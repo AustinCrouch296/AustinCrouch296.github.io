@@ -1,0 +1,48 @@
+﻿/* AustinCrouch296.github.io stylesheet ) */
+
+body {
+	background-color: rgb(230, 230, 230);
+	color: rgb(69, 69, 69);
+	font-family: monospace;
+}
+	
+#pageTitle {
+	line-height: 13px;
+	text-align: center;
+}
+	
+.postTitle {
+	line-height: 0px;
+	margin-bottom: 14px;
+	font-family: serif;
+}
+            
+.postDate {
+	margin-top: 0px;
+	font-style: italic;
+	font-family: serif;
+}
+
+#toc {
+	margin: 1em;
+	border-style: double;
+	display: table;
+	font-size: 95%;
+	padding: 10px;
+	background: hsl(0, 10%, 90%);
+}
+
+#short-bio {
+	line-height: 16px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+#contents {
+	line-height: 0px;
+	margin-bottom: 14px;
+}
+	
+article {
+	margin: 0px 2.5%;
+}
