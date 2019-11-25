@@ -5,6 +5,12 @@ body {
 	color: rgb(69, 69, 69);
 	font-family: monospace;
 }
+
+#header {
+	width: 100%;
+	background: rgb(200, 200, 200);
+	color: black;
+}
 	
 #pageTitle {
 	line-height: 13px;
@@ -15,12 +21,14 @@ body {
 	line-height: 0px;
 	margin-bottom: 14px;
 	font-family: serif;
+	color: black;
 }
             
 .postDate {
 	margin-top: 0px;
 	font-style: italic;
 	font-family: serif;
+	color: black;
 }
 
 #toc {
@@ -29,7 +37,7 @@ body {
 	display: table;
 	font-size: 95%;
 	padding: 10px;
-	background: hsl(0, 10%, 90%);
+	background: rgb(240, 240, 240);
 }
 
 #short-bio {
