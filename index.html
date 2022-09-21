@@ -9,11 +9,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--==================== SWIPER CSS ====================-->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
         <!--==================== CSS ====================-->
         <title>Joseph Marks-Chadwick - Game Designer Portfolio</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
     <body class="dark-theme">
     <!--==================== HEADER ====================-->
@@ -89,7 +89,7 @@
                 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
                 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
                 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x="12" y="18" xlink:href="../assets/img/perfil.png"/>
+                                    <image class="home__blob-img" x="12" y="18" xlink:href="/assets/img/perfil.png"/>
                                 </g>
                             </svg>
 
@@ -313,7 +313,7 @@
                                         <div class="work-item-container">
                                             <a href="/assets/projects/umbra/projects-umbra.html">
                                                 <div class="work-item">
-                                                    <div class="work-item-bg" style="background-image: url('../assets/img/umbra-thumbnail.png')"></div>
+                                                    <div class="work-item-bg" style="background-image: url('/assets/img/umbra-thumbnail.png')"></div>
                                                 </div>
                                             </a>
                                             <div class="work-item-tags-container">
@@ -342,7 +342,7 @@
                                         <div class="work-item-container">
                                             <a href="/assets/projects/vaporworld/projects-vaporworld.html">
                                                 <div class="work-item">
-                                                    <div class="work-item-bg" style="background-image: url('../assets/img/vaporworld-thumbnail.png')"></div>
+                                                    <div class="work-item-bg" style="background-image: url('/assets/img/vaporworld-thumbnail.png')"></div>
                                                 </div>
                                             </a>
                                             <div class="work-item-tags-container">
@@ -372,7 +372,7 @@
                                         <div class="work-item-container">
                                             <a href="/assets/projects/platformer/projects-platformer.html">
                                                 <div class="work-item">
-                                                    <div class="work-item-bg" style="background-image: url('../assets/img/platformer-thumbnail.png')"></div>
+                                                    <div class="work-item-bg" style="background-image: url('/assets/img/platformer-thumbnail.png')"></div>
                                                     <div class="work-item-title-container">
                                                         <div class="work-item-title">
                                                             <span>Among Us</span>
@@ -416,7 +416,7 @@
                     <div class="swiper-wrapper">
                         <!--======================== PORTFOLIO 1 =============-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="../assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+                            <img src="/assets/img/portfolio1.jpg" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Modern Website</h3>
@@ -432,7 +432,7 @@
 
                         <!--======================== PORTFOLIO 2 =============-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="../assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+                            <img src="/assets/img/portfolio2.jpg" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Modern Website(2)</h3>
@@ -448,7 +448,7 @@
 
                         <!--======================== PORTFOLIO 3 =============-->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="../assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+                            <img src="/assets/img/portfolio3.jpg" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Modern Website(3)</h3>
@@ -501,32 +501,42 @@
                             </div>
                         </div>
 
-                        <form action="" class="contact__form grid">
+                        <form action="https://formsubmit.co/31765ae695283e075efa570612cc95dd" method="POST" class="contact__form grid">
+                            <!-- Honeypot -->
+                            <input type="text" name="_honey" style="display:none;">
+
+                            <!-- Disable Captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <input type="hidden" name="_next" value="./public/success.html">
+
                             <div class="contact__inputs grid">
                                 <div class="contact__content">
-                                    <label for="name" class="contact__label">Name</label>
-                                    <input type="text" id="name" class="contact__input">
+                                    <label for="name" class="contact__label">Name <small>(required)</small></label>
+                                    <input type="text" id="name" name="Name" class="contact__input" required>
                                 </div>
 
                                 <div class="contact__content">
-                                    <label for="email" class="contact__label">Email</label>
-                                    <input type="email" id="email" class="contact__input">
+                                    <label for="email" class="contact__label">Email <small>(required)</small></label>
+                                    <input type="email" id="email" name="Email" class="contact__input" required>
                                 </div>
                             </div>
 
                             <div class="contact__content">
-                                <label for="project-contact" class="contact__label">Project</label>
-                                <input type="text" id="project-contact" class="contact__input">
+                                <label for="project-contact" class="contact__label">Subject</label>
+                                <input type="text" id="project-contact" name="Subject" class="contact__input">
                             </div>
 
                             <div class="contact__content">
                                 <label for="message-contact" class="contact__label">Message</label>
-                                <textarea name="" cols="0" rows="7" id="message-contact" class="contact__input"></textarea>
+                                <textarea cols="0" rows="7" id="message-contact" class="contact__input" name="Message"></textarea>
                             </div>
                             
                             <div>
-                                <a href="#" class="button button--flex">Send Message</a>
-                                <i class="uil uil-message button__icon"></i>
+                                <button type="submit" style="border: 0px; background: transparent;">
+                                    <a class="button button--flex">Send Message</a>
+                                </button>
+                                    <i class="uil uil-message button__icon"></i>
                             </div>
                         </form>
                     </div>
@@ -585,10 +595,9 @@
         -->
 
         <!--==================== SWIPER JS ====================-->
-        <script src="../assets/js/swiper-bundle.min.js"></script>
+        <script src="/assets/js/swiper-bundle.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
-        <script src="../assets/js/main.js"></script>
-        <link rel="stylesheet" type="text/css" href="../assets/less/common2.css">
+        <script src="/assets/js/main.js"></script>
     </body>
 </html>
