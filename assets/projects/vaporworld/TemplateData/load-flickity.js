@@ -1,5 +1,6 @@
 $('.main-carousel').flickity({
   // options
   wrapAround: "true", 
-  cellAlign: "center"
+  cellAlign: "center",
+  imagesLoaded: "true"
 });
