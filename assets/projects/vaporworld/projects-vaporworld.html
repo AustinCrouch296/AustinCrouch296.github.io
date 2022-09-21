@@ -9,8 +9,9 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="shortcut icon" href="TemplateData/favicon.ico">
       <!--==================== SWIPER CSS ====================-->
-      <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+      <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
       <!--==================== FLICKITY CSS ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== UNITY WEBGL PLAYER ====================-->
@@ -18,7 +19,6 @@
       <script src="Build/UnityLoader.js"></script>
       <!--==================== CSS ====================-->
       <title>Joseph Marks-Chadwick - Game Designer Portfolio</title>
-      <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
       <link rel="stylesheet" href="../../css/styles.css">
       <link rel="stylesheet" href="TemplateData/style.css">
@@ -72,8 +72,7 @@
     <main class="site-content">
 
       <section id="flickity-container">
-        <div class="main-carousel"
-          data-flickity='{ "wrapAround": "true", "cellAlign": "center" }'>
+        <div class="main-carousel" data-flickity>
             <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png"></div>
             <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png"></div>
             <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png"></div>
@@ -185,6 +184,7 @@
           document.getElementById("fullscreen-btn").onclick= function() { window.gameInstance.SetFullscreen(1); }
         }
       </script>
+      <script type="text/javascript" src="./TemplateData/load-flickity.js"></script>
 
       <!--==================== MAIN JS ====================-->
       <script src="../assets/js/main.js"></script>
