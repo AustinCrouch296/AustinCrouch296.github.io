@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+      <!--==================== UNICONS ====================-->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" href="TemplateData/favicon.ico">
+      <!--==================== SWIPER CSS ====================-->
+      <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+      <!--==================== FLICKITY CSS ====================-->
+      <script src="/assets/js/flickity.pkgd.min.js"></script>
+      <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
+      <!--==================== UNITY WEBGL PLAYER ====================-->
+      <script src="TemplateData/UnityProgress.js"></script>
+      <script src="Build/UnityLoader.js"></script>
+      <!--==================== CSS ====================-->
+      <title>Joseph Marks-Chadwick - Game Designer Portfolio</title>
+      <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../css/styles.css">
+      <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+
+  <body class="dark-theme">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+          <a href="../../../public/index.html" class="nav__logo">Joseph Marks-Chadwick</a>
+          <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list grid">
+                  <li class="nav__item">
+                      <a href="../../../public/index.html#home" class="nav__link active-link">
+                          <i class="uil uil-estate nav__icon"></i> Home
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="../../../public/index.html#about" class="nav__link">
+                          <i class="uil uil-user nav__icon"></i> About
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="../../../public/index.html#skills" class="nav__link">
+                          <i class="uil uil-file-alt nav__icon"></i> Skills
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="../../../public/index.html#services" class="nav__link">
+                          <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="../../../public/index.html#portfolio" class="nav__link">
+                          <i class="uil uil-scenery nav__icon"></i> Portfolio
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="../../../public/index.html#contact" class="nav__link">
+                          <i class="uil uil-estate nav__icon"></i> Contact Me
+                      </a>
+                  </li>
+              </ul>
+              <i class="uil uil-times nav__close" id="nav-close"></i>
+          </div>
+      </nav>
+    </header>
+
+        <!--==================== WEBGL PLAYER ====================-->
+
+    <main class="site-content">
+
+      <section id="flickity-container">
+        <div class="main-carousel"
+          data-flickity='{ "wrapAround": "true", "cellAlign": "center" }'>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_4.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_5.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_6.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_7.png"></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_8.png"></div>
+        </div>
+      </section>
+
+      <section id="bio" class="section">
+        <br />
+        <h1>VaporWorld</h1>
+        <p>This game was my part of a project for my Interface Design class. The assignment was to create a functional game that has an easy-to-understand UI.
+            <br /><br />The game also had to have an accurate scoring system; a calculation based on how many collectibles the player is able to find, and how many areas they visit within the game's time limit, minus the amount of steps taken.
+            <br /><br />
+            The final product is a Vaporwave themed game where the player walks around, searching for the different collectables in the level, trying to increase their score before they run out of time (health).
+            There is also a special powerup that opens a pop-up menu, allowing the player to gamble for extra score, as well as 4 distinct areas for the player to visit.
+            <br /><br />
+            One of the constraints of the project was that the character had to use Unity's NavMesh system for movement. 
+            I wanted the player to use third person movement, so I had to write a script that allowed the player to move with their mouse and keyboard, but use NavMesh to map out the walkable areas for the player.
+            <br /><br />
+            The game encapsulates the Vaporwave aesthetic by using many features of the genre. It uses retro shaders that make the game look like a stylish 80's movie being watched on a CRT TV. 
+            It also uses low-poly models, electronic music that crossfades as you enter different areas, and UI elements reminiscient of late 1990s web design.
+            <br /><br />
+            If you would like to play the game for yourself, it is accessible below:</p>
+      </section>
+
+        <div class="webgl-player">
+            <div class="webgl-content">
+                <div id="gameContainer" style="width: 720px; height: 450px;">
+                    <div style="width: 720px; height: 450px; background-color: #8307F7; display: absolute;">
+                        <div class="centered">
+                            <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
+                                <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                </svg> Run game
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="webgl-logo"></div>
+                    <div class="fullscreen" id="fullscreen-btn"></div>
+                    <div class="title">VaporWorld</div>
+                </div>
+            </div>
+        </div>
+
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Joseph Marks-Chadwick</h1>
+                    <span class="footer__subtitle">Game Designer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="../../../public/index.html#services" class="footer__link">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="../../../public/index.html#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+
+                    <li>
+                        <a href="../../../public/index.html#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/" class="footer__social" target="_blank"  class="footer__social">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick-8b17ba116/" target="_blank" class="footer__social" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+          <p class="footer__copy">&#169; Joseph Marks-Chadwick. All rights reserved.</p>
+        </div>
+      </footer>
+  
+      <!--==================== SCROLL TOP ====================
+      <a href="" class="scrollup" id="scroll-up">
+          <i class="uil uil-arrow-up scroll__icon"></i>
+      </a>
+      -->
+
+      <!--==================== SWIPER JS ====================-->
+      <script src="../assets/js/swiper-bundle.min.js"></script>
+
+      <script>
+        var gameInstance;
+         
+        function runUnityLoader() {
+          gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", {onProgress: UnityProgress});
+          document.getElementById("fullscreen-btn").onclick= function() { window.gameInstance.SetFullscreen(1); }
+        }
+      </script>
+
+      <!--==================== MAIN JS ====================-->
+      <script src="../assets/js/main.js"></script>
+      <link rel="stylesheet" type="text/css" href="../assets/less/common2.css">
+    </main>
+  </body>
+</html>
