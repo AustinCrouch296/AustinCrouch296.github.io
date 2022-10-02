@@ -1357,7 +1357,6 @@ img{
 	padding-right: 5px;
 	text-align: left;
 	vertical-align: top;
-	text-wrap: normal;
 	word-wrap: break-word;
 	font-size: 19px;
 }
@@ -1414,3 +1413,22 @@ img{
     display: flex;
     align-items: center;
 }
+  
+ /* .modal {
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    --bs-modal-width: 80%;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .modal.show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  */
