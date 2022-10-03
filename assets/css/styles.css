@@ -1406,22 +1406,95 @@ img{
     display: flex;
     align-items: center;
 }
-  
- /* .modal {
-    background-color: red;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-left: auto;
-    --bs-modal-width: 80%;
-    margin-right: auto;
-    text-align: center;
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-  }
 
-  .modal.show {
-    pointer-events: auto;
-    opacity: 1;
+/********************************* MODAL STYLES *********************************/
+
+#display_modal1,
+#display_modal2,
+#display_modal3 {
+    cursor: pointer;
+    transition: 0.3s;
   }
-  */
+  
+  #myModal1,
+  #myModal2,
+  #myModal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: var(--z-modal); /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-window-content {
+    margin: auto;
+    display: block;
+  }
+  
+  /* Caption of Modal Image */
+  #modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-window-content, #modal-caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .modal-close1,
+  .modal-close2,
+  .modal-close3 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .modal-close1:hover,
+  .modal-close2:hover,
+  .modal-close3:hover,
+  .modal-close1:focus,
+  .modal-close2:focus,
+  .modal-close3:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-window-content {
+      width: 100%;
+    }
+  }

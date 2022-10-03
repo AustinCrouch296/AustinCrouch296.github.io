@@ -4,21 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--==================== UNICONS ====================-->
+        <!--===================== UNICONS =====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--==================== SWIPER CSS ====================-->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
-        <!--==================== CSS ====================-->
+        <!--=============== MODEL VIEWER SCRIPT ===============-->
+        <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script> 
+        <link type="text/css" href="/assets/css/3dmodel-styles.css" rel="stylesheet"/>
+        <!--======================= CSS =======================-->
         <title>Joseph Marks-Chadwick - Game Designer Portfolio</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
 
-    <body class="dark-theme">
     <!--==================== HEADER ====================-->
-        <header class="header" id="header">
+    <body class="dark-theme">
+        <header class="header" id="header" class="dark-theme">
             <nav class="nav container">
                 <a href="#" class="nav__logo">Joseph Marks-Chadwick</a>
                 <div class="nav__menu" id="nav-menu">
@@ -261,14 +264,14 @@
                             <img src="/assets/img/portfolio1.jpg" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Example Model(1)</h3>
+                                <h3 class="portfolio__title">Running Horse</h3>
                                 <p class="portfolio__description">
-                                    This is test description(1) right now.
+                                    This is an example 3D model from the &lt;modelviewer&gt; project.
                                 </p>
-                                <a href="/public/models.html" class="button button--flex button--small portfolio__button">
+                                <button id="display_modal1" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -277,14 +280,14 @@
                             <img src="/assets/img/portfolio2.jpg" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Example Model(2)</h3>
+                                <h3 class="portfolio__title">Monkey Cube</h3>
                                 <p class="portfolio__description">
-                                    This is test description(2) right now.
+                                    Another example model from &lt;modelviewer&gt;, this one is a monkey!
                                 </p>
-                                <a href="/public/models.html" class="button button--flex button--small portfolio__button">
+                                <button id="display_modal2" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -293,14 +296,14 @@
                             <img src="/assets/img/portfolio3.jpg" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
-                                <h3 class="portfolio__title">Example Model(3)</h3>
+                                <h3 class="portfolio__title">Astronaut</h3>
                                 <p class="portfolio__description">
-                                    This is test description(3) right now.
+                                    This is another example model that I'm using to fill up 'space'.
                                 </p>
-                                <a href="/public/models.html" class="button button--flex button--small portfolio__button">
+                                <button id="display_modal3" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -430,17 +433,81 @@
 
                 <p class="footer__copy">&#169; Joseph Marks-Chadwick. All rights reserved.</p>
             </div>
-
         </footer>
 
-        <!--==================== SCROLL TOP ====================
-        <a href="" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scroll__icon"></i>
-        </a>
-        -->
+        <!--============ MODALS =======================-->
+        <!--======== Modal 1 ========-->
+        <div id="myModal1" class="modal-window">
+            <span class="modal-close1">&times;</span>
+            <div class="modal-window-content" id="img01">
+                <!-- <model-viewer> HTML element -->
+                <model-viewer id="lazy-load1" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model1/Horse.glb" alt="A 3D model of a running horse" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model1/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" skybox-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" exposure="1.5">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                    <div id="ar-prompt">
+                        <img src="/assets/img/ar_hand_prompt.png">
+                    </div>
+                    <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter1.png')"></div>
+                    <div id="button-load1" slot="poster">Load 3D Model</div>
+                </model-viewer>
+            </div>
+            <div id="modal-caption">This is Epona the 3D running horse.<br/>Is your horse running? Well, you better go catch it!</div>
+        </div>
+
+        <!--======== Modal 2 ========-->
+        <div id="myModal2" class="modal-window">
+            <span class="modal-close2">&times;</span>
+            <div class="modal-window-content" id="img01">
+                <!-- <model-viewer> HTML element -->
+                <model-viewer id="lazy-load2" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model2/alpha-blend-litmus.glb" alt="A 3D model of a monkey in a cube" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model2/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model2/pillars_1k.hdr" skybox-image="/assets/models/model2/pillars_1k.hdr">                                                                                                                                                                                   
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                    <div id="ar-prompt">
+                        <img src="/assets/img/ar_hand_prompt.png">
+                    </div>
+                    <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter2.png')"></div>
+                    <div id="button-load2" slot="poster">Load 3D Model</div>
+                </model-viewer>
+            </div>
+            <div id="modal-caption">This is Paul, the monkey cube.<br/>Being boxed in for so long has drove him a little bananas.</div>
+        </div>
+
+        <!--======== Modal 3 ========-->
+        <div id="myModal3" class="modal-window">
+            <span class="modal-close3">&times;</span>
+            <div class="modal-window-content" id="img01">
+                <!-- <model-viewer> HTML element -->
+                <model-viewer id="lazy-load3" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
+                    <div class="progress-bar hide" slot="progress-bar">
+                        <div class="update-bar"></div>
+                    </div>
+                    <button slot="ar-button" id="ar-button">
+                        View in your space
+                    </button>
+                    <div id="ar-prompt">
+                        <img src="/assets/img/ar_hand_prompt.png">
+                    </div>
+                    <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.png')"></div>
+                    <div id="button-load3" slot="poster">Load 3D Model</div>
+                </model-viewer>
+            </div>
+            <div id="modal-caption">This is Armstrong, the accountant.<br/>He just wears the spacesuit for fun!</div>
+        </div>
 
         <!--==================== SWIPER JS ====================-->
         <script src="/assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MODEL VIEWER SCRIPTS ===============-->
+        <script src="/assets/js/3dmodel-script.js"></script> 
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="/assets/js/main.js"></script>
