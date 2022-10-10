@@ -139,9 +139,7 @@ model-viewer > #ar-prompt > img {
   background-color: black;
 }
 
-#button-load1, 
-#button-load2, 
-#button-load3 {
+.loadModelBtn {
   background-image: url("/assets/img/ic_get_app_white_24dp.svg");
   background-repeat: no-repeat;
   background-size: 24px 24px;

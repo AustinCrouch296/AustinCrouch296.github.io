@@ -252,7 +252,7 @@
                     </div>
             </section>
 
-            <!--==================== PORTFOLIO ====================-->
+             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
                 <h2 class="section__title">3D Modeling</h2>
                 <span class="section__subtitle">Most Recent Work</span>
@@ -268,7 +268,7 @@
                                 <p class="portfolio__description">
                                     This is an example 3D model from the &lt;modelviewer&gt; project.
                                 </p>
-                                <button id="display_modal1" class="button button--flex button--small portfolio__button">
+                                <button onclick="openModal('1');" id="modal1" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </button>
@@ -284,7 +284,7 @@
                                 <p class="portfolio__description">
                                     Another example model from &lt;modelviewer&gt;, this one is a monkey!
                                 </p>
-                                <button id="display_modal2" class="button button--flex button--small portfolio__button">
+                                <button onclick="openModal('2');" id="modal2" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </button>
@@ -300,13 +300,12 @@
                                 <p class="portfolio__description">
                                     This is another example model that I'm using to fill up 'space'.
                                 </p>
-                                <button id="display_modal3" class="button button--flex button--small portfolio__button">
+                                <button onclick="openModal('3');" id="modal3" class="button button--flex button--small portfolio__button">
                                     Demo
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </button>
                             </div>
                         </div>
-
                     </div>
                     <!--============ Add Arrows =============-->
                     <div class="swiper-button-next">
@@ -320,6 +319,64 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
+           
+            <!--***
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">3D Modeling</h2>
+                <span class="section__subtitle">Most Recent Work</span>
+
+                <div class="portfolio__container container">
+                    <div> ***-->
+                        <!--======================== PORTFOLIO 1 =============--><!--***
+                        <div class="portfolio__content grid">
+                            <img src="/assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Running Horse</h3>
+                                <p class="portfolio__description">
+                                    This is an example 3D model from the &lt;modelviewer&gt; project.
+                                </p>
+                                <button id="display_modal1" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                            </div>
+                        </div> ***-->
+
+                        <!--======================== PORTFOLIO 2 =============--><!--***
+                        <div class="portfolio__content grid">
+                            <img src="/assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Monkey Cube</h3>
+                                <p class="portfolio__description">
+                                    Another example model from &lt;modelviewer&gt;, this one is a monkey!
+                                </p>
+                                <button id="display_modal2" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                            </div>
+                        </div> ***-->
+
+                        <!--======================== PORTFOLIO 3 =============--> <!--***
+                        <div class="portfolio__content grid">
+                            <img src="/assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Astronaut</h3>
+                                <p class="portfolio__description">
+                                    This is another example model that I'm using to fill up 'space'.
+                                </p>
+                                <button id="display_modal3" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> ***-->
 
             <section class="testimonial section">
                 <!--=======This feature is skipped for now========-->
@@ -438,10 +495,10 @@
         <!--============ MODALS =======================-->
         <!--======== Modal 1 ========-->
         <div id="myModal1" class="modal-window">
-            <span class="modal-close1">&times;</span>
+            <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
             <div class="modal-window-content" id="img01">
                 <!-- <model-viewer> HTML element -->
-                <model-viewer id="lazy-load1" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model1/Horse.glb" alt="A 3D model of a running horse" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model1/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" skybox-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" exposure="1.5">
+                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model1/Horse.glb" alt="A 3D model of a running horse" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model1/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" skybox-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" exposure="1.5">
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
                     </div>
@@ -452,7 +509,7 @@
                         <img src="/assets/img/ar_hand_prompt.png">
                     </div>
                     <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter1.png')"></div>
-                    <div id="button-load1" slot="poster">Load 3D Model</div>
+                    <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
                 </model-viewer>
             </div>
             <div id="modal-caption">This is Epona the 3D running horse.<br/>Is your horse running? Well, you better go catch it!</div>
@@ -460,10 +517,10 @@
 
         <!--======== Modal 2 ========-->
         <div id="myModal2" class="modal-window">
-            <span class="modal-close2">&times;</span>
+            <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
             <div class="modal-window-content" id="img01">
                 <!-- <model-viewer> HTML element -->
-                <model-viewer id="lazy-load2" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model2/alpha-blend-litmus.glb" alt="A 3D model of a monkey in a cube" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model2/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model2/pillars_1k.hdr" skybox-image="/assets/models/model2/pillars_1k.hdr">                                                                                                                                                                                   
+                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model2/alpha-blend-litmus.glb" alt="A 3D model of a monkey in a cube" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model2/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model2/pillars_1k.hdr" skybox-image="/assets/models/model2/pillars_1k.hdr">                                                                                                                                                                                   
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
                     </div>
@@ -474,7 +531,7 @@
                         <img src="/assets/img/ar_hand_prompt.png">
                     </div>
                     <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter2.png')"></div>
-                    <div id="button-load2" slot="poster">Load 3D Model</div>
+                    <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
                 </model-viewer>
             </div>
             <div id="modal-caption">This is Paul, the monkey cube.<br/>Being boxed in for so long has drove him a little bananas.</div>
@@ -482,10 +539,10 @@
 
         <!--======== Modal 3 ========-->
         <div id="myModal3" class="modal-window">
-            <span class="modal-close3">&times;</span>
+            <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
             <div class="modal-window-content" id="img01">
                 <!-- <model-viewer> HTML element -->
-                <model-viewer id="lazy-load3" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
+                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
                     </div>
@@ -496,7 +553,7 @@
                         <img src="/assets/img/ar_hand_prompt.png">
                     </div>
                     <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.png')"></div>
-                    <div id="button-load3" slot="poster">Load 3D Model</div>
+                    <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
                 </model-viewer>
             </div>
             <div id="modal-caption">This is Armstrong, the accountant.<br/>He just wears the spacesuit for fun!</div>

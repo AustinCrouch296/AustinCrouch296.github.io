@@ -1469,9 +1469,7 @@ img{
   }
   
   /* The Close Button */
-  .modal-close1,
-  .modal-close2,
-  .modal-close3 {
+  .modalCloseBtn {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -1481,12 +1479,7 @@ img{
     transition: 0.3s;
   }
   
-  .modal-close1:hover,
-  .modal-close2:hover,
-  .modal-close3:hover,
-  .modal-close1:focus,
-  .modal-close2:focus,
-  .modal-close3:focus {
+  .modalCloseBtn:hover {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
