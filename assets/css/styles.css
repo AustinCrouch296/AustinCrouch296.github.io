@@ -1368,10 +1368,8 @@ img{
 
 .work-item-tag
 {
-	height: 21px;
 	min-width: 30px;
-	padding-left: 7px;
-	padding-right: 7px;
+    padding: 2px 7px;
 	color: white;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 100;
@@ -1410,6 +1408,22 @@ img{
     align-items: center;
 }
 
+#trailer-button {
+    height: auto;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: border-radius 200ms linear;
+}
+
+#trailer-button:hover {
+    transition: border-radius 200ms linear;
+    border-radius: 2em;
+}
+
 /********************************* MODAL STYLES *********************************/
 
 #display_modal1,
@@ -1417,11 +1431,11 @@ img{
 #display_modal3 {
     cursor: pointer;
     transition: 0.3s;
-  }
+}
   
-  #myModal1,
-  #myModal2,
-  #myModal3 {
+#myModal1,
+#myModal2,
+#myModal3 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: var(--z-modal); /* Sit on top */
@@ -1433,16 +1447,16 @@ img{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  }
+}
   
-  /* Modal Content (image) */
-  .modal-window-content {
+/* Modal Content (image) */
+.modal-window-content {
     margin: auto;
     display: block;
-  }
+}
   
-  /* Caption of Modal Image */
-  #modal-caption {
+/* Caption of Modal Image */
+#modal-caption {
     margin: auto;
     display: block;
     width: 80%;
@@ -1451,28 +1465,28 @@ img{
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-  }
+}
   
-  /* Add Animation */
-  .modal-window-content, #modal-caption {  
+/* Add Animation */
+.modal-window-content, #modal-caption {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
-  }
+}
   
-  @-webkit-keyframes zoom {
+@-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
-  }
+}
   
-  @keyframes zoom {
+@keyframes zoom {
     from {transform:scale(0)} 
     to {transform:scale(1)}
-  }
+}
   
-  /* The Close Button */
-  .modalCloseBtn {
+/* The Close Button */
+.modalCloseBtn {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -1480,82 +1494,179 @@ img{
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-  }
+}
   
-  .modalCloseBtn:hover {
+.modalCloseBtn:hover {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }
+}
   
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
     .modal-window-content {
       width: 100%;
     }
-  }
+}
 
-  .purple {
+.purple {
     color: #c770f0;
-  }
+}
 
-  .flex-column {
+.flex-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
-  }
+}
   
-  .column-item:nth-of-type(1),
-  .column-item:nth-of-type(2)  {
+.column-item:nth-of-type(1),
+.column-item:nth-of-type(2)  {
     grid-column: span 2;
-  }
+}
   
-  .column-item {
+.column-item {
     background-color: lightgreen;
     grid-column: span 2;
-  }
+}
 
-  @media screen and (max-width: 800px){
+@media screen and (max-width: 800px){
     #flex-parent-div {
         display: auto;
         margin-left: auto; 
         margin-right: auto;
         flex-flow: row wrap;
     }
+}
 
-    #umbra-trailer-vid {
-        width:100%; 
-        min-width: 400px;
-    }
-  }
-
-  @media screen and (min-width: 801px){
+@media screen and (min-width: 801px){
     #flex-parent-div {
         display: flex;
         margin-left: auto; 
         margin-right: auto;
         flex-flow: row wrap;
     }
+}
 
-    #umbra-trailer-vid {
-        width:100%; 
-        min-width: 400px;
-    }
-  }
-
-  .flex-full {
+.flex-full {
     flex: 1 1 100%; 
     padding: 15px;
-  }
+}
 
-  .flex-half {
+.flex-half {
     flex: 1 1 calc(50%  - .5rem); 
     padding: 15px;
-  }
+}
 
-  .flex-third {
+.flex-third {
     flex: 1 1 calc(33%  - .5rem); 
     padding: 15px;
-  }
+}
 
-  
+#hero {
+    height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
+#hero::after {
+    width:100%;
+    height:100%;
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top:0;
+    left:0;
+    background :rgba(0,0,0,0.5)
+}
+
+#hero video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+    font-family:'object-fit: cover';
+}
+
+#hero .texture {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:15;
+    background:url('/assets/img/video-overlay-texture.png');
+}
+
+#hero .video-caption {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
+
+#hero .video-caption h1 {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+}
+
+#game-title {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #hero .video-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    #game-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #hero .video-caption h1 {
+        font-size: 3rem;
+    }
+
+    #game-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #hero .video-caption h1 {
+        font-size: 4rem;
+    }
+
+    #game-title {
+        font-size: 2.5rem;
+    }
+}
+
+header.nav-active {
+    background-color: var(--body-color) !important;
+    transition: background-color 200ms linear;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+#umbra-trailer-vid {
+    min-width: 320px;
+    max-width: 1920px;
+    max-height: 1080px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 15px;
+}

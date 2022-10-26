@@ -12,6 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
       <!--==================== FLICKITY CSS ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== CSS ====================-->
@@ -31,24 +32,12 @@
         p {
             padding-top: 5px;
         }
-
-        @media screen and (max-width: 767px) {
-            #section1, #section2, #section3, #section4 {
-                scroll-margin-top: 0em;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            #section1, #section2, #section3, #section4 {
-                scroll-margin-top: 1.6em;
-            }
-        }
       </style>
   </head>
 
   <body class="dark-theme">
     <!--==================== HEADER ====================-->
-    <header class="header" id="header" class="dark-theme">
+    <header class="header" id="header" class="dark-theme" style="background-color: transparent; transition: background-color 200ms linear;">
       <nav class="nav container">
           <a href="/index.html" class="nav__logo">Joseph Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
@@ -101,237 +90,104 @@
     </header>
 
     <!--==================== MAIN ====================-->
-    <main class="main" style="max-width:1200px; margin: 10px auto;">
+    <main>
 
-        <section class="section-project-page" id="flex-parent-div">
-            <div class="flex-full" style="padding: 0 15px;">
-                <h1 style="font-size: 2.5rem;">Umbra</h1>
-            </div>
-
-            <div class="flex-half">
-                <video id="umbra-trailer-vid" poster="./Screenshots/umbra-vid-thumbnail.png" controls>
-                    <source src="umbra-trailer.mp4" type="video/mp4">
+        <div id="hero">
+            <div class="texture"></div>
+            <video loop muted autoplay preload="auto">
+                <source src="https://avalanche-studios.cdn.prismic.io/avalanche-studios/ad2488ad-90a9-4b67-a199-6a50158bbb34_Avalanche_20s_Web_04_high.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-                </video>
+            </video>
+            <div class="video-caption" id="startchange">
+                <h1>UMBRA</h1>
+                <a href="#main-section">
+                    <button id="trailer-button" class="button" style="cursor: pointer;">
+                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg> Watch the Trailer
+                    </button>
+                </a>
             </div>
-            <div class="flex-half">
-                <p style="padding-top: 0px;">
-                    <b>Umbra</b> is a virtuality-reality Atmospheric Horror game that I created for my dissertation study at Bournemouth University.
-                    <br/><br/>
-                    My dissertation, <em><b>"Designing a Horror Puzzle Game in Virtual Reality Using a Heartbeat Monitor"</b></em>, analyzed the development process and playtesting periods, and answered conclusions as to what makes a VR game feel immersive, unsettling, and interesting to play. 
-                    <br/><br/>
-                    While the VR experience only contained a few puzzles and scripted events, the game's unnerving atmosphere and environmental audio were very effective at keeping the player's immersed. The user study combined with heartrate monitor readings uncovered very insightful information about the games strengths and weaknesses.
-                </p>
-            </div>
-        </section>
+        </div>
 
-        <section id="flex-parent-div">
-            <div class="flex-full">
-                <h1 style="font-size: 2.5rem;">Purpose for the Study</h1>
-            </div>
+        <hr>
 
-            <div class="flex-third">
-                <p style="padding-top: 0px;">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit numquam est porro harum sequi, eligendi nesciunt delectus necessitatibus ea quia debitis dolores velit? Doloremque aliquid, alias vitae itaque maxime possimus!
-                    <br/><br/>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo sequi laborum laboriosam, exercitationem hic officia vel in doloremque repudiandae! Repellat praesentium nulla consequuntur quo provident at accusamus omnis distinctio eaque!
-                </p>
-            </div>
-            <div style="flex: 1 1 calc(66%  - .5rem);" id="flex-parent-div">
-                <div class="flex-half">
-                    <img src="./Screenshots/Screenshot_2.png">
+        <a class="anchor" id="main-section"></a>
+
+        <div id="umbra-div">
+            <section id="flex-parent-div" style="padding: 2rem 0 1rem 0;">
+                <div class="flex-full" style="padding: 0 15px; text-align:center;" >
+                    <h1 id="game-title">An immersive VR Horror Game</h1>
                 </div>
-                <div class="flex-half">
-                    <img src="./Screenshots/Screenshot_3.png">
+            </section>
+
+            <section style="min-width: 320px;">
+                <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+                    <video id="umbra-trailer-vid" preload="none" poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png" controls>
+                        <source src="umbra-trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
                 </div>
-                <div class="flex-half">
-                    <img src="./Screenshots/Screenshot_4.png">
+                <div class="flex-full" style="padding: 15px 6%;">
+                    <p style="padding-top: 0px;">
+                        Umbra is a virtual reality atmospheric horror game created with the intention to understand the game design challenges behind making a game scary. This was created for my dissertation titled <b><em>"Creating an Immersive Horror Puzzle Game in Virtual Reality"</b></em>.
+                    </p>
+                    <br/>
+                    <p>
+                        Several participants were asked to play through the level of the game, which is set in a haunted house. They had to find a way to escape the house by exploring rooms and solving puzzles. The user study uncovered some very insightful information about how a horror game should be designed.
+                    </p>
+                    <br/>
+                    <p>
+                        All Bournemouth University codes of conduct and ethical practices were followed while creating this project. The 3D models shown in this project were downloaded from the Unity asset store.
+                    </p>
+                    <br/>
+                    <p>All results and research for this project can be found below in the linked PDF.</p>
                 </div>
-                <div class="flex-half">
-                    <img src="./Screenshots/Screenshot_2.png">
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <hr style="margin: 30px 15px;">
+            <div style="padding: 15px 0;">
+                <hr>
+            </div>
+        </div>
 
-        <section id="flex-parent-div">
-            <div class="flex-full">
-                <h1 style="font-size: 2.5rem;">Implementation</h1>
-            </div>
-            <div class="flex-full">
-                <p style="padding-bottom: 10px;">Table of Contents for the following sections about Umbra's design process:</p>
-                <ul style="list-style-type: disc; padding: 0 0 0 40px;">
-                    <a href="#section1"><li>Atmospheric Horror Elements</li></a>
-                    <a href="#section2"><li>Puzzles and Design Philosophy</li></a>
-                    <a href="#section3"><li>Lighting, Graphics, and Render Pipeline</li></a>
-                    <a href="#section4"><li>Dissertation Conclusion - What did I gain from undertaking this project?</li></a>
-                </ul>
-            </div>
-        </section>
-
-        <hr style="margin: 30px 15px;">
-
-        <section id="flex-parent-div">
-            <div class="flex-full">
-                <h1 id="section1" style="font-size: 2.5rem;">Atmospheric Horror Elements</h1>
-            </div>
-
-            <div class="flex-third">
-                <h3>Setting of Umbra</h3>
-                <p>You find yourself inside of a small room, the furniture around you appears to be old and covered up as if the home has been long abandoned.</p>
-                <p>The feeling of being in a home is meant to instill a sense of familiarity and comfort in the player. Then as they travel further through the housegrow, they will notice objects that are not quite right, and become increasingly unsettled.</p>  
-                <p>To create the environment, I found the ___ asset pack on the Unity Store and I was able to begin creating a layout of the level, keeping in mind which rooms could be created with the available assets. I created the level's design, including arrows showing how the player should progress to the end.</p>
-            </div>
-            <div style="flex: 1 1 calc(66%  - .5rem);" id="flex-parent-div">
-                <div class="flex-half">
-                    <h3 style="padding-bottom: 5px;">&nbsp;</h3>
-                    <img src="./Screenshots/Screenshot_2.png">
-                </div>
-                <div class="flex-half">
-                    <h3 style="padding-bottom: 5px;">&nbsp;</h3>
-                    <img src="./Screenshots/Screenshot_3.png">
-                </div>
-                <div class="flex-half">
-                    <img src="./Screenshots/Screenshot_4.png">
-                </div>
-                <div class="flex-half">
-                    <img src="./Screenshots/Screenshot_2.png">
-                </div>
-            </div>
-            <div class="flex-full">
-                <h3>Ambient Audio Areas</h3>
-                <p>Once the game's level was split into different rooms, I wanted to implement sounds to keep the player immersed in the environment.</p>
-                <p>I started with ambient sounds from objects, like the flames in the lounge's fireplace crackling, and the grandfather clock ticking. These sounds would get louder as the player approached the object.</p>
-                <p>Then each room had it's own atmospheric audio that would match the mood of its environment. Such as the bathroom having the sounds of dripping pipes, and the lounge having creaking floor boards from the rooms above it, and the dining room having a humming noise from it's single dim lightbulb.</p> 
-                <p></p>Some of the audio was also shared between multiple rooms - the upstairs rooms of the house had the sound of heavy rainfall on the roof above them, while the downstairs area was more silent, with more open space that allowed for ambient noises like the piano and grandfather clock in the lounge to be heard throughout them.</p>  
-            </div>
-            <div class="flex-full" id="flex-parent-div">
-                <div class="flex-third">
-                    <img src="./Screenshots/Screenshot_2.png">
-                </div>
-                <div class="flex-third">
-                    <img src="./Screenshots/Screenshot_2.png">
-                </div>
-                <div class="flex-third">
-                    <img src="./Screenshots/Screenshot_2.png">
-                </div>
-            </div>
-        </section>
-
-        <section id="flex-parent-div">
-            <div class="flex-full">
-                <h1  id="section2" style="font-size: 2.5rem;">Puzzles and Design Philosophy</h1>
-            </div>
-
-            <div class="flex-full">
-                <h3>Design Philosophy</h3>
-                <p>Umbra's gameplay loops focused around a simple mechanic - the player would have to search around their environment to find an object that they needed to progress to the next area.</p>
-                <p>The first two rooms serve as a tutorial for the player. The first room is contains a few interactable objects for the player to pick up and activate, including a key to the door that they must put in the door's keyhole to progress. The second room contains a bunch of fake keys, with hints written on objects for the player to learn that they will need to solve puzzles in order to progress.</p>  
-                <p>The game has a simple progression system where the player solves a puzzle, earns a key, and uses that key to unlock a specific door to access the next area. The player must solve 4 puzzles in exit the upstairs area, and then a large puzzle on the ground floor unlocks a key to the basement that allows the player to make their escape.</p>
-            </div>
-
-            <div class="flex-full">
-                <h3>VR Interaction</h3>
-                <p>Umbra's VR was created greatly in part to a Unity plugin called <a href="https://www.vrtk.io/">VRTK (Virtual Reality Toolkit)</a>, and was built and run off of my HTC Vive Cosmos using SteamVR.</p>
-                <p>VRTK helped in making interactable objects, both grabbable (like a flashlight or key) and controllable (pushable buttons, pullable drawers). It also was used to set up a working VR Rig with both locomotion and teleport controls, as well as a long-distance pointer to pick objects up.</p>
-            </div>
-
-            <div class="flex-half">
-                <h3>Brief Overview of Puzzles</h3>
-                <p>
-                    <b>Twin Bedroom</b> - The player must locate the real key in a room full of fakes, objects around the room hint to the location of the real key.
-                </p>                
-                <p>
-                    <b>Bathroom</b> - Four dials are located on the wall, with unique symbols on each side. Four objects in the room have the correct symbols etched on them.
-                </p>
-                <p>
-                    <b>Master Bedroom</b> - A scrambled painting must be rotated until it displays its proper image. This gives the player a hammer that can be used to smash a glass display case containing the key.
-                </p>
-                <p>
-                    <b>Dining Room</b> - Multiple mannequins posing around a diner table, each missing different body parts which the player must reattach to their bodies to unlock access to the kitchen.
-                </p>
-                <p>
-                    <b>Library</b> - There is a large safe with a 4 digit passcode, each number correlating with a different color. The player must find the numbers hidden in the other rooms, but hints to where each of the digits can be found once they gain access to the kitchen.
-                </p>
-            </div>
-            <div class="flex-half">
-                <h3 style="padding-bottom: 5px;">&nbsp;</h3>
-                <video id="umbra-trailer-vid" poster="./Screenshots/umbra-vid-thumbnail.png" controls>
-                    <source src="umbra-trailer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <div class="flex-full">
-                <h3>Player Events</h3>
-                <p>In order to keep the gameplay experience the same for all the players in my test study, I decided that Umbra should have specific planned events. These events are controlled by invisible box colliders that activate when the player enters within their boundaries.</p>
-                <p>A few of the events control the entity that lives in the house, trapping you in a room as it wails and charges down the hallway at you, or watches you through the cracks in the wall, before dissapearing and whispering right behind you. These events, while cruel, allowed for a baseline to be set with the heartrate monitor readings.</p>
-                <p>Other player events are smaller, such as a piano beginning to play when the player enters in the foyer - the melody continues to play out until the end, or until the player approaches the piano and is startled by a loud slam on the keys.</p>
-            </div>
-        </section>
-
-        <section id="flex-parent-div">
-            <div class="flex-full">
-                <h1 id="section3" style="font-size: 2.5rem;">Lighting, Graphics, and Render Pipeline</h1>
-            </div>
-
-            <div class="flex-full">
-                <h3>Lighting</h3>
-                <p>...</p>
-            </div>
-
-            <div class="flex-full">
-                <h3>Reflection Probes, Shadow, and Fog</h3>
-                <p>...</p>
-            </div>
-
-            <div class="flex-full">
-                <h3>Use of Unity's Particle System</h3>
-                <p>...</p>
-            </div>
-
-            <div class="flex-full">
-                <h3>LOD Models, HDRP and Limitations of Hardware</h3>
-                <p>...</p>
-            </div>
-        </section>
-
-
-        <hr style="margin: 30px 15px;">
-
-        <section id="flex-parent-div">
-            <div class="flex-full">
-                <h1 id="section4" style="font-size: 2.5rem;">Dissertation Conclusion</h1>
-                <h2 style="font-size: 2rem;">What did I gain from undertaking this project?</h2>
-            </div>
-            <div class="flex-full">
-                <p style="padding-bottom: 10px;">Unity is a pain in the backside...</p>
-            </div>
-        </section>
-
-        <!-- !!! Temporarily Removed Flickity Carousel !!!
         <section id="flickity-container">
-            <div class="main-carousel"
-            data-flickity='{ "wrapAround": "true", "cellAlign": "center", "imagesLoaded": "true" }'>
-
-                <div class="carousel-cell"> 
-                    <div class="webgl-player">
-                        <div class="webgl-content">
-                            <video width="854" height="480" poster="./Screenshots/umbra-vid-thumbnail.png" controls>
-                                <source src="umbra-trailer.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png"></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png"></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_4.png"></div>
+            <div class="main-carousel" data-flickity>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad quisquam reprehenderit odio, officiis repellat, cum neque impedit eaque iste molestiae vero. Consectetur aliquam fugit sapiente ipsam nemo iste in."></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ut ducimus fuga explicabo pariatur molestiae incidunt, repellat qui ab dolor quia sed consectetur aliquid doloribus sunt accusamus, perspiciatis excepturi enim!"></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident exercitationem pariatur quo aut repellendus vero libero doloremque ipsum voluptas ipsa, iusto ab odio fugit adipisci quas laborum eos culpa rem."></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis molestiae id dolorum ullam sed necessitatibus illum sint libero! Esse illo consequuntur ipsum suscipit doloribus illum eos accusantium enim aut veniam?"></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium esse fugiat veniam sequi, nobis unde recusandae maxime et commodi odit porro soluta voluptatem, aliquam iste, provident mollitia error eaque quos."></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus architecto pariatur recusandae, illum doloremque temporibus exercitationem magni dolorem dicta vitae impedit. Et consequatur sint numquam vel natus perferendis ex laudantium?"></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sint! Sapiente, explicabo! Doloremque perspiciatis provident harum reprehenderit aliquid unde. Excepturi molestias doloribus consequuntur repellendus aliquam soluta mollitia a pariatur nihil."></div>
+                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tenetur quidem odit, facere voluptates accusamus voluptate quasi laborum ea sed deserunt cumque temporibus a dolore maiores doloremque perspiciatis, odio rerum!"></div>
             </div>
         </section>
-        -->
+
+        <div id="umbra-div">
+            <section id="flex-parent-div" style="min-width: 320px;">
+                <div class="flex-full" style="padding: 0px 6%;">
+                    <p id="flickity-caption">
+                        &nbsp;
+                    </p>
+                </div>
+            </section>
+
+            <div style="padding: 15px 0;">
+                <hr>
+            </div>
+
+            <section id="flex-parent-div">
+                <div class="flex-full" style="padding: 0px 6%; text-align: center;">
+                    <p style="font-size: 1.25em;" id="flickity-caption">
+                        Dissertation PDF
+                    </p>
+                    <a href="/public/resume.html" target="_blank" class="button button--flex">
+                        Open PDF <i class="uil uil-file-alt" style="padding-left:5px;"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
     </main>
 
       <!--==================== FOOTER ====================-->
@@ -378,10 +234,28 @@
 
       <!--==================== SWIPER JS ====================-->
       <script src="/assets/js/swiper-bundle.min.js"></script>
+      <script src="/assets/js/object-fit-videos.js"></script>
+      <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
+      <script src="/assets/js/app.js"></script>
       <script>
-        var offset = $(':target').offset();
-        var scrollto = offset.top - 60; // minus fixed header height
-        $('html, body').animate({scrollTop:scrollto}, 0);
+        $(document).ready(function(){       
+        var scroll_start = 0;
+        var startchange = $('#startchange');
+        var offset = startchange.offset();
+        var header = document.querySelector('#header');
+
+        if (startchange.length){
+            $(document).scroll(function() { 
+                scroll_start = $(this).scrollTop();
+
+                if(scroll_start > offset.top - 40) {
+                    header.classList.add('nav-active');
+                } else {
+                    header.classList.remove('nav-active');
+                }
+            });
+        }
+        });
       </script>
     </main>
   </body>
