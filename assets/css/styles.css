@@ -1448,6 +1448,19 @@ img{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
+
+#myModal4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: var(--z-modal); /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
   
 /* Modal Content (image) */
 .modal-window-content {
@@ -1665,10 +1678,6 @@ a.anchor {
     min-width: 320px;
     max-width: 1920px;
     max-height: 1080px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    margin-bottom: 15px;
 }
 
 #game-container {
@@ -1676,4 +1685,11 @@ a.anchor {
     height: 450px; 
     background-color: #8307F7; 
     display: absolute;
+}
+
+.centered-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

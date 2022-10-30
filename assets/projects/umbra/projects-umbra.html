@@ -102,35 +102,33 @@
             </video>
             <div class="video-caption" id="startchange">
                 <h1>UMBRA</h1>
-                <a href="#main-section">
-                    <button id="trailer-button" class="button" style="cursor: pointer;">
+                    <button onclick="openModal('4');" id="trailer-button" class="button" style="cursor: pointer;">
                         <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="10 8 16 12 10 16 10 8"></polygon>
                         </svg> Watch the Trailer
+                        </button>
                     </button>
-                </a>
             </div>
         </div>
 
-        <hr>
+        <hr style="background-color: black; border: 0; height:5px;">
 
         <a class="anchor" id="main-section"></a>
 
         <div id="umbra-div">
-            <section id="flex-parent-div" style="padding: 2rem 0 1rem 0;">
+            <div style="padding: 15px 0;">
+                <hr>
+            </div>
+
+            <section id="flex-parent-div" style="padding: 1rem 0;">
                 <div class="flex-full" style="padding: 0 15px; text-align:center;" >
                     <h1 id="game-title">An immersive VR Horror Game</h1>
                 </div>
             </section>
 
             <section style="min-width: 320px;">
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%; margin-top: 15px; margin-bottom: 15px;">
-                    <video id="umbra-trailer-vid" preload="none" poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png" controls>
-                        <source src="umbra-trailer.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
-                </div>
+                
                 <div class="flex-full" style="padding: 15px 6%;">
                     <p style="padding-top: 0px;">
                         Umbra is a virtual reality atmospheric horror game created with the intention to understand the game design challenges behind making a game scary. This was created for my dissertation titled <b><em>"Creating an Immersive Horror Puzzle Game in Virtual Reality"</b></em>.
@@ -234,6 +232,22 @@
         </div>
       </footer>
 
+      <div id="myModal4" class="modal-window">
+        <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
+        <div class="modal-window-content" id="img01">
+            <!-- <model-viewer> HTML element -->
+                <div class="centered-div" style="margin-left: 10vw; margin-right: 10vw;">
+                    <video id="umbra-trailer-vid" preload="none" poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png" controls>
+                        <source src="umbra-trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+        </div>
+    </div>
+
+    
+      <!--=============== MODALS ===============-->
+      <script src="/assets/js/modal.js"></script>
       <!--==================== VIDEO PLAYER ====================-->
       <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
       <!--==================== SWIPER JS ====================-->
