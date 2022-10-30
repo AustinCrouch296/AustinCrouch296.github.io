@@ -39,7 +39,7 @@
 
   <body class="dark-theme">
     <!--==================== HEADER ====================-->
-    <header class="header" id="header" class="dark-theme" style="background-color: transparent; transition: background-color 200ms linear;">
+    <header class="header" id="header" class="dark-theme" style="background-color: hsla(0, 0%, 0%, 0.25); transition: background-color 400ms ease-in-out;">
       <nav class="nav container">
           <a href="/index.html" class="nav__logo">Joseph Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
@@ -125,7 +125,7 @@
             </section>
 
             <section style="min-width: 320px;">
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+                <div style="position: relative; width: 100%; padding-bottom: 56.25%; margin-top: 15px; margin-bottom: 15px;">
                     <video id="umbra-trailer-vid" preload="none" poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png" controls>
                         <source src="umbra-trailer.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -234,9 +234,12 @@
         </div>
       </footer>
 
+      <!--==================== VIDEO PLAYER ====================-->
+      <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
       <!--==================== SWIPER JS ====================-->
       <script src="/assets/js/swiper-bundle.min.js"></script>
       <script src="/assets/js/object-fit-videos.js"></script>
+      <!--==================== FLICKITY ====================-->
       <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
       <script type="text/javascript" src="/assets/js/flickity-carousel-captions.js"></script>
       <script src="/assets/js/app.js"></script>
