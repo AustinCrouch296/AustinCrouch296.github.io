@@ -15,6 +15,13 @@ function closeModal() {
     stopModel();
 }
 
+function closeVideoModal(video_id) {
+    currentVideo = document.getElementById(video_id);
+    currentVideo.pause();
+    currentModal.style.display = "none";
+    stopModel();
+}
+
 function loadModel(ele) {
     //Get modelviewer & model play button
     mv = ele.parentNode;
