@@ -17,8 +17,9 @@
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
       <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+      <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
       <!--==================== CSS ====================-->
-      <title>Joseph Marks-Chadwick - Game Designer Portfolio</title>
+      <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
       <link rel="stylesheet" href="/assets/css/styles.css">
       <link rel="stylesheet" href="TemplateData/style.css">
@@ -41,7 +42,7 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header" class="dark-theme" style="background-color: hsla(0, 0%, 0%, 0.25); transition: background-color 400ms ease-in-out;">
       <nav class="nav container">
-          <a href="/index.html" class="nav__logo">Joseph Marks-Chadwick</a>
+          <a href="/index.html" class="nav__logo">Joe Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
               <ul class="nav__list grid">
                   <li class="nav__item">
@@ -195,7 +196,7 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Joseph Marks-Chadwick</h1>
+                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
                     <span class="footer__subtitle">Game Designer</span>
                 </div>
 
@@ -228,7 +229,7 @@
                 </div>
             </div>
 
-          <p class="footer__copy">&#169; Joseph Marks-Chadwick. All rights reserved.</p>
+          <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
       </footer>
 
@@ -236,12 +237,18 @@
         <span onclick="closeVideoModal('umbra-trailer-vid');" class="modalCloseBtn">&times;</span>
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
-                <div class="centered-div" style="margin-left: 10vw; margin-right: 10vw;">
-                    <video id="umbra-trailer-vid" preload="none" poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png" controls>
+                <div class="video-holder-div centered-div">
+                    <video id="umbra-trailer-vid"
+                            class="video-js vjs-theme-city vjs-big-play-centered vjs-fluid" 
+                            controls
+                            preload="auto" 
+                            poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png"
+                            data-setup='{"aspectRatio":"16:9"}'>
                         <source src="umbra-trailer.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
                 </div>
+            </div>
         </div>
     </div>
 

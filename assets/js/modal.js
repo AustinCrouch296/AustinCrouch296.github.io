@@ -16,7 +16,7 @@ function closeModal() {
 }
 
 function closeVideoModal(video_id) {
-    currentVideo = document.getElementById(video_id);
+    currentVideo = document.getElementById(video_id + "_html5_api");
     currentVideo.pause();
     currentModal.style.display = "none";
     stopModel();
