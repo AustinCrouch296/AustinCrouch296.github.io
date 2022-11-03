@@ -1072,6 +1072,13 @@ img{
     }
 }
 
+@media screen and (min-width: 1475px) {
+    .services__container.four{
+        grid-template-columns: repeat(4, 350px);
+        justify-content: center;
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .container{
@@ -1346,6 +1353,14 @@ img{
 	color: white;
 	font-weight: 100;
 	font-size: 15px;
+}
+
+.work-item-desc.date
+{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: hsl(0, 0%, 60%);
 }
 
 .work-item-contrib-cell
