@@ -154,21 +154,18 @@
 
         <section id="flickity-container">
             <div class="main-carousel" data-flickity>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad quisquam reprehenderit odio, officiis repellat, cum neque impedit eaque iste molestiae vero. Consectetur aliquam fugit sapiente ipsam nemo iste in."></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ut ducimus fuga explicabo pariatur molestiae incidunt, repellat qui ab dolor quia sed consectetur aliquid doloribus sunt accusamus, perspiciatis excepturi enim!"></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident exercitationem pariatur quo aut repellendus vero libero doloremque ipsum voluptas ipsa, iusto ab odio fugit adipisci quas laborum eos culpa rem."></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis molestiae id dolorum ullam sed necessitatibus illum sint libero! Esse illo consequuntur ipsum suscipit doloribus illum eos accusantium enim aut veniam?"></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium esse fugiat veniam sequi, nobis unde recusandae maxime et commodi odit porro soluta voluptatem, aliquam iste, provident mollitia error eaque quos."></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus architecto pariatur recusandae, illum doloremque temporibus exercitationem magni dolorem dicta vitae impedit. Et consequatur sint numquam vel natus perferendis ex laudantium?"></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sint! Sapiente, explicabo! Doloremque perspiciatis provident harum reprehenderit aliquid unde. Excepturi molestias doloribus consequuntur repellendus aliquam soluta mollitia a pariatur nihil."></div>
-                <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tenetur quidem odit, facere voluptates accusamus voluptate quasi laborum ea sed deserunt cumque temporibus a dolore maiores doloremque perspiciatis, odio rerum!"></div>
+                <div class="carousel-cell"><img src="./Screenshots/room_screenshot.png" alt="The final look of the game including lighting, reflections, fog and post processing effects."></div>
+                <div class="carousel-cell"><img src="./Screenshots/fireplace_screenshot.png" alt="An example of how the lighting varies from room to room to set an eerie atmosphere."></div>
+                <div class="carousel-cell"><img src="./Screenshots/comparison_screenshot.png" alt="A before-and-after shot showing the effects of the fog and post processing effects."></div>
+                <div class="carousel-cell"><img src="./Screenshots/hdrp_screenshot.png" alt="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR."></div>
+                <div class="carousel-cell"><img src="./Screenshots/keys_screenshot.png" alt="An assortment of keys, just one of the examples of in world interactions."></div>
             </div>
         </section>
 
         <div id="umbra-div">
             <section id="flex-parent-div" style="min-width: 320px;">
                 <div class="flex-full" style="padding: 0px 6%;">
-                    <p id="flickity-caption">
+                    <p id="flickity-caption" style="display: flex; text-align: center; height: 60px; align-items: center; justify-content: center;">
                         &nbsp;
                     </p>
                 </div>
@@ -238,12 +235,13 @@
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">
-                    <video id="umbra-trailer-vid"
-                            class="video-js vjs-theme-city vjs-big-play-centered vjs-fluid" 
+                    <video id="umbra-trailer-vid" class="video-js vjs-theme-city vjs-big-play-centered vjs-fluid" 
                             controls
+                            width="100%"
+                            height="100%"
                             preload="auto" 
                             poster="/assets/projects/umbra/Screenshots/umbra-vid-thumbnail.png"
-                            data-setup='{"aspectRatio":"16:9"}'>
+                            data-setup='{"aspectRatio":"16:9", "fluid":true}'>
                         <source src="umbra-trailer.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
