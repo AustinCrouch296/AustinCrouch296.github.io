@@ -116,7 +116,8 @@
 
         <div class="webgl-player">
             <div class="webgl-content">
-                    <div id="game-container">
+                <div id="gameContainer" style="width: 720px; height: 450px;">
+                    <div style="width: 720px; height: 450px; background-color: #8307F7; display: absolute;">
                         <div class="centered">
                             <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
                                 <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
@@ -126,14 +127,14 @@
                             </button>
                         </div>
                     </div>
-                <div class="footer">
+                </div>
+                <div class="footer-webgl" style="overflow:hidden">
                     <div class="webgl-logo"></div>
                     <div class="fullscreen" id="fullscreen-btn"></div>
                     <div class="title">VaporWorld</div>
                 </div>
             </div>
         </div>
-
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
@@ -190,8 +191,8 @@
         var gameInstance;
          
         function runUnityLoader() {
-          gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", {onProgress: UnityProgress});
-          document.getElementById("fullscreen-btn").onclick= function() { window.gameInstance.SetFullscreen(1); }
+            gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", {onProgress: UnityProgress});
+            document.getElementById("fullscreen-btn").onclick= function() { window.gameInstance.SetFullscreen(1); }
         }
       </script>
       <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
