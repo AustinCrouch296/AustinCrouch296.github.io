@@ -14,6 +14,7 @@
       <!--==================== FLICKITY CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
+      <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
       <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
@@ -159,7 +160,8 @@
         </div>
 
         <section id="flickity-container">
-            <div class="main-carousel" data-flickity>
+            <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+            <div class="main-carousel carousel" id="main-carousel" data-flickity>
                 <div class="carousel-cell"><img src="./Screenshots/photo1.jpg" alt="The community meeting up with one of the game's mascots Rockhopper."></div>
                 <div class="carousel-cell"><img src="./Screenshots/photo2.jpg" alt="Graphical redesign of fan favourite Cart Surfer."></div>
                 <div class="carousel-cell"><img src="./Screenshots/photo3.jpg" alt="UI design created to allow players to customise their clothing for the Penguin Play Awards event."></div>
@@ -258,9 +260,10 @@
       <script src="/assets/js/swiper-bundle.min.js"></script>
       <script src="/assets/js/object-fit-videos.js"></script>
       <!--==================== FLICKITY ====================-->
+      <script type="text/javascript" src="/assets/js/flickity.pkgd.min.js"></script>
+      <script type="text/javascript" src="/assets/js/flickity-fullscreen.js"></script>
       <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
       <script type="text/javascript" src="/assets/js/flickity-carousel-captions.js"></script>
-      <script src="/assets/js/app.js"></script>
       <script>
         $(document).ready(function(){       
         var scroll_start = 0;

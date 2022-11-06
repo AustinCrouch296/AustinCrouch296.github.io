@@ -148,6 +148,7 @@ https://flickity.metafizzy.co
   min-width: 20px;
   min-height: 20px;
   padding: 10px;
+  /* center images in cells with flexbox */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,4 +288,15 @@ https://flickity.metafizzy.co
 
 #umbra-div {
   margin: 15px auto;
+}
+
+.flickity-fullscreen-button {
+  z-index: 101;
+  position: relative;
+  float: right;
+  margin-left: -100px;
+}
+
+.flickity-fullscreen-button.active {
+  position: fixed;
 }

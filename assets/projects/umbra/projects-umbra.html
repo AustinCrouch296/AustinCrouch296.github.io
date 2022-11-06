@@ -14,6 +14,7 @@
       <!--==================== FLICKITY CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
+      <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
       <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
@@ -147,9 +148,10 @@
         </div>
 
         <section id="flickity-container">
-            <div class="main-carousel" data-flickity>
+            <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+            <div class="main-carousel" id="main-carousel" data-flickity>
                 <div class="carousel-cell"><img src="./Screenshots/room_screenshot.png" alt="The final look of the game including lighting, reflections, fog and post processing effects."></div>
-                <div class="carousel-cell"><img src="./Screenshots/fireplace_screenshot.png" alt="An example of how the lighting varies from room to room to set an eerie atmosphere."></div>
+                <div class="carousel-cell"><img src="./Screenshots/fireplace_screenshot.png" alt="An example of how the lighting varies between rooms to set an eerie atmosphere."></div>
                 <div class="carousel-cell"><img src="./Screenshots/comparison_screenshot.png" alt="A before-and-after shot showing the effects of the fog and post processing effects."></div>
                 <div class="carousel-cell"><img src="./Screenshots/hdrp_screenshot.png" alt="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR."></div>
                 <div class="carousel-cell"><img src="./Screenshots/keys_screenshot.png" alt="An assortment of keys, just one of the examples of in world interactions."></div>
@@ -158,7 +160,7 @@
 
         <div id="umbra-div">
             <section id="flex-parent-div" style="min-width: 320px;">
-                <div class="flex-full" style="padding: 0px 6%;">
+                <div class="flex-full" id="caption-parent-div" style="padding: 0px 6%;">
                     <p id="flickity-caption" style="display: flex; text-align: center; height: 60px; align-items: center; justify-content: center;">
                         &nbsp;
                     </p>
@@ -250,9 +252,10 @@
           const player = new Plyr('#player');
       </script>
       <!--==================== FLICKITY ====================-->
+      <script type="text/javascript" src="/assets/js/flickity.pkgd.min.js"></script>
+      <script type="text/javascript" src="/assets/js/flickity-fullscreen.js"></script>
       <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
       <script type="text/javascript" src="/assets/js/flickity-carousel-captions.js"></script>
-      <script src="/assets/js/app.js"></script>
       <script>
         $(document).ready(function(){       
         var scroll_start = 0;
