@@ -30,45 +30,40 @@
       <nav class="nav container">
           <a href="/index.html" class="nav__logo">Joe Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
-              <ul class="nav__list grid">
-                  <li class="nav__item">
-                      <a href="/index.html#home" class="nav__link active-link">
-                          <i class="uil uil-estate nav__icon"></i> Home
-                      </a>
-                  </li>
-                  <li class="nav__item">
-                      <a href="/index.html#about" class="nav__link">
-                          <i class="uil uil-user nav__icon"></i> About
-                      </a>
-                  </li>
-                  <li class="nav__item">
-                      <a href="/index.html#skills" class="nav__link">
-                          <i class="uil uil-file-alt nav__icon"></i> Skills
-                      </a>
-                  </li>
-                  <li class="nav__item">
-                      <a href="/index.html#services" class="nav__link">
-                          <i class="uil uil-briefcase-alt nav__icon"></i> Projects
-                      </a>
-                  </li>
-                  <li class="nav__item">
-                    <a href="/index.html#portfolio" class="nav__link">
-                        <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+            <ul class="nav__list grid">
+                <li class="nav__item">
+                    <a href="/index.html#home" class="nav__link active-link">
+                        <i class="uil uil-estate nav__icon"></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="/index.html#contact" class="nav__link">
-                        <i class="uil uil-estate nav__icon"></i> Contact Me
+                    <a href="/index.html#about" class="nav__link">
+                        <i class="uil uil-user nav__icon"></i> About
                     </a>
                 </li>
                 <li class="nav__item">
-                  <a href="/public/resume.html" target="_blank" class="nav__link">
-                        <i class="uil uil-file-alt nav__icon"></i> CV
+                    <a href="/index.html#services" class="nav__link">
+                        <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                    </a>
+                </li>
+                <li class="nav__item">
+                  <a href="/index.html#portfolio" class="nav__link">
+                      <i class="uil uil-scenery nav__icon"></i> 3D Modeling
                   </a>
               </li>
-              </ul>
-              <i class="uil uil-times nav__close" id="nav-close"></i>
-          </div>
+              <li class="nav__item">
+                  <a href="/index.html#contact" class="nav__link">
+                      <i class="uil uil-estate nav__icon"></i> Contact Me
+                  </a>
+              </li>
+              <li class="nav__item">
+                <a href="/public/resume.html" target="_blank" class="nav__link">
+                      <i class="uil uil-file-alt nav__icon"></i> CV
+                </a>
+            </li>
+            </ul>
+            <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
 
           <div class="nav__btns">
             <div class="nav__toggle" id="nav-toggle">
@@ -177,25 +172,20 @@
           <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
       </footer>
-  
-      <!--==================== SCROLL TOP ====================
-      <a href="" class="scrollup" id="scroll-up">
-          <i class="uil uil-arrow-up scroll__icon"></i>
-      </a>
-      -->
 
-      <!--==================== SWIPER JS ====================-->
-      <script src="/assets/js/swiper-bundle.min.js"></script>
-
-      <script>
+    <!--==================== SWIPER JS ====================-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <!--==================== MAIN JS ====================-->
+    <script src="/assets/js/main.js"></script>
+    <script>
         var gameInstance;
-         
+
         function runUnityLoader() {
-            gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", {onProgress: UnityProgress});
-            document.getElementById("fullscreen-btn").onclick= function() { window.gameInstance.SetFullscreen(1); }
+            gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", { onProgress: UnityProgress });
+            document.getElementById("fullscreen-btn").onclick = function () { window.gameInstance.SetFullscreen(1); }
         }
-      </script>
-      <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
+    </script>
+    <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
     </main>
   </body>
 </html>
