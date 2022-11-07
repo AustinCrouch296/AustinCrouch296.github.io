@@ -3,6 +3,8 @@ var $carousel = $('.main-carousel').flickity({
   wrapAround: "true", 
   cellAlign: "center",
   imagesLoaded: "true",
+  selectedAttraction: 0.2, 
+  friction: 0.8
 });
 
 function fsFlickity() {
