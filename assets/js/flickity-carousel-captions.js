@@ -1,4 +1,5 @@
 var caption_to_change = document.getElementById("flickity-caption");
+var caption_to_change2 = document.getElementById("flickity-fullscreen-caption");
 // Flickity instance
 var flkty = $carousel.data('flickity');
 
@@ -6,4 +7,5 @@ $carousel.on( 'select.flickity', function() {
   // set image caption using img's alt
   var caption = $(flkty.selectedElement).find('img').attr('alt')
   caption_to_change.innerHTML = caption;
+  caption_to_change2.innerHTML = caption;
 });

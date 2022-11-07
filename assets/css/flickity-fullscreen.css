@@ -7,7 +7,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: hsl(0 0% 0% / 90%);
+  background: black;
   padding-bottom: 35px;
   z-index: 100;
 }
@@ -34,7 +34,10 @@
   max-height: 100%;
   margin-left: 0px;
   margin-right: 0px;
-  height:100%;
+  height: 100%;
+  object-fit: cover;
+  background:hsla(0, 0%, 100%, 0.2);
+  padding: 1px;
 }
 
 
@@ -83,3 +86,20 @@ html.is-flickity-fullscreen {
   z-index:101;
   height: 100%;
 }*/
+
+#flickity-fullscreen-caption {
+  position: fixed;
+  z-index: 101;
+  text-align: center;
+  padding-bottom: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background: rgb(0, 0, 0, 0.5); 
+}
+
+
+#flickity-fullscreen-caption.inactive {
+  visibility: hidden;
+}
