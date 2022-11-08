@@ -139,10 +139,6 @@ body.cpr-theme{
     margin: 0;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
@@ -1471,6 +1467,39 @@ img{
     border-radius: 2em;
 }
 
+#home-hero-button {
+    height: auto;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 0;
+
+    background: transparent; 
+    border: 2px solid #9c9999 !important; 
+    color: #9c9999;
+}
+
+
+#home-hero-button:hover {
+    background: #9c9999;
+    color: black;
+}
+
+#home-hero-button:active {
+    background: #686464;
+    color: black;
+    border: 2px solid #686464 !important; 
+}
+
+
+#home-hero-button:focus {
+    outline: #686464 dotted 1px;
+}
+
+
 /********************************* MODAL STYLES *********************************/
 
 #display_modal1,
@@ -1653,6 +1682,19 @@ img{
     font-family:'object-fit: cover';
 }
 
+#hero-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
 #hero .texture {
     width: 100%;
     height: 100%;
@@ -1663,6 +1705,16 @@ img{
     background:url('/assets/img/video-overlay-texture.png');
 }
 
+#hero .color-overlay {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:15;
+    background-color: rgba(32,26,22,.7);
+}
+
 #hero .video-caption {
     position: relative;
     z-index: 20;
@@ -1670,9 +1722,24 @@ img{
 }
 
 #hero .video-caption h1 {
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 0.5rem;
 }
+
+#home-hero-caption1 {
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #9c9999;
+    margin-bottom: 20px;
+}
+
+#home-hero-caption2 {
+    font-size: 2em;
+    color: #fff;
+    line-height: 1.1em;
+    letter-spacing: 0px;
+}
+
 
 #hero .video-caption img {
     width: 50%;
@@ -1695,6 +1762,14 @@ img{
     #game-title {
         font-size: 1.75rem;
     }
+
+    #home-hero-caption1 {
+        font-size: 1em;
+    }
+    
+    #home-hero-caption2 {
+        font-size: 2.5rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1705,6 +1780,14 @@ img{
     #game-title {
         font-size: 2rem;
     }
+
+    #home-hero-caption1 {
+        font-size: 1.5em;
+    }
+    
+    #home-hero-caption2 {
+        font-size: 3rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1714,6 +1797,14 @@ img{
 
     #game-title {
         font-size: 2.5rem;
+    }
+
+    #home-hero-caption1 {
+        font-size: 2em;
+    }
+    
+    #home-hero-caption2 {
+        font-size: 4rem;
     }
 }
 
