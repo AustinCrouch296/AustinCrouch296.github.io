@@ -134,7 +134,7 @@
             <div class="video-caption" id="startchange">
                 <img id="vaporwave-logo" src="/assets/projects/vaporworld/vaporworld-logo.png" />
                     <button onclick="location.href='#play_game';" id="vaporcity-trailer-button" class="button">
-                        </svg> Run VaporCity.exe?
+                        </svg> Run VaporWorld.exe?
                         </button>
                     </button>
             </div>
@@ -199,37 +199,39 @@
         </p>
       </section>
 
-      <a class="anchor" id="play_game"></a>
-      <div id="umbra-div">
-        <section id="flex-parent-div" style="padding: 3rem 0 1rem 0;">
-            <div class="flex-full" style="padding: 0 15px; text-align:center;" >
-                <h1 id="game-title">Play VaporWorld</h1>
-            </div>
-        </section>
-      </div>
-
         <!--==================== WEBGL PLAYER ====================-->
-        <div class="webgl-player">
-            <div class="webgl-content">
-                <div id="gameContainer" style="width: 720px; height: 450px;">
-                    <div style="width: 720px; height: 450px; background-color: #8307F7; display: absolute;">
-                        <div class="centered">
-                            <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
-                                <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                                </svg> Run game
-                            </button>
+        <section id="webgl-section">
+            <a class="anchor" id="play_game"></a>
+            <div id="umbra-div">
+            <section id="flex-parent-div" style="padding: 3rem 0 1rem 0;">
+                <div class="flex-full" style="padding: 0 15px; text-align:center;" >
+                    <h1 id="game-title">Play VaporWorld</h1>
+                </div>
+            </section>
+            </div>
+
+            <div class="webgl-player">
+                <div class="webgl-content">
+                    <div id="gameContainer" style="width: 720px; height: 450px;">
+                        <div style="width: 720px; height: 450px; background-color: #8307F7; display: absolute;">
+                            <div class="centered">
+                                <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
+                                    <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg> Run game
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer-webgl" style="overflow:hidden">
-                    <div class="webgl-logo"></div>
-                    <div class="fullscreen" id="fullscreen-btn"></div>
-                    <div class="title">VaporWorld</div>
+                    <div class="footer-webgl" style="overflow:hidden">
+                        <div class="webgl-logo"></div>
+                        <div class="fullscreen" id="fullscreen-btn"></div>
+                        <div class="title">VaporWorld</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
@@ -276,6 +278,7 @@
     <!--==================== MAIN JS ====================-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
+    <script src="/assets/js/detect-mobile-browser.js"></script>
     <!--=============== MODALS ===============-->
     <script src="/assets/js/modal.js"></script>
     <!--==================== VIDEO PLAYER ====================-->
