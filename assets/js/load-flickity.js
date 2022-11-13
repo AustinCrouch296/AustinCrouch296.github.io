@@ -3,8 +3,6 @@ var $carousel = $('.main-carousel').flickity({
   wrapAround: "true", 
   cellAlign: "center",
   imagesLoaded: "true",
-  selectedAttraction: 0.2, 
-  friction: 0.8
 });
 
 function fsFlickity() {
@@ -21,3 +19,15 @@ function fsFlickity() {
   setTimeout(function() {
     $carousel.flickity('resize');}, 500);
 }
+
+//====================================
+
+$(document).ready(function(){
+
+  $(window).on('resize', function(){
+
+    if($(window).width() <= 768){
+      $carousel.flickity('resize');
+    }
+  });
+});

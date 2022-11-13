@@ -8,7 +8,9 @@ const onProgress = (event) => {
   } else {
     progressBar.classList.remove('hide');
     if (event.detail.totalProgress === 0) {
-      event.target.querySelector('.center-pre-prompt').classList.add('hide');
+      if (event.target.querySelector('.center-pre-prompt') != null) {
+        event.target.querySelector('.center-pre-prompt').classList.add('hide');
+      }
     }
   }
 };

@@ -136,7 +136,7 @@ model-viewer > #ar-prompt > img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: black;
+  background-color: transparent;
 }
 
 .loadModelBtn {

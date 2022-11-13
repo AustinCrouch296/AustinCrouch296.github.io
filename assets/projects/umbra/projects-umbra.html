@@ -7,7 +7,6 @@
       <!--==================== UNICONS ====================-->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="shortcut icon" href="TemplateData/favicon.ico">
       <!--==================== SWIPER CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
@@ -22,20 +21,6 @@
       <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
       <link rel="stylesheet" href="/assets/css/styles.css">
-      <link rel="stylesheet" href="TemplateData/style.css">
-      <style>
-        a:link, a:visited {
-            color: hsl(250, 8%, 90%);;
-        }
-
-        a:hover, a:active {
-            color: hsl(250, 69%, 61%);;
-        }
-
-        p {
-            padding-top: 5px;
-        }
-      </style>
   </head>
 
   <body class="dark-theme">
@@ -107,16 +92,11 @@
                     </button>
             </div>
         </div>
-
-        <hr style="background-color: hsl(250, 30%, 8%);; border: 0; height:5px;">
+        <hr id="hero-hr">
 
         <a class="anchor" id="main-section"></a>
 
         <div id="umbra-div">
-            <div style="padding: 15px 0;">
-                <hr>
-            </div>
-
             <section id="flex-parent-div" style="padding: 1rem 0;">
                 <div class="flex-full" style="padding: 0 15px; text-align:center;" >
                     <h1 id="game-title">An immersive VR Horror Game</h1>
@@ -141,15 +121,10 @@
                     <p>All results and research for this project can be found below in the linked PDF.</p>
                 </div>
             </section>
-
-            <div style="padding: 15px 0;">
-                <hr>
-            </div>
         </div>
 
         <section id="flickity-container">
             <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
-            <p id="flickity-fullscreen-caption" class="inactive">&nbsp;</p>
             <div class="main-carousel" id="main-carousel" data-flickity>
                 <div class="carousel-cell"><img src="./Screenshots/room_screenshot.png" alt="The final look of the game including lighting, reflections, fog and post processing effects."></div>
                 <div class="carousel-cell"><img src="./Screenshots/fireplace_screenshot.png" alt="An example of how the lighting varies between rooms to set an eerie atmosphere."></div>
@@ -157,21 +132,15 @@
                 <div class="carousel-cell"><img src="./Screenshots/hdrp_screenshot.png" alt="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR."></div>
                 <div class="carousel-cell"><img src="./Screenshots/keys_screenshot.png" alt="An assortment of keys, just one of the examples of in world interactions."></div>
             </div>
+            <div id="flickity-fullscreen-div">
+                <p id="flickity-fullscreen-caption" class="inactive">&nbsp;</p>
+            </div>
+            <p id="flickity-caption">
+                &nbsp;
+            </p>
         </section>
 
         <div id="umbra-div">
-            <section id="flex-parent-div" style="min-width: 320px;">
-                <div class="flex-full" id="caption-parent-div" style="padding: 0px 6%;">
-                    <p id="flickity-caption" style="display: flex; text-align: center; height: 60px; align-items: center; justify-content: center;">
-                        &nbsp;
-                    </p>
-                </div>
-            </section>
-
-            <div style="padding: 15px 0;">
-                <hr>
-            </div>
-
             <section id="flex-parent-div">
                 <div class="flex-full" style="padding: 0px 6%; text-align: center;">
                     <p style="font-size: 1.25em;" id="flickity-caption">
@@ -242,42 +211,23 @@
 
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
-      <script src="/assets/js/app.js"></script>
+      <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
       <!--=============== MODALS ===============-->
       <script src="/assets/js/modal.js"></script>
       <!--==================== SWIPER JS ====================-->
       <script src="/assets/js/swiper-bundle.min.js"></script>
-      <script src="/assets/js/object-fit-videos.js"></script>
       <!--==================== VIDEO PLAYER ====================-->
       <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
       <script>
           const player = new Plyr('#player');
       </script>
+      <script src="/assets/js/object-fit-videos.js"></script>
+      <script src="/assets/js/app.js"></script>
       <!--==================== FLICKITY ====================-->
       <script type="text/javascript" src="/assets/js/flickity.pkgd.min.js"></script>
       <script type="text/javascript" src="/assets/js/flickity-fullscreen.js"></script>
       <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
       <script type="text/javascript" src="/assets/js/flickity-carousel-captions.js"></script>
-      <script>
-        $(document).ready(function(){       
-        var scroll_start = 0;
-        var startchange = $('#startchange');
-        var offset = startchange.offset();
-        var header = document.querySelector('#header');
-
-        if (startchange.length){
-            $(document).scroll(function() { 
-                scroll_start = $(this).scrollTop();
-
-                if(scroll_start > offset.top - 40) {
-                    header.classList.add('nav-active');
-                } else {
-                    header.classList.remove('nav-active');
-                }
-            });
-        }
-        });
-      </script>
     </main>
   </body>
 </html>
