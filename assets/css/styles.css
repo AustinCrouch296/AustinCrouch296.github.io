@@ -1874,3 +1874,14 @@ a.anchor {
 p {
     padding-top: 5px;
 }
+
+#header { 
+    background-color: hsla(0, 0%, 0%, 0.25);
+    transition: background-color 400ms ease-in-out;
+}
+
+@media screen and (max-width: 767px){
+    #header { 
+        background-color: var(--body-color);
+    }    
+}
