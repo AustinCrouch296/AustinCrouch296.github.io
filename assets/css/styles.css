@@ -1626,7 +1626,7 @@ img{
 
 #hero {
     width:100%;
-    height: 80vh;
+    height: calc(100vh - 3rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1634,7 +1634,7 @@ img{
 
 #hero::after {
     width:100%;
-    height: 80vh;
+    height: calc(100vh - 3rem);
     content: '';
     z-index: 10;
     position: absolute;
@@ -1645,7 +1645,7 @@ img{
 
 #hero video {
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 3rem);
     position: absolute;
     top: 0;
     left: 0;
@@ -1656,7 +1656,7 @@ img{
 
 #hero-img {
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 3rem);
     position: absolute;
     top: 0;
     left: 0;
@@ -1669,7 +1669,7 @@ img{
 
 #hero .texture {
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 3rem);
     position:absolute;
     top:0;
     left:0;
@@ -1679,7 +1679,7 @@ img{
 
 #hero .color-overlay {
     width: 100%;
-    height: 80vh;
+    height: calc(100vh - 3rem);
     position:absolute;
     top:0;
     left:0;
@@ -1711,15 +1711,6 @@ img{
     max-width: 1500px;
     min-width: 400px;
     height: auto;
-}
-
-#hero.front-page-hero, 
-#hero.front-page-hero::after,
-#hero.front-page-hero video,
-#hero.front-page-hero #hero-img,
-#hero.front-page-hero .texture,
-#hero.front-page-hero .color-overlay {
-    height: calc(100vh - 3rem);
 }
 
 #game-title {
@@ -1893,12 +1884,12 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 }
 
 @media screen and (min-width: 768px) {
-    #hero.front-page-hero, 
-    #hero.front-page-hero::after,
-    #hero.front-page-hero video,
-    #hero.front-page-hero #hero-img,
-    #hero.front-page-hero .texture,
-    #hero.front-page-hero .color-overlay {
+    #hero, 
+    #hero::after,
+    #hero video,
+    #hero #hero-img,
+    #hero .texture,
+    #hero .color-overlay {
         height: 100vh;
     }
     
