@@ -1931,7 +1931,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 }
 
 
-.testimonial p {
+.text-block p {
     margin-bottom: var(--mb-0-75);
     padding-top: 0px;
 }
