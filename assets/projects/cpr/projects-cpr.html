@@ -21,6 +21,15 @@
       <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
       <link rel="stylesheet" href="/assets/css/styles.css">
+      <style>
+        .swiper-slide {
+            padding: 0 2rem;
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets{
+            bottom: -1.5rem;
+        }
+      </style>
   </head>
 
   <body class="cpr-theme">
@@ -74,6 +83,7 @@
 
     <!--==================== MAIN ====================-->
     <main>
+        <!--==================== HERO ====================-->
         <div id="hero">
             <div class="texture"></div>
             <video loop muted autoplay preload="auto">
@@ -82,7 +92,7 @@
             </video>
             <div class="video-caption" id="startchange">
                 <img src="/assets/projects/cpr/cpr-logo.png" />
-                    <button onclick="openModal('4');" id="trailer-button" class="button" style="background: #0078D1; border-color: #002E5E; box-shadow: inset 0px 0px 0px 3px #00b9ff, 0px 0px 0px 2px white;">
+                    <button onclick="openModal('4');" id="cpr-trailer-btn" class="button">
                         <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="10 8 16 12 10 16 10 8"></polygon>
@@ -93,35 +103,34 @@
         </div>
         <hr id="hero-hr">
 
+        <!--==================== CONTENT ====================-->
         <a class="anchor" id="main-section"></a>
 
         <div id="umbra-div">
-            <section id="flex-parent-div" style="padding: 1rem 0;">
-                <div class="flex-full" style="padding: 0 15px; text-align:center;" >
+            <section id="flex-parent-div">
+                <div class="flex-full" style="padding: 1rem 6%; text-align:center;" >
                     <h1 id="game-title">An MMO fanserver tailored to over 11,000,000 users.</h1>
                 </div>
             </section>
 
             <section style="min-width: 320px;">
                 
-                <div class="flex-full" style="padding: 15px 6%;">
-                    <p style="padding-top: 0px;">
+                <div class="flex-full testimonial" style="padding: 0 6% 1rem 6%;">
+                    <p>
                         This is where the description will go, and it will be immense. This will be one of the best descriptions ever crafted, akin to the writings of Socrates, Sun Tzu, and God. The lands will quake when it is read, and the sky will envelope the earth.</em>.
                     </p>
-                    <br/>
                     <p>
                         Here's an interesting story. I almost got a job at a zoo caring for penguins. Guess who the foreman went with? Only an exact duplicate of himself. Nepotism. Ended up giving me the WORST job, tending to the smelly humans at the zoo instead.
                     </p>
-                    <br/>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam consectetur, repellat vero nihil voluptatem provident blanditiis et illo incidunt velit temporibus obcaecati sapiente inventore sint totam. Ad beatae quam at.
                     </p>
-                    <br/>
                     <p>I hope you are as... proficient... with that sled as you are with that crowbar Mr. Freeman. I am quite... undefeated myself. *The G-Man places his breifcase down, and sits ontop of it, waiting for Gordon to race him*.</p>
                 </div>
             </section>
         </div>
 
+        <!--==================== IMAGE CAROUSEL ====================-->
         <section id="flickity-container">
             <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
             <div class="main-carousel carousel" id="main-carousel" data-flickity>
@@ -145,6 +154,179 @@
                 &nbsp;
             </p>
         </section>
+
+        <!--==================== ARTICLES/QUOTES SECTION ====================-->
+        <!--==================== ARTICLES ====================-->
+        <div id="umbra-div" style="padding-top: 1rem;">
+            <section id="flex-parent-div" style="min-width: 320px;">
+                
+                <div class="flex-third" style="padding: 0 0 15px 6%; font-size:var(--small-font-size);">
+                    <h1 id="game-title">ARTICLES</h1>
+
+                    <ul style="padding-top: 15px;">
+                        <li>
+                            &#x2022; Oct 29, 2017 – 
+                            <a href="http://culture.affinitymagazine.us/save-club-penguin-the-game-we-know-and-love/" target="_blank" rel="noopener noreferrer" title="Save Club Penguin: The Game We Know and Love" style="color:#0292bc;">Affinity Magazine</a>
+                        </li>
+                        <li>
+                            &#x2022; Aug 22, 2018 – 
+                            <a href="https://www.newstatesman.com/science-tech/2018/08/rebooted-club-penguin-giving-millennials-their-first-dose-digital" target="_blank" rel="noopener noreferrer" title="A rebooted Club Penguin is giving millennials their first dose of digital nostalgia" style="color:#0292bc;">New Statesman</a>
+                        </li>
+                        <li>
+                            &#x2022; Feb 7, 2019 – 
+                            <a href="https://kotaku.com/club-penguin-speedrunner-returns-after-two-years-to-fin-1832436044" target="_blank" rel="noopener noreferrer" title="Club Penguin Speedrunner Sets New Record In Fan Remake" style="color:#0292bc;">Kotaku</a>
+                        </li>
+                        <li>
+                            &#x2022; Apr 1, 2020 – 
+                            <a href="https://www.gamerevolution.com/guides/641585-is-club-penguin-back-in-2020" target="_blank" rel="noopener noreferrer" title="Is Club Penguin back in 2020?" style="color:#0292bc;">GameRevolution</a>
+                        </li>
+                        <li>
+                            &#x2022; Apr 3, 2020 – 
+                            <a href="https://www.capitalfm.com/news/club-penguin-online-rewritten-2020/" target="_blank" rel="noopener noreferrer" title="Club Penguin Is Back Online And The Number Of Users Are Overloading Its Servers" style="color:#0292bc;">Capital FM</a>
+                        </li>
+                        <li>
+                            &#x2022; Apr 3, 2020 – 
+                            <a href="https://www.nme.com/news/music/soccer-mommy-postpones-club-penguin-gig-because-fans-overloaded-the-servers-2640255" target="_blank" rel="noopener noreferrer" title="Soccer Mommy postpones Club Penguin gig because fans 'overloaded the servers" style="color:#0292bc;">NME</a>
+                        </li>
+                        <li>
+                            &#x2022; Apr 21, 2020 – 
+                            <a href="https://studybreaks.com/tvfilm/club-penguin-rewritten/" target="_blank" rel="noopener noreferrer" title="Your Favorite Childhood Game, Club Penguin, Is Making A Comeback" style="color:#0292bc;">Study Breaks Magazine</a>
+                        </li>
+                        <li>
+                            &#x2022; Oct 13, 2020 – 
+                            <a href="https://studybreaks.com/tvfilm/club-penguin/" target="_blank" rel="noopener noreferrer" title="Club Penguin In The Time Of COVID-19: Keep Calm And Waddle On" style="color:#0292bc;">Study Breaks Magazine</a>
+                        </li>
+                        <li>
+                            &#x2022; Mar 23, 2022 – 
+                            <a href="https://www.hollywoodreporter.com/news/general-news/club-penguin-sees-major-boost-student-users-coronavirus-quarantine-1285830/" target="_blank" rel="noopener noreferrer" title="Students Flock to 'Club Penguin' Amid Coronavirus Quarantine" style="color:#0292bc;">The Hollywood Reporter</a>
+                        </li>
+                    </ul>
+                </div>
+
+            <!--==================== QUOTES ====================-->
+            <section class="flex-two-third" style="padding: 0 6% 1.5rem 6%; overflow: hidden;">
+                <h1 id="game-title" style="text-align: center;">QUOTES</h1>
+
+                <div class="portfolio__container container swiper-container" style="padding-top: 15px;">
+                    <div class="swiper-wrapper">
+
+                        <!--======================== QUOTE 1 =============-->
+                        <div class="grid swiper-slide">
+                            <div class="content__centered portfolio__data testimonial">
+                                <p>
+                                    "Some particular fans decided that <em>'just because a company pulls a plug out of a game, doesn’t mean it has to die'</em>. 
+                                    These fans formed Club Penguin Rewritten (CPR), and set out to keep the game they loved alive. 
+                                    They rewrote the code for Club Penguin and created a replica of the game at its height, roughly around 2008. 
+                                    They launched their game on February 12, 2017, almost a month before the true Club Penguin shut down.
+                                </p>
+                                <p>
+                                    After the shutdown, CPR slowly but surely gained followers, reaching 100,000 accounts in the following April and a staggering 1,000,000 on October 4th, 2017. 
+                                    The company rallied behind this success, thrilled that fellow Club Penguin lovers could continue to play the game that reminded them so much of their childhoods."
+                                </p>
+                                <p>
+                                    <em>
+                                        <strong>Marcus Cooley</strong>
+                                        – 
+                                        <a href="http://culture.affinitymagazine.us/save-club-penguin-the-game-we-know-and-love/" target="_blank" rel="noopener noreferrer" title="Save Club Penguin: The Game We Know and Love" style="color:#0292bc;">
+                                            "Save Club Penguin: The Game We Know and Love"
+                                        </a>
+                                        , Affinity Magazine
+                                    </em>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--======================== QUOTE 2 =============-->
+                        <div class="grid swiper-slide">
+                            <div class="content__centered portfolio__data testimonial">
+                                <p>
+                                    "I spoke to one user, Katie, who echoes the positive experience described by the creators. 
+                                    Katie is 19, lives in St Louis, Missouri, and played Club Penguin as a kid, from around age eight. 
+                                    ( . . . )
+                                    She’s enjoyed using the Rewritten version, calling it 'very nostalgic and calming', and saying that there are actually some elements that make it better than the original, in particular, the fact that everyone is a “member” without having to pay.
+                                </p>
+                                <p>
+                                    Previously Club Penguin was sustained on paid memberships, which gave certain users special access that other users had to win coins (via in-app games) to even dream of getting. 
+                                    The absence of this is another plus. 'There’s no competing between people for items you can get or games you can play or anything like that,' Katie says. 
+                                    She feels this creates a less hostile environment, often inseparable from online multiplayer games."
+                                </p>
+                                <p style="margin-bottom: 0;">
+                                    <em>
+                                        <strong>Sarah Manavis</strong>
+                                        –
+                                        <a href="https://www.newstatesman.com/science-tech/2018/08/rebooted-club-penguin-giving-millennials-their-first-dose-digital" target="_blank" rel="noopener noreferrer" title="A rebooted Club Penguin is giving millennials their first dose of digital nostalgia" style="color:#0292bc;">
+                                            "A rebooted Club Penguin is giving millennials their first dose of digital nostalgia"
+                                        </a>
+                                        , New Statesman
+                                    </em>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--======================== QUOTE 3 =============-->
+                        <div class="grid swiper-slide">
+                            <div class="content__centered portfolio__data testimonial">
+                                <p>
+                                    College and high school students flock to revisit their childhood as well as help younger children experience the nostalgic landmark for the very first time. 
+                                    Club Penguin Rewritten is an online place where nostalgia and wonder collide to create normalcy in a COVID-19-ridden world.
+                                </p>
+                                <p>
+                                    ( . . . )
+                                </p>
+                                <p>
+                                    Club Penguin Rewritten is more than a nostalgic game for adults who want to revisit their childhood and bored children simply looking to fill a social void. 
+                                    Club Penguin Rewritten is now a monument to a community, encouraging safe behavior while showing how joy can be found even in the turbulence of isolation, reminding us all that we will eventually waddle on through life — together.
+                                </p>
+                                <p>
+                                    <em>
+                                        <strong>Summer Brotman</strong>
+                                        –
+                                        <a href="https://studybreaks.com/tvfilm/club-penguin/" target="_blank" rel="noopener noreferrer" title="Club Penguin In The Time Of COVID-19: Keep Calm And Waddle On" style="color:#0292bc;">
+                                            "Club Penguin In The Time Of COVID-19: Keep Calm And Waddle On"
+                                        </a>
+                                        , Study Breaks Magazine
+                                    </em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--============ Add Arrows =============-->
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <!--============ Add Pagination =============-->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+        </section>
+
+            <!--==================== CONTENT ====================-->
+        <a class="anchor" id="main-section"></a>
+
+        <div id="umbra-div">
+            <section id="flex-parent-div">
+                <div class="flex-full" style="padding: 1rem 6%; text-align:center;" >
+                    <h1 id="game-title">The Community Made A Real Change!</h1>
+                </div>
+            </section>
+
+            <section style="min-width: 320px;">
+                
+                <div class="flex-full testimonial" style="padding: 0 6% 1rem 6%;">
+                    <p>
+                        During my time on Rewritten, we had the opportunity to make real change with help from our community.    
+                    </p>
+                    <p>
+                        Every December, the original Club Penguin ran an event called Coins for Change. The event encouraged every player to donate their virtually earned in-game coins and have real money given to charities based on their virtual contribution. 
+                    </p>
+                    
+                </div>
+            </section>
+        </div>
     </main>
 
       <!--==================== FOOTER ====================-->
@@ -202,8 +384,11 @@
         </div>
     </div>
 
+      <!--==================== SWIPER JS ====================-->
+      <script src="/assets/js/swiper-bundle.min.js"></script>
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/cpr-swiper-init.js"></script>
       <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
       <!--=============== MODALS ===============-->
       <script src="/assets/js/modal.js"></script>
@@ -214,8 +399,6 @@
       </script>
       <script src="/assets/js/object-fit-videos.js"></script>
       <script src="/assets/js/app.js"></script>
-      <!--==================== SWIPER JS ====================-->
-      <script src="/assets/js/swiper-bundle.min.js"></script>
       <!--==================== FLICKITY ====================-->
       <script type="text/javascript" src="/assets/js/flickity.pkgd.min.js"></script>
       <script type="text/javascript" src="/assets/js/flickity-fullscreen.js"></script>

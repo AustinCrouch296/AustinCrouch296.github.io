@@ -792,6 +792,10 @@ img{
     padding-top: 0px;
 }
 
+.content__centered {
+    justify-self: center;
+}
+
 .portfolio__button:hover .button__icon{
     transform: translateX(.25rem);
 }
@@ -1624,6 +1628,11 @@ img{
     padding: 15px;
 }
 
+.flex-two-third {
+    flex: 1 1 calc(66%  - .5rem); 
+    padding: 15px;
+}
+
 #hero {
     width:100%;
     height: calc(100vh - 3rem);
@@ -1714,9 +1723,10 @@ img{
 }
 
 #game-title {
-    font-weight: 400;
     font-size: 1.5em;
     margin: 0;
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
 }
 
 @media screen and (min-width: 768px) {
@@ -1896,4 +1906,32 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     .ca3-scroll-down-link {
         margin-bottom: 0;
     }
+}
+
+#cpr-trailer-btn {
+    height: auto;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+    transition: border-radius 200ms linear;
+    cursor: pointer;
+
+    background: #0078D1;
+    border-color: #002E5E;
+    box-shadow: inset 0px 0px 0px 2px #00b9ff, 0px 0px 0px 2px white;
+    transition: border-color 0.2s;
+}
+
+#cpr-trailer-btn:hover {
+    transition: border-radius 200ms linear;
+    border-radius: 2em;
+}
+
+
+.testimonial p {
+    margin-bottom: var(--mb-0-75);
+    padding-top: 0px;
 }
