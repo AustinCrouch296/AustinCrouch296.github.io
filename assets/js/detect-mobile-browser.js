@@ -12,5 +12,6 @@ $(document).ready(function(){
 
         header_btn = document.querySelector('#vaporcity-trailer-button');
         header_btn.innerHTML = "Read VaporWorld.txt";
+        header_btn.setAttribute("onClick", "location.href='#main-section'");
     }
 });
