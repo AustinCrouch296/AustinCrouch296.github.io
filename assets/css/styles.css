@@ -1733,6 +1733,10 @@ img{
     #game-title {
         font-size: 1.75rem;
     }
+
+    #hero .video-caption {
+        margin-top: calc(var(--header-height)/2);
+    }
 }
 
 @media screen and (min-width: 1024px) {
