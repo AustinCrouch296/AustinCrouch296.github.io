@@ -28,6 +28,12 @@
             background: none;
         }
         
+        #trailer-button {
+            background: #904FE7; 
+            box-shadow: inset 0px 0px 0px 3px #B07FF2, 0px 0px 0px 2px #2E282A;
+            cursor: pointer;
+        }
+
         #trailer-button i {
             margin-left: 5px;
             rotate:90deg;
@@ -100,12 +106,10 @@
             </video>
             <div class="video-caption" id="startchange">
                 <img src="/assets/projects/smrpg/smrpg-logo.png" style="width: 60%; margin-top: -80px" />
-                <a href="#main-section">
-                    <button style="background: #904FE7; box-shadow: inset 0px 0px 0px 3px #B07FF2, 0px 0px 0px 2px #2E282A; cursor: pointer;" id="trailer-button" class="button">
-                        </svg> Learn More
-                        <i class="uil uil-star"></i>
-                    </button>
-                </a>
+                <button  onclick="openModal('4');" id="trailer-button" class="button">
+                    </svg> Watch Trailer
+                    <i class="uil uil-star"></i>
+                </button>
             </div>
         </div>
         <hr id="hero-hr">
@@ -197,10 +201,21 @@
                     </a>
                 </div>
             </div>
-
           <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
       </footer>
+
+      <div id="myModal4" class="modal-window">
+        <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
+        <div class="modal-window-content" id="img01">
+            <!-- <video> HTML element -->
+                <div class="video-holder-div centered-div">
+                    <video id="player" playsinline controls>
+                        <source src="smrpg-trailer.mp4" type="video/mp4" />
+                    </video>
+                </div>
+        </div>
+    </div>
 
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
