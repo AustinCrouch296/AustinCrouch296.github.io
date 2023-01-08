@@ -218,8 +218,8 @@
                     </div>
                     <div class="footer-webgl" style="overflow:hidden">
                         <div class="webgl-logo"></div>
-                        <div class="fullscreen" id="fullscreen-btn"></div>
-                        <div class="title">VaporWorld</div>
+                        <div class="fullscreen" id="fullscreen-btn" style="cursor:not-allowed;"></div>
+                        <div class="title" style="font-family: var(--body-font);">VaporWorld</div>
                     </div>
                 </div>
             </div>
@@ -294,6 +294,7 @@
         function runUnityLoader() {
             gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", { onProgress: UnityProgress });
             document.getElementById("fullscreen-btn").onclick = function () { window.gameInstance.SetFullscreen(1); }
+            document.getElementById("fullscreen-btn").style.cursor = "pointer";
         }
     </script>
     </main>

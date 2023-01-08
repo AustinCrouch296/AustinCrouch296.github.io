@@ -1461,6 +1461,8 @@ img{
     font-size: 120%;
     display: flex;
     align-items: center;
+    cursor:pointer;
+    font-family: var(--body-font);
 }
 
 #trailer-button {
