@@ -10,10 +10,11 @@ function fsFlickity() {
   carousel = document.getElementById("main-carousel");
   btn = document.getElementById("flickity-fullscreen-btn");
   fs_caption = document.getElementById("flickity-fullscreen-caption");
+  fs_caption_div = document.getElementById("flickity-fullscreen-div");
 
   carousel.classList.toggle('is-fullscreen');
   btn.classList.toggle('active');
-  fs_caption.classList.toggle('inactive');
+  fs_caption_div.classList.toggle('inactive');
   $carousel.flickity('resize');
 
   setTimeout(function() {

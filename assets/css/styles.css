@@ -1950,3 +1950,11 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     }
 }
 
+.tb-header {
+    padding: 1rem 6%;
+    text-align:center;
+}
+
+.tb-section {
+    padding: 0 6% 1rem 6%;
+}

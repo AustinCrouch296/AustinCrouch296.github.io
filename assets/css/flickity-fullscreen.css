@@ -127,7 +127,8 @@ html.is-flickity-fullscreen {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-#flickity-fullscreen-caption.inactive {
+#flickity-fullscreen-div.inactive {
   visibility: hidden;
+  display: none;
 }
 

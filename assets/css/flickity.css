@@ -215,7 +215,7 @@ https://flickity.metafizzy.co
 
 @media screen and (min-width: 0px) {
   #flickity-container,
-  #umbra-div {
+  .dynamic {
     max-width: 100%; 
   }
 
@@ -227,7 +227,7 @@ https://flickity.metafizzy.co
 @media screen and (min-width: 1010px) {
   #flickity-container, 
   #bio, 
-  #umbra-div {
+  .dynamic {
     max-width: 90%; 
   }
 
@@ -237,7 +237,8 @@ https://flickity.metafizzy.co
 }
 
 @media screen and (min-width: 1145px) {
-  #flickity-container, #umbra-div {
+  #flickity-container, 
+  .dynamic {
     max-width: 80%; 
   }
 
@@ -247,7 +248,8 @@ https://flickity.metafizzy.co
 }
 
 @media screen and (min-width: 1350px) {
-  #flickity-container, #umbra-div {
+  #flickity-container, 
+  .dynamic {
     max-width: 70%; 
   }
 
@@ -257,7 +259,8 @@ https://flickity.metafizzy.co
 }
 
 @media screen and (min-width: 1635px) {
-  #flickity-container, #umbra-div {
+  #flickity-container, 
+  .dynamic {
     max-width: 60%; 
   }
 
@@ -266,7 +269,8 @@ https://flickity.metafizzy.co
   }
 }
 
-#flickity-container, #umbra-div {
+#flickity-container, 
+.dynamic {
   margin: auto; 
   padding-top: 0px;
 }
@@ -289,7 +293,7 @@ https://flickity.metafizzy.co
   padding-top: 0px;
 }
 
-#umbra-div {
+.dynamic {
   margin: 15px auto;
 }
 
