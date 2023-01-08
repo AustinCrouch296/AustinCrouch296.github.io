@@ -31,49 +31,6 @@
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
       <link rel="stylesheet" href="/assets/css/styles.css">
       <link rel="stylesheet" href="TemplateData/style.css">
-      <style>
-        #vaporwave-logo {
-            animation: MoveUpDown 7s ease-in-out infinite;
-            margin-bottom: -50px;
-            }
-
-            @keyframes MoveUpDown {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-        
-        #vaporcity-trailer-button {
-            height: auto;
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            cursor: pointer; 
-            background: #8307F7; 
-            position: relative; 
-            outline: none; 
-            border: 1px solid black; 
-            border-radius: 0px; 
-            box-shadow: inset -2px -2px 3px black, inset 2px 2px 3px white; 
-            font-family: 'VT323', monospace; 
-            font-size: 2em;
-        }
-
-        #vaporcity-trailer-button:active {
-            box-shadow: inset -2px -2px 3px white, inset 2px 2px 3px black; 
-            top: 2px;
-            left: 2px;
-        }
-
-        #vaporcity-trailer-button:focus {
-            outline: 1px dotted white;
-            outline-offset: -10px;
-        }
-      </style>
   </head>
 
   <body class="dark-theme">
@@ -129,23 +86,25 @@
     <main>
         <div id="hero">
             <div class="texture"></div>
+            <a class="ca3-scroll-down-link ca3-scroll-down-arrow" onclick="location.href='#main-section';" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+            <img id="hero-img" src="./Screenshots/Screenshot_4.jpg" />
             <video loop muted autoplay preload="auto">
                 <source src="vaporworld-hero-temp.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="video-caption" id="startchange">
-                <img id="vaporwave-logo" src="/assets/projects/vaporworld/vaporworld-logo.png" />
-                    <button onclick="location.href='#play_game';" id="vaporcity-trailer-button" class="button">
-                        Play VaporWorld.exe?
-                    </button>
+                <h1>Abandoned Mall</h1>
+                <h3>A Work-In-Progress Map built in S&box.</h3>
             </div>
         </div>
         <hr id="hero-hr">
 
-        <div id="main-section" class="dynamic">
+        <a class="anchor" id="main-section"></a>
+
+        <div class="dynamic">
             <section id="flex-parent-div">
-                <div class="flex-full tb-header">
-                    <h1 id="game-title">Welcome to VaporWorld!</h1>
+                <div class="flex-full tb-header" >
+                    <h1 id="game-title">Learning how to build a level in the Source 2 Engine</h1>
                 </div>
             </section>
 
@@ -153,18 +112,23 @@
                 
                 <div class="flex-full text-block tb-section">
                     <p>
-                        VaporWorld was created as a project for my Interface Design class at Bournemouth University. The assignment was to create a functional game that has an easy-to-understand UI.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsa, recusandae minima culpa pariatur qui soluta, fugiat, suscipit voluptates incidunt quaerat asperiores? Porro eaque deleniti cupiditate omnis nisi molestias reiciendis?
                     </p>
                     <p>
-                        It is a Vaporwave-themed exploration game where the player tries to get as many collectibles before their health (time) runs out.
-                        The player's goal is to get a high score, which they can do by picking up collectibles and visiting each area, in as few steps as possible.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ea doloribus dolor accusantium laborum eum inventore libero facere tenetur repellendus ab. 
+                        Aliquam sequi exercitationem placeat unde numquam ipsum vel, minus culpa!
                     </p>
                     <p>
-                        The project created on Unity, with one of the project's constraints being that the character had to use NavMesh for movement.
-                        I created a C# script to allow for third-person movement by having the game detect if the location that the player tries to move towards is a valid NavMesh surface.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quasi reiciendis eligendi laborum dolorum asperiores sit sunt, odio inventore at. 
+                        Alias, libero odio amet sequi dolorum inventore. 
+                        Totam possimus sapiente ut?
                     </p>
                     <p>
-                        The game uses retro shaders to make the game look like a stylish 80's movie being watched on a CRT TV, as well as low-poly models, electronic music, and UI elements reminiscient of late 1990s web design to encapsulate the Vaporwave aesthetic.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Suscipit odio sunt eligendi magni in voluptas dolores, quasi voluptatibus. 
+                        Tenetur nisi, dolor laborum maxime corporis delectus consectetur libero aliquid fugit. Fugit!
                     </p>
                 </div>
             </section>
@@ -174,14 +138,10 @@
       <section id="flickity-container">
         <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
         <div class="main-carousel carousel" id="main-carousel" data-flickity>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.png" alt="The title screen for VaporWorld."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.png" alt="The UI contained counters for each collectible type, as well as the player's score, steps, health, and visited locations."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.png" alt="The Temple area contained the special power-up that allowed the player to choose to gamble for more score."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_4.png" alt="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_5.png" alt="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_6.png" alt="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_7.png" alt="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles."></div>
-            <div class="carousel-cell"><img src="./Screenshots/Screenshot_8.png" alt="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s."></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_1.jpg" alt="Lighting and texture test within the Source 2 engine."></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_2.jpg" alt="Basic block layout of the level's design, created for a zombie survival gamemode."></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_3.jpg" alt="Early lighting, texture and reflection testing (Not representative of final version)."></div>
+            <div class="carousel-cell"><img src="./Screenshots/Screenshot_4.jpg" alt="Early block layout of one of the restaurants."></div>
         </div>
         <div id="flickity-fullscreen-div" class="inactive">
             <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -190,40 +150,6 @@
             &nbsp;
         </p>
       </section>
-
-        <!--==================== WEBGL PLAYER ====================-->
-        <section id="webgl-section">
-            <a class="anchor" id="play_game"></a>
-            <div class="dynamic">
-            <section id="flex-parent-div" style="padding: 1rem 0 1rem 0;">
-                <div class="flex-full" style="padding: 0 15px; text-align:center;" >
-                    <h1 id="game-title">Play VaporWorld</h1>
-                </div>
-            </section>
-            </div>
-
-            <div class="webgl-player">
-                <div class="webgl-content">
-                    <div id="gameContainer" style="width: 720px; height: 450px;">
-                        <div style="width: 720px; height: 450px; background-color: #8307F7; display: absolute;">
-                            <div class="centered">
-                                <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
-                                    <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                                    </svg> Run game
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-webgl" style="overflow:hidden">
-                        <div class="webgl-logo"></div>
-                        <div class="fullscreen" id="fullscreen-btn"></div>
-                        <div class="title">VaporWorld</div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
@@ -287,15 +213,6 @@
     <script type="text/javascript" src="/assets/js/flickity-fullscreen.js"></script>
     <script type="text/javascript" src="/assets/js/load-flickity.js"></script>
     <script type="text/javascript" src="/assets/js/flickity-carousel-captions.js"></script>
-    <!--==================== GAME PLAYER ====================-->
-    <script>
-        var gameInstance;
-
-        function runUnityLoader() {
-            gameInstance = UnityLoader.instantiate("gameContainer", "Build/VaporworldDeployable.json", { onProgress: UnityProgress });
-            document.getElementById("fullscreen-btn").onclick = function () { window.gameInstance.SetFullscreen(1); }
-        }
-    </script>
     </main>
   </body>
 </html>
