@@ -23,14 +23,10 @@
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
       <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
-      <!--==================== UNITY WEBGL PLAYER ====================-->
-      <script src="TemplateData/UnityProgress.js"></script>
-      <script src="Build/UnityLoader.js"></script>
       <!--==================== CSS ====================-->
       <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
       <link rel="stylesheet" href="/assets/css/styles.css">
-      <link rel="stylesheet" href="TemplateData/style.css">
   </head>
 
   <body class="dark-theme">
@@ -86,12 +82,8 @@
     <main>
         <div id="hero">
             <div class="texture"></div>
-            <a class="ca3-scroll-down-link ca3-scroll-down-arrow" onclick="location.href='#main-section';" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+            <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" onclick="location.href='#main-section';" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
             <img id="hero-img" src="./Screenshots/Screenshot_4.jpg" />
-            <video loop muted autoplay preload="auto">
-                <source src="vaporworld-hero-temp.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
             <div class="video-caption" id="startchange">
                 <h1>Abandoned Mall</h1>
                 <h3>A Work-In-Progress Map built in S&box.</h3>
@@ -197,6 +189,7 @@
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
     <script src="/assets/js/detect-mobile-browser.js"></script>
+    <script src="/assets/js/hero_arrow.js"></script>
     <!--=============== MODALS ===============-->
     <script src="/assets/js/modal.js"></script>
     <!--==================== VIDEO PLAYER ====================-->
