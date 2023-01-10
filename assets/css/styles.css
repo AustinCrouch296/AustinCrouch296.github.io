@@ -1106,6 +1106,7 @@ img{
     }
 }
 
+/**
 @media screen and (min-width: 1100px) {
     .services__container{
         grid-template-columns: repeat(3, 350px);
@@ -1119,6 +1120,7 @@ img{
         justify-content: center;
     }
 }
+*/
 
 
 @media screen and (min-width: 768px) {
