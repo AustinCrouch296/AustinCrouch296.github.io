@@ -1985,12 +1985,8 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     padding: 0 6% 1rem 6%;
 }
 
-.tb-section-half-l {
-    padding: 0 3% 1rem 6%;
-}
-
-.tb-section-half-r {
-    padding: 0 6% 1rem 3%;
+.tb-section-half {
+    padding: 0 3%;
 }
 
 .text-block-ul  li {
