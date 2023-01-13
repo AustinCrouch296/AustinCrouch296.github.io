@@ -8,4 +8,4 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 
 # error 404 page:
 
-ErrorDocument 404 /not-found-page.html
+ErrorDocument 404 /404.html
