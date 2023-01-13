@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://joemarkschadwick.com/</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/resume</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/projects/cp-rewritten</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/projects/umbra</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/projects/vaporworld</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/projects/mario-rpg</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/projects/abandoned-mall</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/assets/pdf/Joe_Marks-Chadwick_Resume.pdf</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/dissertation</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://joemarkschadwick.com/assets/pdf/Joe_Marks-Chadwick_Dissertation.pdf</loc>
+  <lastmod>2023-01-13T04:05:09+00:00</lastmod>
+  <priority>0.00</priority>
+</url>
+
+
+</urlset>
