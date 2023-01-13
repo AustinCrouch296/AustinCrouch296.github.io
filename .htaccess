@@ -1,0 +1,6 @@
+# mod_rewrite if page does not incluse .html file extenstion
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
