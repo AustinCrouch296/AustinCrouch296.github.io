@@ -1602,14 +1602,14 @@ img{
     grid-column: span 2;
 }
 
-#flex-parent-div,
+.flex-parent-div,
 #flickity-container {
     max-width: 1500px;
     min-width: 320px;
 }
 
 @media screen and (max-width: 768px){
-    #flex-parent-div {
+    .flex-parent-div {
         display: auto;
         margin-left: auto; 
         margin-right: auto;
@@ -1618,7 +1618,7 @@ img{
 }
 
 @media screen and (min-width: 768px){
-    #flex-parent-div {
+    .flex-parent-div {
         display: flex;
         margin-left: auto; 
         margin-right: auto;
