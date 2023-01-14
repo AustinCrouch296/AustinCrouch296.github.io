@@ -68,7 +68,7 @@ model-viewer {
   transition: width 0.3s;
 }
 
-#ar-button {
+.ar-button {
   background-image: url(/assets/img/ar_icon.png);
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -111,7 +111,7 @@ model-viewer {
   to   { transform: translateX(-100px); }
 }
 
-model-viewer > #ar-prompt {
+model-viewer > .ar-prompt {
   position: absolute;
   left: 50%;
   bottom: 60px;
@@ -119,11 +119,11 @@ model-viewer > #ar-prompt {
   display: none;
 }
 
-model-viewer[ar-status="session-started"] > #ar-prompt {
+model-viewer[ar-status="session-started"] > .ar-prompt {
   display: block;
 }
 
-model-viewer > #ar-prompt > img {
+model-viewer > .ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
