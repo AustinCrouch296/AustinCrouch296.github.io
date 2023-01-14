@@ -22,13 +22,13 @@
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
-      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
       <!--==================== UNITY WEBGL PLAYER ====================-->
       <script src="TemplateData/UnityProgress.js"></script>
       <script src="Build/UnityLoader.js"></script>
       <!--==================== CSS ====================-->
       <title>VaporWorld — Joe Marks-Chadwick - Game Designer Portfolio</title>
-      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
       <link rel="stylesheet" href="/assets/css/styles.css">
       <link rel="stylesheet" href="TemplateData/style.css">
       <style>
@@ -138,7 +138,7 @@
                 Your browser does not support the video tag.
             </video>
             <div class="video-caption" id="startchange">
-                <img id="vaporwave-logo" src="/assets/img/vaporworld/vaporworld-logo.png" />
+                <img id="vaporwave-logo" src="/assets/img/vaporworld/vaporworld-logo.png" alt="VaporWorld Logo">
                     <button onclick="location.href='#play_game';" id="vaporcity-trailer-button" class="button">
                         Play VaporWorld.exe?
                     </button>
@@ -149,7 +149,7 @@
         <div id="main-section" class="dynamic">
             <div class="flex-parent-div">
                 <div class="flex-full tb-header">
-                    <h1 id="game-title">Welcome to VaporWorld!</h1>
+                    <h1 class="game-title">Welcome to VaporWorld!</h1>
                 </div>
             </div>
 
@@ -175,7 +175,7 @@
         </div>
 
 
-      <section id="flickity-container">
+      <div id="flickity-container">
         <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
         <div class="main-carousel carousel" id="main-carousel" data-flickity>
             <div class="carousel-cell"><img src="/assets/img/vaporworld/Screenshot_1.png" alt="The title screen for VaporWorld."></div>
@@ -193,7 +193,7 @@
         <p id="flickity-caption">
             &nbsp;
         </p>
-      </section>
+    </div>
 
         <!--==================== WEBGL PLAYER ====================-->
         <section id="webgl-section">
@@ -201,7 +201,7 @@
             <div class="dynamic">
                 <div class="flex-parent-div" style="padding: 1rem 0 1rem 0;">
                     <div class="flex-full" style="padding: 0 15px; text-align:center;" >
-                        <h1 id="game-title">Play VaporWorld</h1>
+                        <h1 class="game-title">Play VaporWorld</h1>
                     </div>
                 </div>
             </div>
@@ -209,10 +209,10 @@
             <div class="webgl-player">
                 <div class="webgl-content">
                     <div id="gameContainer" style="width: 720px; height: 450px;">
-                        <div style="width: 720px; height: 450px; background-color: #8307F7; display: absolute;">
+                        <div style="width: 720px; height: 450px; background-color: #8307F7; position: absolute;">
                             <div class="centered">
                                 <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
-                                    <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                                    <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
                                         <circle cx="12" cy="12" r="10"></circle>
                                         <polygon points="10 8 16 12 10 16 10 8"></polygon>
                                     </svg> Run game

@@ -18,10 +18,10 @@
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
-      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
       <!--==================== CSS ====================-->
       <title>Umbra — Joe Marks-Chadwick - Game Designer Portfolio</title>
-      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
       <link rel="stylesheet" href="/assets/css/styles.css">
       <style>
         #trailer-button {
@@ -33,7 +33,7 @@
 
   <body class="dark-theme">
     <!--==================== HEADER ====================-->
-    <header class="header" id="header" class="dark-theme">
+    <header class="header dark-theme" id="header">
       <nav class="nav container">
           <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
@@ -90,14 +90,13 @@
                 Your browser does not support the video tag.
             </video>
             <div class="video-caption" id="startchange">
-                <img src="/assets/img/umbra/umbra-logo.svg" style="min-width: 300px; max-width: 1000px;" />
+                <img src="/assets/img/umbra/umbra-logo.svg" style="min-width: 300px; max-width: 1000px;" alt="Umbra Logo">
                 <!--<h1 style="margin-bottom:.25em;">UMBRA</h1>-->
                     <button onclick="openModal('4');" id="trailer-button" class="button">
-                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="10 8 16 12 10 16 10 8"></polygon>
                         </svg> Watch the Trailer
-                        </button>
                     </button>
             </div>
         </div>
@@ -108,7 +107,7 @@
         <div class="dynamic">
             <div class="flex-parent-div">
                 <div class="flex-full tb-header" >
-                    <h1 id="game-title">An immersive VR Horror Game</h1>
+                    <h1 class="game-title">An immersive VR Horror Game</h1>
                 </div>
             </div>
 
@@ -117,7 +116,7 @@
                 <div class="flex-full text-block tb-section">
                     <p>
                         Umbra is a virtual reality (VR) atmospheric horror game created with to explore the game design challenges that make a game scary. 
-                        It was created as a university project for my dissertation project, <b><em>"Creating an Immersive Horror Puzzle Game in Virtual Reality"</b></em>.
+                        It was created as a university project for my dissertation project, <b><em>"Creating an Immersive Horror Puzzle Game in Virtual Reality"</em></b>.
                     </p>
                     <p>
                         Umbra takes place inside of an old abandoned house.
@@ -136,7 +135,7 @@
             </div>
         </div>
 
-        <section id="flickity-container">
+        <div id="flickity-container">
             <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
             <div class="main-carousel" id="main-carousel" data-flickity>
                 <div class="carousel-cell"><img src="/assets/img/umbra/room_screenshot.png" alt="The final look of the game including lighting, reflections, fog and post processing effects."></div>
@@ -151,12 +150,12 @@
             <p id="flickity-caption">
                 &nbsp;
             </p>
-        </section>
+        </div>
 
         <div class="dynamic">
             <div class="flex-parent-div">
                 <div class="flex-full tb-header">
-                    <h1 id="game-title" style="padding-bottom:1rem">Dissertation PDF</h1>
+                    <h1 class="game-title" style="padding-bottom:1rem">Dissertation PDF</h1>
                     <a href="/dissertation" target="_blank" class="button button--flex">
                         Open PDF <i class="uil uil-file-alt" style="padding-left:5px;"></i>
                     </a>
@@ -166,7 +165,7 @@
     </main>
 
       <!--==================== FOOTER ====================-->
-      <footer class="footer">
+    <footer class="footer">
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
@@ -205,40 +204,38 @@
 
           <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
-      </footer>
+    </footer>
 
-      <div id="myModal4" class="modal-window">
+    <div id="myModal4" class="modal-window">
         <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
-                <div class="video-holder-div centered-div">
-                    <video id="player" playsinline controls data-poster="/assets/img/umbra/umbra-vid-thumbnail.png">
-                        <source src="/assets/img/umbra/umbra-trailer.mp4" type="video/mp4" />
-                      </video>
-                </div>
+            <div class="video-holder-div centered-div">
+                <video id="player" playsinline controls data-poster="/assets/img/umbra/umbra-vid-thumbnail.png">
+                    <source src="/assets/img/umbra/umbra-trailer.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </div>
 
-      <!--==================== MAIN JS ====================-->
-      <script src="/assets/js/main.js"></script>
-      <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
-      <!--=============== MODALS ===============-->
-      <script src="/assets/js/modal.js"></script>
-      <!--==================== SWIPER JS ====================-->
-      <script src="/assets/js/swiper-bundle.min.js"></script>
-      <!--==================== VIDEO PLAYER ====================-->
-      <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
-      <script>
-          const player = new Plyr('#player');
-      </script>
-      <script src="/assets/js/object-fit-videos.js"></script>
-      <script src="/assets/js/app.js"></script>
-      <!--==================== FLICKITY ====================-->
-      <script src="/assets/js/flickity.pkgd.min.js"></script>
-      <script src="/assets/js/flickity-fullscreen.js"></script>
-      <script src="/assets/js/load-flickity.js"></script>
-      <script src="/assets/js/flickity-carousel-captions.js"></script>
-    </main>
+    <!--==================== MAIN JS ====================-->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
+    <!--=============== MODALS ===============-->
+    <script src="/assets/js/modal.js"></script>
+    <!--==================== SWIPER JS ====================-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <!--==================== VIDEO PLAYER ====================-->
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
+    <script src="/assets/js/object-fit-videos.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <!--==================== FLICKITY ====================-->
+    <script src="/assets/js/flickity.pkgd.min.js"></script>
+    <script src="/assets/js/flickity-fullscreen.js"></script>
+    <script src="/assets/js/load-flickity.js"></script>
+    <script src="/assets/js/flickity-carousel-captions.js"></script>
   </body>
 </html>

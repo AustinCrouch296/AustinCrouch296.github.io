@@ -19,10 +19,10 @@
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
-      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
       <!--==================== CSS ====================-->
       <title>Club Penguin Rewritten — Joe Marks-Chadwick - Game Designer Portfolio</title>
-      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
       <link rel="stylesheet" href="/assets/css/styles.css">
       <style>
         .swiper-slide {
@@ -38,7 +38,7 @@
 
   <body class="cpr-theme">
     <!--==================== HEADER ====================-->
-    <header class="header" id="header" class="dark-theme">
+    <header class="header dark-theme" id="header">
       <nav class="nav container">
           <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
@@ -95,13 +95,12 @@
                 Your browser does not support the video tag.
             </video>
             <div class="video-caption" id="startchange">
-                <img src="/assets/img/cprewritten/cpr-logo.png" />
+                <img src="/assets/img/cprewritten/cpr-logo.png" alt="Club Penguin Rewritten Logo">
                     <button onclick="openModal('4');" id="cpr-trailer-btn" class="button">
-                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="10 8 16 12 10 16 10 8"></polygon>
                         </svg> Watch the Trailer
-                        </button>
                     </button>
             </div>
         </div>
@@ -113,7 +112,7 @@
         <div class="dynamic">
             <div class="flex-parent-div">
                 <div class="flex-full tb-header" >
-                    <h1 id="game-title">An MMO fanserver tailored to over 11,000,000 users.</h1>
+                    <h1 class="game-title">An MMO fanserver tailored to over 11,000,000 users.</h1>
                 </div>
             </div>
 
@@ -139,7 +138,7 @@
 
             <div class="flex-parent-div">
                 <div class="flex-full tb-header" >
-                    <h1 id="game-title">Core Responsibilities</h1>
+                    <h1 class="game-title">Core Responsibilities</h1>
                 </div>
             </div>
 
@@ -170,7 +169,7 @@
         </div>
 
         <!--==================== IMAGE CAROUSEL ====================-->
-        <section id="flickity-container">
+        <div id="flickity-container">
             <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
             <div class="main-carousel carousel" id="main-carousel" data-flickity>
                 <div class="carousel-cell"><img src="/assets/img/cprewritten/community1.jpg" alt="The community meeting up with one of the game's mascots, Rockhopper."></div>
@@ -199,7 +198,7 @@
             <p id="flickity-caption">
                 &nbsp;
             </p>
-        </section>
+        </div>
 
         <!--==================== ARTICLES/QUOTES SECTION ====================-->
         <!--==================== ARTICLES ====================-->
@@ -207,7 +206,7 @@
             <div class="flex-parent-div">
                 
                 <div class="article__section flex-third">
-                    <h1 id="game-title">ARTICLES</h1>
+                    <h1 class="game-title">ARTICLES</h1>
                     <ul style="padding-top: 15px;">
                         <li>
                             &#x2022; Oct 29, 2017 – 
@@ -246,7 +245,7 @@
 
             <!--==================== QUOTES ====================-->
                 <section class="flex-two-third" style="padding: 1rem 6% 1.5rem 6%; overflow: hidden;">
-                    <h1 id="game-title" style="text-align: center;">QUOTES</h1>
+                    <h1 class="game-title" style="text-align: center;">QUOTES</h1>
 
                     <div class="portfolio__container container swiper-container" style="padding-top: 15px;">
                         <div class="swiper-wrapper">
@@ -350,7 +349,7 @@
         <div class="dynamic">
             <div class="flex-parent-div">
                 <div class="flex-full tb-header">
-                    <h1 id="game-title">The Community Made A Real Change!</h1>
+                    <h1 class="game-title">The Community Made A Real Change!</h1>
                     <h3>During my time on Rewritten, the community came together to make a positive impact in the world.</h3>
                 </div>
             </div>
@@ -432,7 +431,7 @@
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">
                     <video id="player" playsinline controls data-poster="/assets/img/cprewritten/cpr-vid-thumbnail.jpg">
-                        <source src="/assets/img/cprewritten/cpr-trailer.mp4" type="video/mp4" />
+                        <source src="/assets/img/cprewritten/cpr-trailer.mp4" type="video/mp4">
                     </video>
                 </div>
         </div>
@@ -458,6 +457,5 @@
       <script src="/assets/js/flickity-fullscreen.js"></script>
       <script src="/assets/js/load-flickity.js"></script>
       <script src="/assets/js/flickity-carousel-captions.js"></script>
-    </main>
   </body>
 </html>
