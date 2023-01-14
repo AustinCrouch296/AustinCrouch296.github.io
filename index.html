@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
         <!--=============== MODEL VIEWER SCRIPT ===============-->
         <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script> 
-        <link type="text/css" href="/assets/css/3dmodel-styles.css" rel="stylesheet"/>
+        <link type="text/css" href="/assets/css/3dmodel-styles.css" rel="stylesheet">
         <!--======================= CSS =======================-->
         <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
-        <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+        <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
         <link rel="stylesheet" href="/assets/css/styles.css">
 
         <style>
@@ -35,7 +35,7 @@
 
     <!--==================== HEADER ====================-->
     <body class="dark-theme">
-        <header class="header" id="header" class="dark-theme">
+        <header class="dark-theme header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">Joe Marks-Chadwick</a>
                 <div class="nav__menu" id="nav-menu">
@@ -89,7 +89,7 @@
                         <div id="hero">
                             <div class="color-overlay"></div>
                             <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" onclick="location.href='#about';" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
-                            <img id="hero-img" src="/assets/img/hero_temp.png">
+                            <img id="hero-img" src="/assets/img/hero_temp.png" alt="Banner image of a person programming on a laptop.">
                             <div class="video-caption" id="startchange" style="display:block">
                                 <h1>JOSEPH MARKS-CHADWICK</h1>
                                 <h2>Game Design Portfolio</h2>
@@ -490,11 +490,11 @@
 
                             <div class="contact__content">
                                 <label for="message-contact" class="contact__label">Message</label>
-                                <textarea cols="0" rows="7" id="message-contact" class="contact__input" name="Message"></textarea>
+                                <textarea cols="1" rows="7" id="message-contact" class="contact__input" name="Message"></textarea>
                             </div>
                             
                             <div>
-                                <button type="submit" style="border: 0px; background: transparent;">
+                                <button class="button button--flex" type="submit" style="border: 0px; background: transparent;">
                                     <a class="button button--flex">Send Message</a>
                                 </button>
                                     <i class="uil uil-message button__icon"></i>
@@ -533,11 +533,11 @@
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
 
-                        <a href="/#contact" class="footer__social"  class="footer__social">
+                        <a href="/#contact" class="footer__social">
                             <i class="uil uil-message"></i>
                         </a>
 
-                        <a href="/resume" class="footer__social" target="_blank"  class="footer__social">
+                        <a href="/resume" class="footer__social" target="_blank">
                             <i class="uil uil-file-alt"></i>
                         </a>
                     </div>
@@ -551,9 +551,9 @@
         <!--======== Modal 1 ========-->
         <div id="myModal1" class="modal-window">
             <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
-            <div class="modal-window-content" id="img01">
+            <div class="modal-window-content">
                 <!-- <model-viewer> HTML element -->
-                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model1/Horse.glb" alt="A 3D model of a running horse" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model1/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" skybox-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" exposure="1.5">
+                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model1/Horse.glb" alt="A 3D model of a running horse" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model1/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" skybox-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" exposure="1.5">
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
                     </div>
@@ -561,21 +561,21 @@
                         View in your space
                     </button>
                     <div id="ar-prompt">
-                        <img src="/assets/img/ar_hand_prompt.png">
+                        <img src="/assets/img/ar_hand_prompt.png" alt="">
                     </div>
-                    <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter1.png')"></div>
+                    <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter1.png')"></div>
                     <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
                 </model-viewer>
             </div>
-            <div id="modal-caption">This is Epona the 3D running horse.<br/>Is your horse running? Well, you better go catch it!</div>
+            <div class="modal-caption">This is Epona the 3D running horse.<br>Is your horse running? Well, you better go catch it!</div>
         </div>
 
         <!--======== Modal 2 ========-->
         <div id="myModal2" class="modal-window">
             <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
-            <div class="modal-window-content" id="img01">
+            <div class="modal-window-content">
                 <!-- <model-viewer> HTML element -->
-                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model2/alpha-blend-litmus.glb" alt="A 3D model of a monkey in a cube" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model2/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model2/pillars_1k.hdr" skybox-image="/assets/models/model2/pillars_1k.hdr">                                                                                                                                                                                   
+                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model2/alpha-blend-litmus.glb" alt="A 3D model of a monkey in a cube" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model2/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model2/pillars_1k.hdr" skybox-image="/assets/models/model2/pillars_1k.hdr">                                                                                                                                                                                   
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
                     </div>
@@ -583,21 +583,21 @@
                         View in your space
                     </button>
                     <div id="ar-prompt">
-                        <img src="/assets/img/ar_hand_prompt.png">
+                        <img src="/assets/img/ar_hand_prompt.png" alt="">
                     </div>
-                    <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter2.png')"></div>
+                    <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter2.png')"></div>
                     <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
                 </model-viewer>
             </div>
-            <div id="modal-caption">This is Paul, the monkey cube.<br/>Being boxed in for so long has drove him a little bananas.</div>
+            <div class="modal-caption">This is Paul, the monkey cube.<br>Being boxed in for so long has drove him a little bananas.</div>
         </div>
 
         <!--======== Modal 3 ========-->
         <div id="myModal3" class="modal-window">
             <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
-            <div class="modal-window-content" id="img01">
+            <div class="modal-window-content">
                 <!-- <model-viewer> HTML element -->
-                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
+                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
                     <div class="progress-bar hide" slot="progress-bar">
                         <div class="update-bar"></div>
                     </div>
@@ -605,13 +605,13 @@
                         View in your space
                     </button>
                     <div id="ar-prompt">
-                        <img src="/assets/img/ar_hand_prompt.png">
+                        <img src="/assets/img/ar_hand_prompt.png" alt="">
                     </div>
-                    <div id="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.png')"></div>
+                    <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.png')"></div>
                     <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
                 </model-viewer>
             </div>
-            <div id="modal-caption">This is Armstrong, the accountant.<br/>He just wears the spacesuit for fun!</div>
+            <div class="modal-caption">This is Armstrong, the accountant.<br>He just wears the spacesuit for fun!</div>
         </div>
 
         <!--==================== SWIPER JS ====================-->

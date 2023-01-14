@@ -127,7 +127,7 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
-#lazy-load-poster {
+.lazy-load-poster {
   position: absolute;
   left: 0;
   right: 0;
