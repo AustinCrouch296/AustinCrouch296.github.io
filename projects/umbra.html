@@ -12,6 +12,8 @@
       <!--==================== SWIPER CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+      <!--==================== FITTEXT ====================-->
+      <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
@@ -105,14 +107,13 @@
         <a class="anchor" id="main-section"></a>
 
         <div class="dynamic">
-            <div class="flex-parent-div">
+            <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header" >
-                    <h1 class="game-title">An immersive VR Horror Game</h1>
+                    <h1 id="main-summary-title" class="game-title">Umbra: Creating an immersive VR Horror and Puzzle game.</h1>
                 </div>
             </div>
 
-            <div class="flex-parent-div">
-                
+            <div class="flex-parent-div summary__description">
                 <div class="flex-full text-block tb-section">
                     <p>
                         Umbra is a virtual reality (VR) atmospheric horror game created with to explore the game design challenges that make a game scary. 
@@ -153,7 +154,7 @@
         </div>
 
         <div class="dynamic">
-            <div class="flex-parent-div">
+            <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header">
                     <h1 class="game-title" style="padding-bottom:1rem">Dissertation PDF</h1>
                     <a href="/dissertation" target="_blank" class="button button--flex">
@@ -232,6 +233,11 @@
     </script>
     <script src="/assets/js/object-fit-videos.js"></script>
     <script src="/assets/js/app.js"></script>
+    <!--==================== DYNAMIC PAGE SIZING ====================-->
+    <script>
+        window.fitText( document.getElementById("main-summary-title"), 3.0 );
+    </script>
+    <script src="/assets/js/dynamic-sizing.js"></script>
     <!--==================== FLICKITY ====================-->
     <script src="/assets/js/flickity.pkgd.min.js"></script>
     <script src="/assets/js/flickity-fullscreen.js"></script>

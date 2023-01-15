@@ -12,13 +12,10 @@ function fsFlickity() {
   fs_caption = document.getElementById("flickity-fullscreen-caption");
   fs_caption_div = document.getElementById("flickity-fullscreen-div");
 
-  carousel.classList.toggle('is-fullscreen');
+  $carousel.flickity('toggleFullscreen');
   btn.classList.toggle('active');
   fs_caption_div.classList.toggle('inactive');
   $carousel.flickity('resize');
-
-  setTimeout(function() {
-    $carousel.flickity('resize');}, 500);
 }
 
 //====================================
@@ -31,4 +28,11 @@ $(document).ready(function(){
       $carousel.flickity('resize');
     }
   });
+});
+
+//====================================
+
+// Flickity fullscreen on button click
+$carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+  fsFlickity();
 });

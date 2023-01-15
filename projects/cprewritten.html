@@ -13,6 +13,8 @@
       <!--==================== SWIPER CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+      <!--==================== FITTEXT ====================-->
+      <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
@@ -29,10 +31,27 @@
             padding: 0 2rem;
         }
 
-        .swiper-container-horizontal > .swiper-pagination-bullets{
-            bottom: -1.5rem;
+        .swiper-container-horizontal > .swiper-pagination-bullets {
+            bottom: -1rem;
         }
 
+        .swiper-button-prev{
+            left: -0.5rem;
+        }
+
+        .swiper-button-next{
+            right: -0.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .swiper-button-prev{
+                left: -1rem;
+            }
+            
+            .swiper-button-next {
+                right: -1rem;
+            }
+        }
       </style>
   </head>
 
@@ -110,14 +129,13 @@
         <a class="anchor" id="main-section"></a>
 
         <div class="dynamic">
-            <div class="flex-parent-div">
-                <div class="flex-full tb-header" >
-                    <h1 class="game-title">An MMO fanserver tailored to over 11,000,000 users.</h1>
+            <div class="flex-parent-div summary__title">
+                <div class="flex-full tb-header">
+                    <h1 id="main-summary-title" class="game-title">An MMO fanserver tailored to over 11,000,000 users.</h1>
                 </div>
             </div>
 
-            <div class="flex-parent-div">
-                
+            <div class="flex-parent-div summary__description">
                 <div class="flex-full text-block tb-section">
                     <p>
                         In 2005, Club Penguin opened its doors and set a new standard for children's MMOs. 
@@ -142,10 +160,10 @@
                 </div>
             </div>
 
-            <div class="flex-parent-div" style="padding: 0 3%;">
+            <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
                 
-                <div class="flex-half text-block tb-section-half">
-                    <ul class="text-block-ul" style="list-style: disc; margin-left: 2rem;">
+                <div class="flex-half text-block tb-section-half-l">
+                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
                         <li>
                             Conducted research and information gathering to troubleshoot and improve content quality for over 10 million registered users.
                         </li>
@@ -155,8 +173,8 @@
                     </ul>
                 </div>
 
-                <div class="flex-half text-block tb-section-half">
-                    <ul class="text-block-ul" style="list-style: disc; margin-left: 2rem;">
+                <div class="flex-half text-block tb-section-half-r">
+                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
                         <li>
                             Balanced and adjusted gameplay experiences to increase critical and commercial success of product.
                         </li>
@@ -203,7 +221,7 @@
         <!--==================== ARTICLES/QUOTES SECTION ====================-->
         <!--==================== ARTICLES ====================-->
         <div class="dynamic">
-            <div class="flex-parent-div">
+            <div class="flex-parent-div summary__description">
                 
                 <div class="article__section flex-third">
                     <h1 class="game-title">ARTICLES</h1>
@@ -244,10 +262,10 @@
                 </div>
 
             <!--==================== QUOTES ====================-->
-                <section class="flex-two-third" style="padding: 1rem 6% 1.5rem 6%; overflow: hidden;">
+                <section class="flex-two-third" style="overflow: hidden;">
                     <h1 class="game-title" style="text-align: center;">QUOTES</h1>
 
-                    <div class="portfolio__container container swiper-container" style="padding-top: 15px;">
+                    <div class="quotes_flickity portfolio__container swiper-container" style="padding-top: 15px;">
                         <div class="swiper-wrapper">
 
                             <!--======================== QUOTE 1 =============-->
@@ -282,7 +300,7 @@
                                     <p>
                                         "I spoke to one user, Katie, who echoes the positive experience described by the creators. 
                                         Katie is 19, lives in St Louis, Missouri, and played Club Penguin as a kid, from around age eight. 
-                                        ( . . . )
+                                        <span style="white-space:nowrap">( . . . )</span>
                                         She’s enjoyed using the Rewritten version, calling it 'very nostalgic and calming', and saying that there are actually some elements that make it better than the original, in particular, the fact that everyone is a “member” without having to pay.
                                     </p>
                                     <p>
@@ -308,10 +326,7 @@
                                 <div class="content__centered portfolio__data text-block">
                                     <p>
                                         College and high school students flock to revisit their childhood as well as help younger children experience the nostalgic landmark for the very first time. 
-                                        Club Penguin Rewritten is an online place where nostalgia and wonder collide to create normalcy in a COVID-19-ridden world.
-                                    </p>
-                                    <p>
-                                        ( . . . )
+                                        Club Penguin Rewritten is an online place where nostalgia and wonder collide to create normalcy in a COVID-19-ridden world. <span style="white-space:nowrap">( . . . )</span>
                                     </p>
                                     <p>
                                         Club Penguin Rewritten is more than a nostalgic game for adults who want to revisit their childhood and bored children simply looking to fill a social void. 
@@ -350,11 +365,11 @@
             <div class="flex-parent-div">
                 <div class="flex-full tb-header">
                     <h1 class="game-title">The Community Made A Real Change!</h1>
-                    <h3>During my time on Rewritten, the community came together to make a positive impact in the world.</h3>
+                    <h3 class="summary__description summary__title__h3">During my time on Rewritten, the community came together to make a positive impact in the world.</h3>
                 </div>
             </div>
 
-            <div class="flex-parent-div">
+            <div class="flex-parent-div summary__description">
                 
                 <div class="flex-full text-block tb-section">
                     <p>
@@ -452,6 +467,11 @@
       </script>
       <script src="/assets/js/object-fit-videos.js"></script>
       <script src="/assets/js/app.js"></script>
+      <!--==================== DYNAMIC PAGE SIZING ====================-->
+      <script>
+        window.fitText( document.getElementById("main-summary-title"), 2.6 );
+      </script>
+      <script src="/assets/js/dynamic-sizing.js"></script>
       <!--==================== FLICKITY ====================-->
       <script src="/assets/js/flickity.pkgd.min.js"></script>
       <script src="/assets/js/flickity-fullscreen.js"></script>

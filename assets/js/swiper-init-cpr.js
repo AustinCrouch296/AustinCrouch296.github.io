@@ -22,6 +22,7 @@ window.addEventListener('scroll', scrollActive);
 let swiper = new Swiper(".portfolio__container", {
     cssMode: true,
     loop: false,
+    slidesPerView:'auto',
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

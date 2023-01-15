@@ -16,6 +16,8 @@
       <!--==================== SWIPER CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+      <!--==================== FITTEXT ====================-->
+      <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <script src="/assets/js/flickity.pkgd.min.js"></script>
@@ -94,13 +96,13 @@
         <a class="anchor" id="main-section"></a>
 
         <div class="dynamic">
-            <div class="flex-parent-div">
+            <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header" >
-                    <h1 class="game-title">Learning how to build a level in the Source 2 Engine</h1>
+                    <h1 id="main-summary-title" class="game-title">Learning how to build a level in the Source 2 Engine</h1>
                 </div>
             </div>
 
-            <div class="flex-parent-div">
+            <div class="flex-parent-div summary__description">
                 <div class="flex-full text-block tb-section">
                     <p>
                         Abandoned Mall is my most recent personal project, it is a map created for a Zombie Survival game mode in the Source 2 engine. 
@@ -191,6 +193,11 @@
     </script>
     <script src="/assets/js/object-fit-videos.js"></script>
     <script src="/assets/js/app.js"></script>
+    <!--==================== DYNAMIC PAGE SIZING ====================-->
+    <script>
+    window.fitText( document.getElementById("main-summary-title"), 2.6 );
+    </script>
+    <script src="/assets/js/dynamic-sizing.js"></script>
     <!--==================== SWIPER JS ====================-->
     <script src="/assets/js/swiper-bundle.min.js"></script>
     <!--==================== FLICKITY ====================-->

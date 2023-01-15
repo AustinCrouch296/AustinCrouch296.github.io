@@ -1608,24 +1608,6 @@ img{
     min-width: 320px;
 }
 
-@media screen and (max-width: 768px){
-    .flex-parent-div {
-        display: auto;
-        margin-left: auto; 
-        margin-right: auto;
-        flex-flow: row wrap;
-    }
-}
-
-@media screen and (min-width: 768px){
-    .flex-parent-div {
-        display: flex;
-        margin-left: auto; 
-        margin-right: auto;
-        flex-flow: row wrap;
-    }
-}
-
 .flex-full {
     flex: 1 1 100%; 
     padding: 1rem;
@@ -1644,6 +1626,28 @@ img{
 .flex-two-third {
     flex: 1 1 calc(66%  - .5rem); 
     padding: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    .flex-parent-div {
+        display: auto;
+        margin-left: auto; 
+        margin-right: auto;
+        flex-flow: row wrap;
+    }
+
+    .flex-two-third {
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .flex-parent-div {
+        display: flex;
+        margin-left: auto; 
+        margin-right: auto;
+        flex-flow: row wrap;
+    }
 }
 
 #hero {
@@ -1851,6 +1855,11 @@ p {
     #about-section-title {
         display: none;
     }
+
+    .quotes_flickity {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
 }
 
 html body [data-ca3_iconfont="ETmodules"]::before {
@@ -1962,9 +1971,26 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 }
 
 .article__section {
-    padding: 1rem 0% 1rem 6%;
+    padding: 1rem 0;
     font-size:var(--small-font-size);
 }   
+
+.tb-header {
+    padding: 1rem 6%;
+    text-align:center;
+}
+
+.tb-section {
+    padding: 0 0 1rem 0;
+}
+
+.tb-section-half-l {
+    padding: 0 0.5rem 0 0;
+}
+
+.tb-section-half-r {
+    padding: 0 0 0 0.5rem;
+}
 
 @media screen and (max-width: 768px) {
     .article__section {
@@ -1974,22 +2000,41 @@ html body [data-ca3_iconfont="ETmodules"]::before {
         align-items: center;
         font-size:var(--normal-font-size);
     }
-}
 
-.tb-header {
-    padding: 1rem 6%;
-    text-align:center;
-}
+    .tb-section {
+        padding: 0 0 1rem 0;
+    }
 
-.tb-section {
-    padding: 0 6% 1rem 6%;
-}
+    .tb-section-half-l {
+        padding: 0;
+    }
 
-.tb-section-half {
-    padding: 0 3% 1rem 3%;
+    .tb-section-half-r {
+        padding: 0;
+    }
 }
 
 .text-block-ul  li {
     margin-bottom: var(--mb-0-75); 
     padding-top: 0px;
+}
+
+
+@media screen and (min-width: 768px){
+    .summary__description {
+        padding: 0 15px;
+    }
+
+    .summary__title div {
+        display: inline;
+    }
+}
+
+.summary__title__h3 {
+    padding: 0px;
+    display: inline-block;
+    text-align: justify;
+    text-align-last: center;
+    white-space: pre-line;
+    font-size: 100%;
 }
