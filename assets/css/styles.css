@@ -780,6 +780,7 @@ img{
 }
 
 .portfolio__img{
+    height: 100%;
     width: 265px;
     border-radius: .5rem;
     justify-self: center;
