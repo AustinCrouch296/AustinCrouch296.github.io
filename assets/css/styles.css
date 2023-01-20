@@ -1387,10 +1387,10 @@ img{
 
 .work-item-desc-container
 {
-	margin-top: 5px;
 	bottom: 0;
 	text-align: left;
 	display: inline-block;
+    margin-top: 5px;
 }
 
 .work-item-desc
@@ -1398,15 +1398,13 @@ img{
 	font-family: 'Quicksand', sans-serif;
 	color: white;
 	font-weight: 100;
-	font-size: 15px;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 .work-item-desc.date
 {
-    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: var(--small-font-size);
     color: hsl(0, 0%, 60%);
 }
 
