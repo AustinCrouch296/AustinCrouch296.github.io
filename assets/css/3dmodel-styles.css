@@ -140,7 +140,7 @@ model-viewer > .ar-prompt > img {
 }
 
 .loadModelBtn {
-  background-color: #000;
+  background-color: black;
   color: white;
   cursor: pointer;
   border-radius: 6px;
@@ -152,4 +152,5 @@ model-viewer > .ar-prompt > img {
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
 }

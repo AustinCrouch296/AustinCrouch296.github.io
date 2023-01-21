@@ -1146,7 +1146,7 @@ img{
     }
 
     .section__subtitle{
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 
     .header{
@@ -2068,7 +2068,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     flex: 0 0 calc(50% - 0.5rem); 
     margin: 0; 
     height:500px; 
-    background: var(--container-color);
+    background: #4630b0;
     display: block;
 }
 
