@@ -104,7 +104,8 @@ body.cpr-theme{
     --hue-color: 211;
 
     --first-color: #00b9ff;
-    --first-color-lighter: hsl(196.5, 100%, 70%);
+    --first-color-lighter: rgb(120, 214, 248);
+    --first-color-alt: #5ed0fa;
     --text-color-light: lightsteelblue;
     --first-color-second: #13212f;
     --title-color: #fff;
