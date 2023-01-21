@@ -19,7 +19,7 @@ model-viewer {
 
 @media (min-width: 0) {
   model-viewer {
-    width: 100vw; 
+    width: calc(100vw - 1rem); 
     height: 70vh;
     margin-left: auto;
     margin-right: auto;
@@ -140,10 +140,6 @@ model-viewer > .ar-prompt > img {
 }
 
 .loadModelBtn {
-  background-image: url("/assets/img/ic_get_app_white_24dp.svg");
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: 6% 50%;
   background-color: #000;
   color: white;
   cursor: pointer;
@@ -156,5 +152,4 @@ model-viewer > .ar-prompt > img {
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
-  z-index: 100;
 }

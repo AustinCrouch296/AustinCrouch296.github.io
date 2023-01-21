@@ -230,7 +230,7 @@
                                         <span>Jan. 2021 &mdash; Feb. 2021</span>
                                     </div>
                                     <div class="work-item-desc">
-                                        <span>A short collect-a-thon game with a simple and easy-to-understand UI.</span>
+                                        <span>A short collect-a-thon game made in Unity with a simple and easy-to-understand UI.</span>
                                     </div>
                                 </div>
                             </div>
@@ -366,73 +366,71 @@
                 </section>
             </section>
 
-
-             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio" style="margin-bottom: 2.5rem;">
+            <!--==================== PORTFOLIO / 3D MODELS ====================-->
+            <section class="portfolio section" id="portfolio">
                 <h2 class="section__title">3D Modeling</h2>
-                <span class="section__subtitle">Most Recent Work</span>
-
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
-
-                        <!--======================== PORTFOLIO 1 =============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="/assets/img/portfolio1.webp" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Running Horse</h3>
-                                <p class="portfolio__description">
-                                    This is an example 3D model from the &lt;modelviewer&gt; project.
-                                </p>
-                                <button onclick="openModal('1');" id="modal1" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </button>
+                <span class="section__subtitle">Models that I have recently created for use in my <a href="/projects/abandoned-mall" style="color: hsl(250, 15%, 90%);">Abandoned Mall</a> map.</span>
+                
+                <div>
+                    <div class="flex-parent-div dynamic" style="max-width: 1100px; justify-content: center; gap: 1rem">
+            
+                        <model-viewer id="modelviewer1" class="modelviewer" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/vending-machine/vending-machine.gltf" alt="A 3D model of a vending machine damaged with age." ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="1" autoplay camera-orbit="-65deg 75deg 2.147m" field-of-view="30deg" camera-target="-0.02m 0m 0m" exposure="1">
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
                             </div>
-                        </div>
-
-                        <!--======================== PORTFOLIO 2 =============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="/assets/img/portfolio2.webp" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Monkey Cube</h3>
-                                <p class="portfolio__description">
-                                    Another example model from &lt;modelviewer&gt;, this one is a monkey!
-                                </p>
-                                <button onclick="openModal('2');" id="modal2" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </button>
+                            <button slot="ar-button" class="ar-button">
+                                View in your space
+                            </button>
+                            <div class="ar-prompt">
+                                <img src="/assets/img/ar_hand_prompt.png" alt="">
                             </div>
-                        </div>
-
-                        <!--======================== PORTFOLIO 3 =============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="/assets/img/portfolio3.webp" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Astronaut</h3>
-                                <p class="portfolio__description">
-                                    This is another example model that I'm using to fill up 'space'.
-                                </p>
-                                <button onclick="openModal('3');" id="modal3" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </button>
+                            <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/vending-machine/poster-vending-machine.webp')"></div>
+                            <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
+                        </model-viewer>
+            
+            
+                        <model-viewer id="modelviewer2" class="modelviewer hidden" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/wooden-bench/bench.glb" alt="A 3D model of a wooden bench." ar ar-modes="webxr scene-viewer quick-look" shadow-intensity="1" autoplay exposure="1" camera-orbit="35deg 70deg 190.3m" field-of-view="30deg" camera-target="-0.000001907m 2.5m 1m">
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
                             </div>
+                            <button slot="ar-button" class="ar-button">
+                                View in your space
+                            </button>
+                            <div class="ar-prompt">
+                                <img src="/assets/img/ar_hand_prompt.png" alt="">
+                            </div>
+                            <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></div>
+                            <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
+                        </model-viewer>
+            
+            
+                        <!--<model-viewer id="modelviewer3" class="modelviewer hidden" camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                            <button slot="ar-button" class="ar-button">
+                                View in your space
+                            </button>
+                            <div class="ar-prompt">
+                                <img src="/assets/img/ar_hand_prompt.png" alt="">
+                            </div>
+                            <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.webp')"></div>
+                            <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
+                        </model-viewer>-->
+            
+            
+                        <div class="flex-parent-div flex-readjust-parent">
+                            <div onclick="selectModelViewer(1);" class="flex-readjust" style="background-image:url('/assets/models/vending-machine/poster-vending-machine.webp'); border-bottom-left-radius: 2rem;"></div>
+                            <div onclick="selectModelViewer(2);" class="flex-readjust" style="background-image:url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></div>
+                            <div                          class="flex-readjust" style="cursor: auto; background: transparent; border:0"></div>
                         </div>
                     </div>
-                    <!--============ Add Arrows =============-->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+            
+                    <div style="padding-top: 1rem;">
+                        <div id="modelviewer-caption1" class="modelviewer-caption">A well-worn vending machine, scratched and damaged with age.<br/>Made with Autodesk Maya and Adobe Substance 3D Painter and Photoshop.</div>
+                        <div id="modelviewer-caption2" class="modelviewer-caption hidden">A wooden bench with realistic proportions and geometry.<br/>Made with Autodesk Maya and Adobe Substance 3D Painter and Photoshop.</div>
+                        <!--<div id="modelviewer-caption3" class="modelviewer-caption hidden">This is Armstrong, the accountant.<br>He just wears the spacesuit for fun!</div>-->
                     </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                    <!--============ Add Pagination =============-->
-                    <div class="swiper-pagination"></div>
                 </div>
             </section>
 
@@ -545,73 +543,6 @@
                 <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
             </div>
         </footer>
-
-        <!--============ MODALS =======================-->
-        <!--======== Modal 1 ========-->
-        <div id="myModal1" class="modal-window">
-            <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
-            <div class="modal-window-content">
-                <!-- <model-viewer> HTML element -->
-                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model1/Horse.glb" alt="A 3D model of a running horse" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model1/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" skybox-image="/assets/models/model1/spruit_sunrise_1k_HDR.hdr" exposure="1.5">
-                    <div class="progress-bar hide" slot="progress-bar">
-                        <div class="update-bar"></div>
-                    </div>
-                    <button slot="ar-button" class="ar-button">
-                        View in your space
-                    </button>
-                    <div class="ar-prompt">
-                        <img src="/assets/img/ar_hand_prompt.png" alt="">
-                    </div>
-                    <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter1.webp')"></div>
-                    <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
-                </model-viewer>
-            </div>
-            <div class="modal-caption">This is Epona the 3D running horse.<br>Is your horse running? Well, you better go catch it!</div>
-        </div>
-
-        <!--======== Modal 2 ========-->
-        <div id="myModal2" class="modal-window">
-            <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
-            <div class="modal-window-content">
-                <!-- <model-viewer> HTML element -->
-                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model2/alpha-blend-litmus.glb" alt="A 3D model of a monkey in a cube" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model2/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model2/pillars_1k.hdr" skybox-image="/assets/models/model2/pillars_1k.hdr">                                                                                                                                                                                   
-                    <div class="progress-bar hide" slot="progress-bar">
-                        <div class="update-bar"></div>
-                    </div>
-                    <button slot="ar-button" class="ar-button">
-                        View in your space
-                    </button>
-                    <div class="ar-prompt">
-                        <img src="/assets/img/ar_hand_prompt.png" alt="">
-                    </div>
-                    <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter2.webp')"></div>
-                    <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
-                </model-viewer>
-            </div>
-            <div class="modal-caption">This is Paul, the monkey cube.<br>Being boxed in for so long has drove him a little bananas.</div>
-        </div>
-
-        <!--======== Modal 3 ========-->
-        <div id="myModal3" class="modal-window">
-            <span onclick="closeModal();" class="modalCloseBtn">&times;</span>
-            <div class="modal-window-content">
-                <!-- <model-viewer> HTML element -->
-                <model-viewer camera-controls touch-action="pan-y" reveal="manual" src="/assets/models/model3/Astronaut.glb" alt="A 3D model of an Astronaut" ar ar-modes="webxr scene-viewer quick-look" poster="/assets/models/model3/poster.webp" shadow-intensity="1" autoplay environment-image="/assets/models/model3/aircraft_workshop_01_1k.hdr" skybox-image="/assets/models/model3/aircraft_workshop_01_1k.hdr">
-                    <div class="progress-bar hide" slot="progress-bar">
-                        <div class="update-bar"></div>
-                    </div>
-                    <button slot="ar-button" class="ar-button">
-                        View in your space
-                    </button>
-                    <div class="ar-prompt">
-                        <img src="/assets/img/ar_hand_prompt.png" alt="">
-                    </div>
-                    <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.webp')"></div>
-                    <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
-                </model-viewer>
-            </div>
-            <div class="modal-caption">This is Armstrong, the accountant.<br>He just wears the spacesuit for fun!</div>
-        </div>
 
         <!--==================== SWIPER JS ====================-->
         <script src="/assets/js/swiper-bundle.min.js"></script>

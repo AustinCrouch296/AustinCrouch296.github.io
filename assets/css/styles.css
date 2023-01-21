@@ -195,7 +195,7 @@ img{
 }
 /*==================== LAYOUT ====================*/
 .container{
-    max-width: 768px;
+    max-width: 767px;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
 }
@@ -251,7 +251,7 @@ img{
     color: var(--first-color);
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .nav__menu{
         position: fixed;
         bottom: -100%;
@@ -1435,7 +1435,6 @@ img{
 	font-weight: 100;
 	font-size: 14px;
 	float: left;
-	background-color: #813772;
 	margin-right: 5px;
 	text-align: center;
 	border-radius: 4px;
@@ -1723,6 +1722,7 @@ img{
     color: #fff;
     line-height: 1.1em;
     letter-spacing: 0px;
+    text-shadow: rgb(0 0 0 / 40%) 0px 0px 15px;
 }
 
 #hero .video-caption h2 {
@@ -1846,7 +1846,7 @@ p {
     display: block;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     #header { 
         background-color: var(--body-color);
     }    
@@ -1914,7 +1914,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   100% { transform:translate(0,20px); opacity: 0; }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     #hero, 
     #hero::after,
     #hero video,
@@ -1991,7 +1991,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     padding: 0 0 0 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .article__section {
         padding: 1rem 6% 1rem 6%;
         display: flex;
@@ -2036,4 +2036,79 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     text-align-last: center;
     white-space: pre-line;
     font-size: 100%;
+}
+
+.flex-readjust-parent {
+    gap: 25px; 
+    margin: 0; 
+}
+
+.flex-readjust {
+    /*border: 2px solid white; */
+    border-radius: 2rem;
+    flex: 0 0 150px; 
+    height: 150px;
+    background-color: var(--first-color);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.flex-readjust:hover {
+    background: var(--first-color-alt);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modelviewer {
+    /*border: 2px solid white;*/
+    border-radius: 2rem;
+    flex: 0 0 calc(50% - 0.5rem); 
+    margin: 0; 
+    height:500px; 
+    background: var(--container-color);
+    display: block;
+}
+
+.modelviewer-caption {
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.modelviewer.hidden,
+.modelviewer-caption.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .flex-readjust-parent {
+        min-width: 150px; 
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .flex-readjust-parent {
+        display: flex;
+        gap: 0px; 
+        margin: 0 auto; 
+        min-width: auto; 
+        max-width: calc(100vw - 1rem); 
+    }
+    
+    .flex-readjust {
+        display: flex;
+        flex: 1 1;
+        border-radius: 0;
+    }
+
+    .modelviewer {
+        margin: 0 auto;
+        border-radius: 0;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
 }
