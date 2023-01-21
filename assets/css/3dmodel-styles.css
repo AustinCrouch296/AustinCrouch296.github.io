@@ -27,18 +27,6 @@ model-viewer {
   }
 }
 
-
-/* 2 */
-@media (min-width: 600px) and (orientation:landscape) {
-  model-viewer {
-    width: 85vw; 
-    height: 70vh;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black;
-  }
-}
-
 .progress-bar {
   display: block;
   width: 33%;
