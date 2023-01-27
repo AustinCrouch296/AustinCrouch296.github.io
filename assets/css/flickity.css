@@ -307,4 +307,5 @@ https://flickity.metafizzy.co
 .flickity-fullscreen-button.active {
   position: fixed;
   z-index: 101;
+  display: block;
 }

@@ -48,6 +48,18 @@
         #flickity-container {
             max-width: 838px;
         }
+
+        .gallery figure img {
+            max-width: 400px;
+        }        
+
+        .gallery figure figcaption {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            max-width: 400px;
+            height: 50px;
+        }
       </style>
   </head>
 
@@ -145,9 +157,40 @@
             </div>
         </div>
 
+        <div class="gallery">
+            <figure>
+                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/mario-rpg/screenshot_1.webp" alt="The player in the overworld.">
+                <figcaption>The player in the overworld.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/mario-rpg/screenshot_2.webp" alt="Encountering enemies in the caves.">
+                <figcaption>Encountering enemies in the caves.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/mario-rpg/screenshot_3.webp" alt="An example of the battle UI.">
+                <figcaption>An example of the battle UI.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/mario-rpg/screenshot_4.webp" alt="Princess Peach's castle from a scrapped version of the early game.">
+                <figcaption>Princess Peach's castle from a scrapped version of the early game.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story.">
+                <figcaption>A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(5); fsFlickity();" src="/assets/img/mario-rpg/screenshot_items.webp" alt="The item inventory system which can display consumable items, keys items and player gear.">
+                <figcaption>The item inventory system which can display consumable items, keys items and player gear.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(6); fsFlickity();" src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="The badge system, inspired by the Paper Mario games.">
+                <figcaption>The badge system, inspired by the Paper Mario games.</figcaption>
+            </figure>
+        </div>
+
         <div id="flickity-container">
-            <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
-            <div class="main-carousel" id="main-carousel" data-flickity>
+            <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+            <div class="main-carousel is-invisible" id="main-carousel" data-flickity>
                 <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_1.webp" alt="The player in the overworld."></div>
                 <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_2.webp" alt="Encountering enemies in the caves."></div>
                 <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_3.webp" alt="An example of the battle UI."></div>

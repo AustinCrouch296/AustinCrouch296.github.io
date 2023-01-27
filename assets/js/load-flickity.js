@@ -18,6 +18,10 @@ function fsFlickity() {
   $carousel.flickity('resize');
 }
 
+function fsFlickitySetImg(img_id) {
+  $carousel.flickity( 'select', img_id, false, true )
+}
+
 //====================================
 
 $(document).ready(function(){

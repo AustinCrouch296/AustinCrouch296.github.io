@@ -31,6 +31,26 @@
       <title>Abandoned Mall — Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
       <link rel="stylesheet" href="/assets/css/styles.css">
+      <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 500px);
+            padding-top: 0;
+        }  
+
+        @media screen and (max-width: 1000px) {
+            .gallery {
+                grid-template-columns: repeat(1, 500px);
+            }
+        }
+
+        .gallery figure figcaption {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 50px;
+        }
+      </style>
   </head>
 
   <body class="dark-theme">
@@ -122,9 +142,28 @@
             </div>
         </div>
 
+        <div class="gallery">
+            <figure>
+                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_1.webp" alt="Lighting and texture test within the Source 2 engine.">
+                <figcaption>Lighting and texture test within the Source 2 engine.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_2.webp" alt="Basic block layout of the level's design, created for a zombie survival gamemode.">
+                <figcaption>Basic block layout of the level's design, created for a zombie survival gamemode.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_3.webp" alt="Early lighting, texture and reflection testing (Not representative of final version).">
+                <figcaption>Early lighting, texture and reflection testing (Not representative of final version).</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Early block layout of one of the restaurants.">
+                <figcaption>Early block layout of one of the restaurants.</figcaption>
+            </figure>
+        </div>
+
       <div id="flickity-container">
-        <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
-        <div class="main-carousel carousel" id="main-carousel" data-flickity>
+        <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+        <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
             <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_1.webp" alt="Lighting and texture test within the Source 2 engine."></div>
             <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_2.webp" alt="Basic block layout of the level's design, created for a zombie survival gamemode."></div>
             <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_3.webp" alt="Early lighting, texture and reflection testing (Not representative of final version)."></div>

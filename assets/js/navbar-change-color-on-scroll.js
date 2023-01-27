@@ -4,6 +4,10 @@ var startchange = $('#startchange');
 var offset = startchange.offset();
 var header = document.querySelector('#header');
 
+if (document.documentElement.scrollTop > offset.top - 40) {
+    header.classList.add('nav-active');
+}
+
 if (startchange.length){
     $(document).scroll(function() { 
         scroll_start = $(this).scrollTop();

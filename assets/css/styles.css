@@ -1424,6 +1424,7 @@ img{
     align-items: center;
     cursor:pointer;
     font-family: var(--body-font);
+    outline: solid 1px white;
 }
 
 #trailer-button {
@@ -2091,4 +2092,37 @@ html body [data-ca3_iconfont="ETmodules"]::before {
         border-radius: 0;
         border-bottom-right-radius: 2rem;
     }
+}
+
+.gallery {
+    display:flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: baseline; 
+    gap: 16px; 
+    margin: 0 auto; 
+    padding: 2rem 0;
+}
+
+.gallery figure {
+    padding: 5px;
+}
+
+.gallery figure img {
+    width: 100%; 
+    max-width:500px; 
+    height: 300px;
+    object-fit:cover; 
+    cursor: pointer;
+}
+
+.gallery figure figcaption {
+    max-width:500px;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.is-invisible {
+    display: none;
 }
