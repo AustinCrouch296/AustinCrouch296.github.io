@@ -78,6 +78,36 @@
         #hero .video-caption img {
             min-width: 350px;
         }
+
+        .gallery {
+            align-items: stretch;
+            padding: 0 10vw;
+            gap: 3rem;
+        }
+
+        .gallery figure img {
+            object-fit: scale-down;
+        }
+
+        .gallery figure figcaption {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 450px;
+        }
+
+        #vaporworld-game {
+            width: 720px; 
+            height: 450px; 
+            position: absolute; 
+            background-image:
+            radial-gradient(circle, rgba(131,7,247,0.5) 0%, rgba(0,0,0,1) 100%),
+            url(/assets/img/vaporworld-game-poster.webp);
+        }
+
+        #vaporworld-game::after {
+            background-color: hsl(271,94.5%,49.8%)
+        }
       </style>
   </head>
 
@@ -176,12 +206,46 @@
             </div>
         </div>
 
+        <div class="gallery">
+            <figure>
+                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/vaporworld/screenshot_1.webp" alt="The title screen for VaporWorld.">
+                <figcaption>The title screen for VaporWorld.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/vaporworld/screenshot_2.webp" alt="The UI displayed each collectible type and the player's score, steps, health, and visited locations.">
+                <figcaption>The UI displayed each collectible type and the player's score, steps, health, and visited locations.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/vaporworld/screenshot_3.webp" alt="The Temple area contained the special power-up that allowed the player to choose to gamble for more score.">
+                <figcaption>The Temple area contained the special power-up that allowed the player to choose to gamble for more score.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/vaporworld/screenshot_4.webp" alt="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item.">
+                <figcaption>The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/vaporworld/screenshot_5.webp" alt="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song.">
+                <figcaption>When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(5); fsFlickity();" src="/assets/img/vaporworld/screenshot_6.webp" alt="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys.">
+                <figcaption>The Suburbs used low-poly assets, bright colors, and had collectible casette tapes hidden along the streets and in alleys.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(6); fsFlickity();" src="/assets/img/vaporworld/screenshot_7.webp" alt="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles.">
+                <figcaption>The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles.</figcaption>
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(7); fsFlickity();" src="/assets/img/vaporworld/screenshot_8.webp" alt="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s.">
+                <figcaption>The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s.</figcaption>
+            </figure>
+        </div>
 
       <div id="flickity-container">
-        <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
-        <div class="main-carousel carousel" id="main-carousel" data-flickity>
+        <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+        <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
             <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_1.webp" alt="The title screen for VaporWorld."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_2.webp" alt="The UI contained counters for each collectible type, as well as the player's score, steps, health, and visited locations."></div>
+            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_2.webp" alt="The UI displayed each collectible type and the player's score, steps, health, and visited locations."></div>
             <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_3.webp" alt="The Temple area contained the special power-up that allowed the player to choose to gamble for more score."></div>
             <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_4.webp" alt="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item."></div>
             <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_5.webp" alt="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song."></div>
@@ -197,81 +261,81 @@
         </p>
     </div>
 
-        <!--==================== WEBGL PLAYER ====================-->
-        <section id="webgl-section">
-            <a class="anchor" id="play_game"></a>
-            <div class="dynamic">
-                <div class="flex-parent-div" style="padding: 1rem 0 1rem 0;">
-                    <div class="flex-full" style="padding: 0 15px; text-align:center;" >
-                        <h1 class="game-title summary__title">Play VaporWorld</h1>
-                    </div>
+    <!--==================== WEBGL PLAYER ====================-->
+    <section id="webgl-section">
+        <a class="anchor" id="play_game"></a>
+        <div class="dynamic">
+            <div class="flex-parent-div" style="padding: 1rem 0 1rem 0;">
+                <div class="flex-full" style="padding: 0 15px; text-align:center;" >
+                    <h1 class="game-title summary__title">Play VaporWorld</h1>
                 </div>
             </div>
+        </div>
 
-            <div class="webgl-player">
-                <div class="webgl-content">
-                    <div id="gameContainer" style="width: 720px; height: 450px;">
-                        <div style="width: 720px; height: 450px; background-color: #8307F7; position: absolute;">
-                            <div class="centered">
-                                <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
-                                    <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                                    </svg> Run game
-                                </button>
-                            </div>
+        <div class="webgl-player">
+            <div class="webgl-content">
+                <div id="gameContainer" style="width: 720px; height: 450px;">
+                    <div id="vaporworld-game">
+                        <div class="centered">
+                            <button id="unity-load-button" onclick="runUnityLoader();" class="button load_iframe_btn">
+                                <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                </svg> Run game
+                            </button>
                         </div>
                     </div>
-                    <div class="footer-webgl" style="overflow:hidden">
-                        <div class="webgl-logo"></div>
-                        <div class="fullscreen" id="fullscreen-btn" style="cursor:not-allowed;"></div>
-                        <div class="title" style="font-family: var(--body-font);">VaporWorld</div>
-                    </div>
+                </div>
+                <div class="footer-webgl" style="overflow:hidden">
+                    <div class="webgl-logo"></div>
+                    <div class="fullscreen" id="fullscreen-btn" style="cursor:not-allowed;"></div>
+                    <div class="title" style="font-family: var(--body-font);">VaporWorld</div>
                 </div>
             </div>
-        </section>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
-                    <span class="footer__subtitle">Game Designer</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="/#services" class="footer__link">Projects</a>
-                    </li>
-
-                    <li>
-                        <a href="/#portfolio" class="footer__link">Portfolio</a>
-                    </li>
-
-                    <li>
-                        <a href="/#contact" class="footer__link">Contact Me</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joe-marks-chadwick-8b17ba116/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-
-                    <a href="/#contact" class="footer__social">
-                        <i class="uil uil-message"></i>
-                    </a>
-
-                    <a href="/resume" class="footer__social" target="_blank">
-                        <i class="uil uil-file-alt"></i>
-                    </a>
-                </div>
-            </div>
-
-          <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
-      </footer>
+    </section>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+    <div class="footer__bg">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                <span class="footer__subtitle">Game Designer</span>
+            </div>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="/#services" class="footer__link">Projects</a>
+                </li>
+
+                <li>
+                    <a href="/#portfolio" class="footer__link">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="/#contact" class="footer__link">Contact Me</a>
+                </li>
+            </ul>
+
+            <div class="footer__socials">
+                <a href="https://www.linkedin.com/in/joe-marks-chadwick-8b17ba116/" target="_blank" class="footer__social">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+
+                <a href="/#contact" class="footer__social">
+                    <i class="uil uil-message"></i>
+                </a>
+
+                <a href="/resume" class="footer__social" target="_blank">
+                    <i class="uil uil-file-alt"></i>
+                </a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
+    </div>
+    </footer>
 
     <!--==================== MAIN JS ====================-->
     <script src="/assets/js/main.js"></script>
