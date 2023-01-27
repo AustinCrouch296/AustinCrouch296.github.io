@@ -2102,7 +2102,7 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     align-items: baseline; 
     gap: 16px; 
     margin: 0 auto; 
-    padding: 2rem 0;
+    padding: 0;
 }
 
 .gallery figure {
