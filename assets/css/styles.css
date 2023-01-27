@@ -681,10 +681,12 @@ img{
     border-radius: .2rem;
 }
 /*==================== SERVICES ====================*/
-.services__container{
-    gap: 1.5rem;
-    grid-template-columns: repeat(1, 350px);
+.services__container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
 }
 
 .services__content{
@@ -1038,11 +1040,7 @@ img{
     .qualification__data{
         gap: .5rem;
     }
-
-    .services__container{
-        grid-template-columns: max-content;
-        justify-content: center;
-    }
+    
     .services__content{
         padding-right: 3.5rem;
     }
@@ -1053,23 +1051,6 @@ img{
     .project__img{
         width: 200px;
     }
-/*============= This is not implemented now ===============*/
-    /*.testimonial__data,*/
-    /*.testimonial__header{*/
-    /*    flex-direction: column;*/
-    /*    align-items: center;*/
-    /*}*/
-
-    /*.testimonial__img{*/
-    /*    margin-right: 0;*/
-    /*    margin-bottom: var(--mb-0-25);*/
-    /*}*/
-
-    /*.testimonial__data,*/
-    /*.testimonial__description{*/
-    /*    text-align: center;*/
-    /*}*/
-
 }
 
 /* For medium devices */
@@ -1103,30 +1084,6 @@ img{
 
 
 }
-
-@media screen and (min-width: 760px) {
-    .services__container{
-        grid-template-columns: repeat(2, 350px);
-        justify-content: center;
-    }
-}
-
-/**
-@media screen and (min-width: 1100px) {
-    .services__container{
-        grid-template-columns: repeat(3, 350px);
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width: 1475px) {
-    .services__container.four{
-        grid-template-columns: repeat(4, 350px);
-        justify-content: center;
-    }
-}
-*/
-
 
 @media screen and (min-width: 768px) {
     .container{
