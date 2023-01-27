@@ -476,34 +476,13 @@
         <!--==================== SWIPER JS ====================-->
         <script src="/assets/js/swiper-bundle.min.js"></script>
         <script src="/assets/js/swiper-init-main.js"></script>
-
         <!--=============== MODEL VIEWER SCRIPTS ===============-->
         <script src="/assets/js/3dmodel-script.js"></script> 
         <script type="module" src="/assets/js/model-viewer.min.js"></script>
-
         <!--==================== MAIN JS ====================-->
         <script src="/assets/js/main.js"></script>
         <script src="/assets/js/modal.js"></script>
         <script src="/assets/js/hero_arrow.js"></script>
-        <script>
-            $(document).ready(function(){       
-            var scroll_start = 0;
-            var startchange = $('#startchange');
-            var offset = startchange.offset();
-            var header = document.querySelector('#header');
-    
-            if (startchange.length){
-                $(document).scroll(function() { 
-                    scroll_start = $(this).scrollTop();
-    
-                    if(scroll_start > offset.top - 40) {
-                        header.classList.add('nav-active');
-                    } else {
-                        header.classList.remove('nav-active');
-                    }
-                });
-            }
-            });
-          </script>
+        <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
     </body>
 </html>
