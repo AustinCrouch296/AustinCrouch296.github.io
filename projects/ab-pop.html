@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game design portfolio of Joseph Marks-Chadwick.">
+    <meta name="keywords" content="Game Design, Game Designer, UI/UX Design, Player Retention, F2P, MMO, MMORPG, Live Updates, Unity, Flash Developer, Interface Design">
+
+
+      <!--==================== UNICONS ====================-->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <!--==================== SWIPER CSS ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+      <!--==================== FONT ====================-->
+      <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+      <!--==================== FITTEXT ====================-->
+      <script src="/assets/js/fittext.js"></script>
+      <!--==================== FLICKITY CSS ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <script src="/assets/js/flickity.pkgd.min.js"></script>
+      <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
+      <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
+      <!--==================== VIDEO PLAYER ====================-->
+      <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
+      <!--==================== CSS ====================-->
+      <title>Angry Birds POP! — Joe Marks-Chadwick - Game Designer Portfolio</title>
+      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
+      <link rel="stylesheet" href="/assets/css/styles.css">
+      <style>
+        .swiper-slide {
+            padding: 0 2rem;
+        }
+
+        .swiper-container-horizontal > .swiper-pagination-bullets {
+            bottom: -1rem;
+        }
+
+        .swiper-button-prev{
+            left: -0.5rem;
+        }
+
+        .swiper-button-next{
+            right: -0.5rem;
+        }
+
+        #flickity-fullscreen-caption {
+            display: none;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .swiper-button-prev{
+                left: -1rem;
+            }
+            
+            .swiper-button-next {
+                right: -1rem;
+            }
+        }
+
+        .marketing-button {
+            color: lightblue;
+            font-weight: bold;
+        }
+
+        .marketing-button:hover {
+            color: lightseagreen;
+        }
+
+        #abpop-logo {
+            display: inline-block;
+            animation: wiggle 2.5s infinite;
+        }
+
+        #abpop-logo:hover {
+            animation: none;
+        }
+
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            80% { transform: rotate(0deg); }
+            85% { transform: rotate(5deg); }
+            95% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+      </style>
+  </head>
+
+  <body class="abpop-theme">
+    <!--==================== HEADER ====================-->
+    <header class="header dark-theme" id="header">
+      <nav class="nav container">
+          <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list grid">
+                <li class="nav__item">
+                    <a href="/#home" class="nav__link active-link">
+                        <i class="uil uil-estate nav__icon"></i> Home
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/#about" class="nav__link">
+                        <i class="uil uil-user nav__icon"></i> About
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/#services" class="nav__link">
+                        <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                    </a>
+                </li>
+                <li class="nav__item">
+                  <a href="/#portfolio" class="nav__link">
+                      <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                  </a>
+              </li>
+              <li class="nav__item">
+                  <a href="/#contact" class="nav__link">
+                      <i class="uil uil-estate nav__icon"></i> Contact Me
+                  </a>
+              </li>
+              <li class="nav__item">
+                <a href="/resume" target="_blank" class="nav__link">
+                      <i class="uil uil-file-alt nav__icon"></i> CV
+                </a>
+            </li>
+            </ul>
+            <i class="uil uil-times nav__close" id="nav-close"></i>
+        </div>
+        
+          <div class="nav__btns">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="uil uil-apps"></i>
+            </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main>
+        <!--==================== HERO ====================-->
+        <div id="hero">
+            <div class="texture"></div>
+            <video loop muted autoplay preload="auto">
+                <source src="/assets/img/ab-pop/abpop-trailer.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <img id="hero-img" src="/assets/img/ab-pop/abpop-hero.webp" alt="Banner image of the Angry Birds POP! logo with Red and Stella.">
+            <div class="video-caption" id="startchange">
+                <img id="abpop-logo" src="/assets/img/ab-pop/abpop-logo.webp" alt="Angry Birds POP! Logo">
+                    <button onclick="openModal('4');" id="abpop-trailer-btn" class="button" style="font-family: 'Bubblegum Sans';">
+                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg> Watch the Trailer!
+                    </button>
+            </div>
+        </div>
+        <hr id="hero-hr">
+
+        <!--==================== CONTENT ====================-->
+        <a class="anchor" id="main-section"></a>
+
+        <div class="dynamic">
+            <div class="flex-parent-div summary__title">
+                <div class="flex-full tb-header">
+                    <h1 id="main-summary-title" class="game-title">Angry Birds meets bubble shooter in a super-addictive puzzle game.</h1>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <p>
+                        AB Pop Paragraph 1
+                    </p>
+                    <p>
+                        AB Pop Paragraph 2
+                    </p>
+                    <p>
+                        Angry Birds POP! is available for download on the 
+                        <a class="marketing-button" target="_blank" href="https://apps.apple.com/us/app/angry-birds-pop/id937718942"><i class="uil uil-apple"></i> App Store</a>,
+                        <a class="marketing-button" target="_blank" href="https://play.google.com/store/apps/details?id=com.rovio.ABstellapop"><i class="uil uil-google-play"></i> Google Play Store</a>, or
+                        <a class="marketing-button" target="_blank" href="https://www.amazon.co.uk/Angry-Birds-POP-Bubble-Shooter/dp/B01701RAY0"><i class="uil uil-amazon"></i> Amazon.com</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header" >
+                    <h1 class="game-title"> Match and pop billions of bubbles!</h1>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
+                
+                <div class="flex-half text-block tb-section-half-l">
+                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
+                        <li>
+                            Conducted research and information gathering to troubleshoot and improve content quality for over 10 million registered users.
+                        </li>
+                        <li>
+                            Managed all of the tasks pertaining to weekly content updates.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-half text-block tb-section-half-r">
+                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
+                        <li>
+                            Balanced and adjusted gameplay experiences to increase critical and commercial success of product.
+                        </li>
+                        <li>
+                            Engaged with large userbase to gather feedback within the community and implement new ideas in an efficient and effective way.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--==================== IMAGE CAROUSEL ====================-->
+        <div class="gallery">
+            <figure>
+                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/ab-pop/screenshot_1.webp">
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/ab-pop/screenshot_2.webp">
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/ab-pop/screenshot_3.webp">
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/ab-pop/screenshot_4.webp">
+            </figure>
+            <figure>
+                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/ab-pop/screenshot_5.webp">
+            </figure>
+        </div>
+
+      <div id="flickity-container">
+        <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+        <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_1.webp"></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_2.webp"></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_3.webp"></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_4.webp"></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_5.webp"></div>
+        </div>
+        <div id="flickity-fullscreen-div" class="inactive">
+            <p id="flickity-fullscreen-caption">&nbsp;</p>
+        </div>
+        <p id="flickity-caption">
+            &nbsp;
+        </p>
+    </div>
+    </main>
+
+      <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                    <span class="footer__subtitle">Game Designer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="/#services" class="footer__link">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="/#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+
+                    <li>
+                        <a href="/#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick-8b17ba116/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+
+                    <a href="/#contact" class="footer__social">
+                        <i class="uil uil-message"></i>
+                    </a>
+
+                    <a href="/resume" class="footer__social" target="_blank">
+                        <i class="uil uil-file-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+          <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="myModal4" class="modal-window">
+        <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
+        <div class="modal-window-content" id="img01">
+            <!-- <video> HTML element -->
+                <div class="video-holder-div centered-div">
+                    <video id="player" playsinline controls data-poster="/assets/img/ab-pop/abpop-vid-thumbnail.webp">
+                        <source src="/assets/img/ab-pop/abpop-trailer.webm" type="video/webm">
+                    </video>
+                </div>
+        </div>
+    </div>
+
+      <!--==================== SWIPER JS ====================-->
+      <script src="/assets/js/swiper-bundle.min.js"></script>
+      <!--==================== MAIN JS ====================-->
+      <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/swiper-init-cpr.js"></script>
+      <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
+      <!--=============== MODALS ===============-->
+      <script src="/assets/js/modal.js"></script>
+      <!--==================== VIDEO PLAYER ====================-->
+      <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+      <script>
+          const player = new Plyr('#player');
+      </script>
+      <script src="/assets/js/object-fit-videos.js"></script>
+      <script src="/assets/js/app.js"></script>
+      <!--==================== DYNAMIC PAGE SIZING ====================-->
+      <script>
+        window.fitText( document.getElementById("main-summary-title"), 2.6 );
+      </script>
+      <script src="/assets/js/dynamic-sizing.js"></script>
+      <!--==================== FLICKITY ====================-->
+      <script src="/assets/js/flickity.pkgd.min.js"></script>
+      <script src="/assets/js/flickity-fullscreen.js"></script>
+      <script src="/assets/js/load-flickity.js"></script>
+      <script src="/assets/js/flickity-carousel-captions.js"></script>
+  </body>
+</html>

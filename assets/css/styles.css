@@ -91,10 +91,10 @@ body.umbra-theme{
     --title-color: #fff;
     --text-color: #fff;
     --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: #252323;
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 68%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 46%);
+    --body-color: #252323;
     background-color: #252323;
     width: 100%;
 }
@@ -111,10 +111,30 @@ body.cpr-theme{
     --title-color: #fff;
     --text-color: #fff;
     --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: #172c42;
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 68%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 46%);
+    --body-color: #172c42;
+    background-color: #172c42;
+    width: 100%;
+}
+
+body.abpop-theme{
+    /* HSL color mode */
+    --hue-color: 211;
+    /*Can potentially use #32ACDA*/
+    --first-color: #00b9ff;
+    --first-color-lighter: rgb(120, 214, 248);
+    --first-color-alt: #5ed0fa;
+    --text-color-light: lightsteelblue;
+    --first-color-second: #13212f;
+    --title-color: #fff;
+    --text-color: #fff;
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 68%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 46%);
+    --body-color: #172c42;
     background-color: #172c42;
     width: 100%;
 }
@@ -1366,6 +1386,18 @@ img{
     color: hsl(0, 0%, 60%);
 }
 
+.work-item-title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+
+.work-item-date {
+    font-weight: bold;
+    font-size: var(--small-font-size);
+    color: hsl(0, 0%, 60%);
+}
+
 .work-item-contrib-cell
 {
 	padding-right: 5px;
@@ -1378,7 +1410,7 @@ img{
 
 .work-item-tags-container
 {
-	margin-top: 15px;
+	margin-top: 5px;
 	width: 100%;
 	text-align: left;
 	overflow: hidden;
@@ -1921,6 +1953,27 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 #cpr-trailer-btn:hover {
     transition: border-radius 200ms linear;
     border-radius: 2rem;
+}
+
+#abpop-trailer-btn {
+    height: auto;
+    font-size: 120%;
+    display: flex;
+    align-items: center;  
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: 0px;
+    background: rgb(224,116,0);
+    background: linear-gradient(0deg, rgba(224,116,0,1) 0%, rgba(224,116,0,1) 50%, rgba(240,169,3,1) 50%, rgba(240,169,3,1) 100%); 
+    box-shadow: 0px 0px 0px 3px #fff;
+    transition: background-color 0.5s;
+    border-radius: 2rem;
+}
+
+#abpop-trailer-btn:hover {
+    background: rgb(196,101,0);
+    background: linear-gradient(0deg, rgba(196,101,0,1) 0%, rgba(196,101,0,1) 50%, rgba(214,151,4,1) 50%, rgba(214,151,4,1) 100%); 
 }
 
 .text-block p {
