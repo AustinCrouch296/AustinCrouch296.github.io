@@ -1811,6 +1811,21 @@ a.anchor {
     padding-top: 0px;
 }
 
+#home-about-bio li {
+    margin-left: 3rem;
+    letter-spacing:0.5px;
+    padding-top: 0px;
+}
+
+#home-about-bio a {
+    color: white; 
+    font-weight: bold; 
+}
+
+#home-about-bio a:hover {
+    color: var(--first-color);
+}
+
 .carousel-cell,
 .flickity-page-dots,
 #main-carousel {
