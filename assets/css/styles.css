@@ -478,9 +478,24 @@ img{
     align-self: center;
 }
 
+@media screen and (max-width: 767px){
+    .about__description p {
+        text-align: left;
+    }
+
+    .about__description li {
+        text-align: left;
+        margin-left: 1rem !important;
+    }
+}
+
 .about__description{
     text-align: center;
     margin-bottom: var(--mb-2-5);
+}
+
+.about__description span {
+    color: white;
 }
 
 .about__info-title{
@@ -1807,13 +1822,11 @@ a.anchor {
 #home-about-bio h2,
 #home-about-bio h3 {
     margin-bottom: 1rem; 
-    letter-spacing:0.5px;
     padding-top: 0px;
 }
 
 #home-about-bio li {
-    margin-left: 3rem;
-    letter-spacing:0.5px;
+    margin-left: 1rem;
     padding-top: 0px;
 }
 
