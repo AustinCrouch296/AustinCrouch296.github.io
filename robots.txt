@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The Unity WebGL export is ~33 MB of generated binaries with nothing to index.
+Disallow: /projects/Build/
+Disallow: /projects/TemplateData/
+
+Sitemap: https://joemarkschadwick.com/sitemap.xml

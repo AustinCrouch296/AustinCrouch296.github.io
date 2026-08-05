@@ -3,22 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Game design portfolio of Joseph Marks-Chadwick.">
-    <meta name="keywords" content="Game Design, Game Designer, UI/UX Design, Player Retention, F2P, MMO, MMORPG, Live Updates, Unity, Flash Developer, Interface Design">
+    <meta name="description" content="Designing levels and in-game events for Angry Birds POP!, a bubble-shooter puzzle game with over 10 million downloads, at Outplay Entertainment.">
+    <link rel="canonical" href="https://joemarkschadwick.com/projects/ab-pop">
+    
+    <!--=============== LINK PREVIEW / OPEN GRAPH ===============-->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Joe Marks-Chadwick">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="https://joemarkschadwick.com/projects/ab-pop">
+    <meta property="og:title" content="Angry Birds POP! — Joe Marks-Chadwick">
+    <meta property="og:description" content="Designing levels and in-game events for Angry Birds POP!, a bubble-shooter puzzle game with over 10 million downloads, at Outplay Entertainment.">
+    <meta property="og:image" content="https://joemarkschadwick.com/assets/img/og/og-ab-pop.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Angry Birds POP! key art with Red and Stella surrounded by coloured bubbles.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Angry Birds POP! — Joe Marks-Chadwick">
+    <meta name="twitter:description" content="Designing levels and in-game events for Angry Birds POP!, a bubble-shooter puzzle game with over 10 million downloads, at Outplay Entertainment.">
+    <meta name="twitter:image" content="https://joemarkschadwick.com/assets/img/og/og-ab-pop.jpg">
+    <meta name="twitter:image:alt" content="Angry Birds POP! key art with Red and Stella surrounded by coloured bubbles.">
 
 
       <!--==================== UNICONS ====================-->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-      <!--==================== SWIPER CSS ====================-->
+      <!--==================== JQUERY ====================-->
       <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
       <!--==================== FONT ====================-->
       <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
       <!--==================== FITTEXT ====================-->
       <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <script src="/assets/js/flickity.pkgd.min.js"></script>
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
@@ -28,34 +43,8 @@
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
       <link rel="stylesheet" href="/assets/css/styles.css">
       <style>
-        .swiper-slide {
-            padding: 0 2rem;
-        }
-
-        .swiper-container-horizontal > .swiper-pagination-bullets {
-            bottom: -1rem;
-        }
-
-        .swiper-button-prev{
-            left: -0.5rem;
-        }
-
-        .swiper-button-next{
-            right: -0.5rem;
-        }
-
         #flickity-fullscreen-caption {
             display: none;
-        }
-
-        @media screen and (min-width: 1024px) {
-            .swiper-button-prev{
-                left: -1rem;
-            }
-            
-            .swiper-button-next {
-                right: -1rem;
-            }
         }
 
         .marketing-button {
@@ -316,11 +305,9 @@
         </div>
     </div>
 
-      <!--==================== SWIPER JS ====================-->
-      <script src="/assets/js/swiper-bundle.min.js"></script>
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
-      <script src="/assets/js/swiper-init-cpr.js"></script>
+      <script src="/assets/js/scroll-spy.js"></script>
       <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
       <!--=============== MODALS ===============-->
       <script src="/assets/js/modal.js"></script>
@@ -329,8 +316,6 @@
       <script>
           const player = new Plyr('#player');
       </script>
-      <script src="/assets/js/object-fit-videos.js"></script>
-      <script src="/assets/js/app.js"></script>
       <!--==================== DYNAMIC PAGE SIZING ====================-->
       <script>
         window.fitText( document.getElementById("main-summary-title"), 2.6 );

@@ -14,4 +14,9 @@ const onProgress = (event) => {
     }
   }
 };
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+
+// Bind every model-viewer on the page, not just the first.
+// Pages without one are a no-op rather than a TypeError.
+document.querySelectorAll('model-viewer').forEach((viewer) => {
+  viewer.addEventListener('progress', onProgress);
+});

@@ -3,8 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Game design portfolio of Joseph Marks-Chadwick.">
-    <meta name="keywords" content="Game Design, Game Designer, UI/UX Design, Player Retention, F2P, MMO, MMORPG, Live Updates, Unity, Flash Developer, Interface Design">
+    <meta name="description" content="Abandoned Mall — a zombie-survival map built from scratch in the Source 2 engine, with original 3D models made in Maya and Substance 3D Painter.">
+    <link rel="canonical" href="https://joemarkschadwick.com/projects/abandoned-mall">
+    
+    <!--=============== LINK PREVIEW / OPEN GRAPH ===============-->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Joe Marks-Chadwick">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="https://joemarkschadwick.com/projects/abandoned-mall">
+    <meta property="og:title" content="Abandoned Mall — Joe Marks-Chadwick">
+    <meta property="og:description" content="Abandoned Mall — a zombie-survival map built from scratch in the Source 2 engine, with original 3D models made in Maya and Substance 3D Painter.">
+    <meta property="og:image" content="https://joemarkschadwick.com/assets/img/og/og-abandoned-mall.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="An interior view of the Abandoned Mall map built in the Source 2 engine.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abandoned Mall — Joe Marks-Chadwick">
+    <meta name="twitter:description" content="Abandoned Mall — a zombie-survival map built from scratch in the Source 2 engine, with original 3D models made in Maya and Substance 3D Painter.">
+    <meta name="twitter:image" content="https://joemarkschadwick.com/assets/img/og/og-abandoned-mall.jpg">
+    <meta name="twitter:image:alt" content="An interior view of the Abandoned Mall map built in the Source 2 engine.">
 
       <!--==================== UNICONS ====================-->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -12,17 +30,14 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-     <!--==================== SWIPER CSS ====================-->
+     <!--==================== JQUERY ====================-->
      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
      <!--=============== MODEL VIEWER SCRIPT ===============-->
      <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script> 
      <link type="text/css" href="/assets/css/3dmodel-styles.css" rel="stylesheet">
       <!--==================== FITTEXT ====================-->
       <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <script src="/assets/js/flickity.pkgd.min.js"></script>
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
@@ -181,7 +196,7 @@
     <div class="dynamic">
         <div class="flex-parent-div summary__title">
             <div class="flex-full tb-header">
-                <h1 id="main-summary-title" class="game-title">3D Modeling</h1>
+                <h1 class="game-title">3D Modeling</h1>
                 <span>These are some of the models that I have recently created to use in the map!</span>
             </div>
         </div>
@@ -294,9 +309,8 @@
     <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
     <script src="/assets/js/detect-mobile-browser.js"></script>
     <script src="/assets/js/hero_arrow.js"></script>
-    <!--==================== SWIPER JS ====================-->
-    <script src="/assets/js/swiper-bundle.min.js"></script>
-    <script src="/assets/js/swiper-init-main.js"></script>
+    <!--==================== SCROLL SPY ====================-->
+    <script src="/assets/js/scroll-spy.js"></script>
 
     <!--=============== MODEL VIEWER SCRIPTS ===============-->
     <script src="/assets/js/3dmodel-script.js"></script> 
@@ -308,8 +322,6 @@
     <script>
         const player = new Plyr('#player');
     </script>
-    <script src="/assets/js/object-fit-videos.js"></script>
-    <script src="/assets/js/app.js"></script>
     <!--==================== DYNAMIC PAGE SIZING ====================-->
     <script>
     window.fitText( document.getElementById("main-summary-title"), 2.6 );

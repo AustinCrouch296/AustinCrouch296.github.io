@@ -1,22 +1,26 @@
-$(document).ready(function(){       
-var scroll_start = 0;
-var startchange = $('#startchange');
-var offset = startchange.offset();
-var header = document.querySelector('#header');
+$(document).ready(function(){
+    var scroll_start = 0;
+    var startchange = $('#startchange');
+    var header = document.querySelector('#header');
 
-if (document.documentElement.scrollTop > offset.top - 40) {
-    header.classList.add('nav-active');
-}
+    //Pages without a hero caption have nothing to measure against:
+    if (!startchange.length || !header) {
+        return;
+    }
 
-if (startchange.length){
-    $(document).scroll(function() { 
+    var offset = startchange.offset();
+
+    if (document.documentElement.scrollTop > offset.top - 40) {
+        header.classList.add('nav-active');
+    }
+
+    $(document).scroll(function() {
         scroll_start = $(this).scrollTop();
 
-        if(scroll_start > offset.top - 40) {
+        if (scroll_start > offset.top - 40) {
             header.classList.add('nav-active');
         } else {
             header.classList.remove('nav-active');
         }
     });
-}
 });

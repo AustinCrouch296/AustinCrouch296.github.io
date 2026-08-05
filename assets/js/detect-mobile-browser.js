@@ -4,13 +4,21 @@ window.mobileCheck = function() {
     return check;
   };
 
-// On page load, if user is running mobile, remove #web-gl-section, and change text on header button
+// On page load, if user is running mobile, remove #webgl-section, and change text on header button.
+// Both elements are VaporWorld-only, so every lookup is guarded — this file is also loaded elsewhere.
 $(document).ready(function(){
-    if (mobileCheck()) {
-        webgl_section = document.querySelector('#webgl-section');
-        webgl_section.remove();
+    if (!mobileCheck()) {
+        return;
+    }
 
-        header_btn = document.querySelector('#vaporcity-trailer-button');
+    var webgl_section = document.querySelector('#webgl-section');
+    var header_btn = document.querySelector('#vaporcity-trailer-button');
+
+    if (webgl_section) {
+        webgl_section.remove();
+    }
+
+    if (header_btn) {
         header_btn.innerHTML = "Read VaporWorld.txt";
         header_btn.setAttribute("onClick", "location.href='#main-section'");
     }
