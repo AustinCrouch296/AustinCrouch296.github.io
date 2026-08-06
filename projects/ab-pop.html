@@ -89,6 +89,7 @@
   </head>
 
   <body class="abpop-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header dark-theme" id="header">
       <nav class="nav container">
@@ -97,48 +98,48 @@
             <ul class="nav__list grid">
                 <li class="nav__item">
                     <a href="/#home" class="nav__link active-link">
-                        <i class="uil uil-estate nav__icon"></i> Home
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#about" class="nav__link">
-                        <i class="uil uil-user nav__icon"></i> About
+                        <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#services" class="nav__link">
-                        <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                        <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
                     </a>
                 </li>
                 <li class="nav__item">
                   <a href="/#portfolio" class="nav__link">
-                      <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                      <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
                   </a>
               </li>
               <li class="nav__item">
                   <a href="/#contact" class="nav__link">
-                      <i class="uil uil-estate nav__icon"></i> Contact Me
+                      <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
                   </a>
               </li>
               <li class="nav__item">
-                <a href="/resume" target="_blank" class="nav__link">
-                      <i class="uil uil-file-alt nav__icon"></i> CV
+                <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                      <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
                 </a>
             </li>
             </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+            <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
         </div>
         
           <div class="nav__btns">
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="uil uil-apps" aria-hidden="true"></i>
+            </button>
         </div>
       </nav>
     </header>
 
     <!--==================== MAIN ====================-->
-    <main>
+    <main id="main-content">
         <!--==================== HERO / BANNER ====================-->
         <div id="hero">
             <div class="texture"></div>
@@ -179,23 +180,23 @@
                     </p>
                     <p>
                         Angry Birds POP! is available for download on the 
-                        <a class="marketing-button" target="_blank" href="https://apps.apple.com/us/app/angry-birds-pop/id937718942"><i class="uil uil-apple"></i> App Store</a>,
-                        <a class="marketing-button" target="_blank" href="https://play.google.com/store/apps/details?id=com.rovio.ABstellapop"><i class="uil uil-google-play"></i> Google Play Store</a>, or
-                        <a class="marketing-button" target="_blank" href="https://www.amazon.co.uk/Angry-Birds-POP-Bubble-Shooter/dp/B01701RAY0"><i class="uil uil-amazon"></i> Amazon.com</a>.
+                        <a class="marketing-button" target="_blank" rel="noopener" href="https://apps.apple.com/us/app/angry-birds-pop/id937718942"><i class="uil uil-apple" aria-hidden="true"></i> App Store</a>,
+                        <a class="marketing-button" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.rovio.ABstellapop"><i class="uil uil-google-play" aria-hidden="true"></i> Google Play Store</a>, or
+                        <a class="marketing-button" target="_blank" rel="noopener" href="https://www.amazon.co.uk/Angry-Birds-POP-Bubble-Shooter/dp/B01701RAY0"><i class="uil uil-amazon" aria-hidden="true"></i> Amazon.com</a>.
                     </p>
                 </div>
             </div>
 
             <div class="flex-parent-div">
                 <div class="flex-full tb-header" >
-                    <h1 class="game-title">Core Responsibilities</h1>
+                    <h2 class="game-title">Core Responsibilities</h2>
                 </div>
             </div>
 
             <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
                 
                 <div class="flex-half text-block tb-section-half-l">
-                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
+                    <ul class="text-block-ul">
                         <li>Point of contact for LiveOps, level creation for Angry Birds Pop, and outsourced QA team, taking full ownership of 10,000+ levels across 15+ events.</li>
                         <li>Managed regular rebalancing processes to maintain player retention and engagement.</li>
                         <li>Collaborated with production, programming, art, and product teams to define event criteria including leaderboards, sidemaps, win-streaks, sales, and season passes.</li>
@@ -203,7 +204,7 @@
                 </div>
 
                 <div class="flex-half text-block tb-section-half-r">
-                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
+                    <ul class="text-block-ul">
                         <li>Partnered with Product Management to run game longevity experiments, including interstitial ad testing in Tier 1 countries, level sawtooth optimization, and FTUE improvements to reduce early churn.</li>
                         <li>Represented team as council member, delivering feedback on company operations directly to CEO and HR leadership.</li>
                         <li>Mentored second-year students at Abertay University, sharing industry insights and career guidance.</li>
@@ -216,30 +217,45 @@
         <!--==================== IMAGE CAROUSEL ====================-->
         <div class="gallery">
             <figure>
-                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/ab-pop/screenshot_1.webp">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
+                        aria-label="Gameplay in a jungle level: a pig trapped in a cluster of coloured bubbles above the slingshot, with Red waiting to fire — view full screen">
+                    <img src="/assets/img/ab-pop/screenshot_1.webp" alt="">
+                </button>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/ab-pop/screenshot_2.webp">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
+                        aria-label="A collage of level layouts from across the game, promoting over 4,000 levels — view full screen">
+                    <img src="/assets/img/ab-pop/screenshot_2.webp" alt="">
+                </button>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/ab-pop/screenshot_3.webp">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
+                        aria-label="A Save the Hatchlings level, with hatchlings held inside bubbles and a pig catching one in a net — view full screen">
+                    <img src="/assets/img/ab-pop/screenshot_3.webp" alt="">
+                </button>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/ab-pop/screenshot_4.webp">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
+                        aria-label="A charged power-up shot loaded into the slingshot, with pigs sheltering behind wooden planks above — view full screen">
+                    <img src="/assets/img/ab-pop/screenshot_4.webp" alt="">
+                </button>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/ab-pop/screenshot_5.webp">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
+                        aria-label="The Seasons menu, showing costumed bird skins across the My Birds and Season Pass tabs — view full screen">
+                    <img src="/assets/img/ab-pop/screenshot_5.webp" alt="">
+                </button>
             </figure>
         </div>
 
       <div id="flickity-container">
         <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
         <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_1.webp"></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_2.webp"></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_3.webp"></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_4.webp"></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_5.webp"></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_1.webp" alt="Gameplay in a jungle level: a pig trapped in a cluster of coloured bubbles above the slingshot, with Red waiting to fire."></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_2.webp" alt="A collage of level layouts from across the game, promoting over 4,000 levels."></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_3.webp" alt="A Save the Hatchlings level, with hatchlings held inside bubbles and a pig catching one in a net."></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_4.webp" alt="A charged power-up shot loaded into the slingshot, with pigs sheltering behind wooden planks above."></div>
+            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_5.webp" alt="The Seasons menu, showing costumed bird skins across the My Birds and Season Pass tabs."></div>
         </div>
         <div id="flickity-fullscreen-div" class="inactive">
             <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -255,7 +271,7 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                    <p class="footer__title">Joe Marks-Chadwick</p>
                     <span class="footer__subtitle">Game Designer</span>
                 </div>
 
@@ -274,16 +290,16 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                        <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/#contact" class="footer__social">
-                        <i class="uil uil-message"></i>
+                    <a href="/#contact" class="footer__social" aria-label="Contact me">
+                        <i class="uil uil-message" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/resume" class="footer__social" target="_blank">
-                        <i class="uil uil-file-alt"></i>
+                    <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                        <i class="uil uil-file-alt" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -293,8 +309,8 @@
     </footer>
 
     <!--==================== MODAL / VIDEO POP-UP PLAYER ====================-->
-    <div id="myModal4" class="modal-window">
-        <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
+    <div id="myModal4" class="modal-window" role="dialog" aria-modal="true" aria-label="Trailer video" aria-hidden="true">
+        <button type="button" onclick="closeVideoModal('player');" class="modalCloseBtn" aria-label="Close video">&times;</button>
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">

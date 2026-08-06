@@ -69,6 +69,7 @@
   </head>
 
   <body class="dark-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -77,55 +78,55 @@
               <ul class="nav__list grid">
                   <li class="nav__item">
                       <a href="/#home" class="nav__link active-link">
-                          <i class="uil uil-estate nav__icon"></i> Home
+                          <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
                       </a>
                   </li>
                   <li class="nav__item">
                       <a href="/#about" class="nav__link">
-                          <i class="uil uil-user nav__icon"></i> About
+                          <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
                       </a>
                   </li>
                   <li class="nav__item">
                       <a href="/#services" class="nav__link">
-                          <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                          <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
                       </a>
                   </li>
                   <li class="nav__item">
                     <a href="/#portfolio" class="nav__link">
-                        <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                        <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#contact" class="nav__link">
-                        <i class="uil uil-estate nav__icon"></i> Contact Me
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
                     </a>
                 </li>
                 <li class="nav__item">
-                  <a href="/resume" target="_blank" class="nav__link">
-                        <i class="uil uil-file-alt nav__icon"></i> CV
+                  <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                        <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
                   </a>
               </li>
               </ul>
-              <i class="uil uil-times nav__close" id="nav-close"></i>
+              <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
           </div>
   
             <div class="nav__btns">
-              <div class="nav__toggle" id="nav-toggle">
-                  <i class="uil uil-apps"></i>
-              </div>
+              <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                  <i class="uil uil-apps" aria-hidden="true"></i>
+              </button>
           </div>
         </nav>
       </header>
 
     <!--==================== MAIN ====================-->
-    <main>
+    <main id="main-content">
         <div id="hero">
             <div class="texture"></div>
-            <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" onclick="location.href='#main-section';" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+            <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" href="#main-section" aria-label="Skip to the main content" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
             <img id="hero-img" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Banner image of an early block layout of a restaurant in the map.">
             <div class="video-caption" id="startchange">
                 <h1>Abandoned Mall</h1>
-                <h3>A Work-In-Progress Map built in S&box.</h3>
+                <h2>A Work-In-Progress Map built in S&box.</h2>
             </div>
         </div>
         <hr id="hero-hr">
@@ -135,7 +136,7 @@
         <div class="dynamic">
             <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header" >
-                    <h1 id="main-summary-title" class="game-title">Learning how to build a level in the Source 2 Engine</h1>
+                    <h2 id="main-summary-title" class="game-title">Learning how to build a level in the Source 2 Engine</h2>
                 </div>
             </div>
 
@@ -159,19 +160,31 @@
 
         <div class="gallery">
             <figure>
-                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_1.webp" alt="Lighting and texture test within the Source 2 engine.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
+                        aria-label="Lighting and texture test within the Source 2 engine — view full screen">
+                    <img src="/assets/img/abandoned-mall/screenshot_1.webp" alt="">
+                </button>
                 <figcaption>Lighting and texture test within the Source 2 engine.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_2.webp" alt="Basic block layout of the level's design, created for a zombie survival gamemode.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
+                        aria-label="Basic block layout of the level's design, created for a zombie survival gamemode — view full screen">
+                    <img src="/assets/img/abandoned-mall/screenshot_2.webp" alt="">
+                </button>
                 <figcaption>Basic block layout of the level's design, created for a zombie survival gamemode.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_3.webp" alt="Early lighting, texture and reflection testing (Not representative of final version).">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
+                        aria-label="Early lighting, texture and reflection testing (Not representative of final version) — view full screen">
+                    <img src="/assets/img/abandoned-mall/screenshot_3.webp" alt="">
+                </button>
                 <figcaption>Early lighting, texture and reflection testing (Not representative of final version).</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Early block layout of one of the restaurants.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
+                        aria-label="Early block layout of one of the restaurants — view full screen">
+                    <img src="/assets/img/abandoned-mall/screenshot_4.webp" alt="">
+                </button>
                 <figcaption>Early block layout of one of the restaurants.</figcaption>
             </figure>
         </div>
@@ -196,7 +209,7 @@
     <div class="dynamic">
         <div class="flex-parent-div summary__title">
             <div class="flex-full tb-header">
-                <h1 class="game-title">3D Modeling</h1>
+                <h2 class="game-title">3D Modeling</h2>
                 <span>These are some of the models that I have recently created to use in the map!</span>
             </div>
         </div>
@@ -213,10 +226,10 @@
                     View in your space
                 </button>
                 <div class="ar-prompt">
-                    <img src="/assets/img/ar_hand_prompt.png" alt="">
+                    <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                 </div>
                 <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/vending-machine/poster-vending-machine.webp')"></div>
-                <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
+                <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
             </model-viewer>
 
 
@@ -228,10 +241,10 @@
                     View in your space
                 </button>
                 <div class="ar-prompt">
-                    <img src="/assets/img/ar_hand_prompt.png" alt="">
+                    <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                 </div>
                 <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></div>
-                <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
+                <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
             </model-viewer>
 
 
@@ -243,16 +256,16 @@
                     View in your space
                 </button>
                 <div class="ar-prompt">
-                    <img src="/assets/img/ar_hand_prompt.png" alt="">
+                    <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                 </div>
                 <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.webp')"></div>
-                <div onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</div>
+                <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
             </model-viewer>-->
 
 
             <div class="flex-parent-div flex-readjust-parent">
-                <div onclick="selectModelViewer(1);" class="flex-readjust top-mvbtn" style="background-image:url('/assets/models/vending-machine/poster-vending-machine.webp');"></div>
-                <div onclick="selectModelViewer(2);" class="flex-readjust" style="background-image:url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></div>
+                <button type="button" onclick="selectModelViewer(1);" class="flex-readjust top-mvbtn" aria-pressed="true" aria-label="Show the vending machine model" style="background-image:url('/assets/models/vending-machine/poster-vending-machine.webp');"></button>
+                <button type="button" onclick="selectModelViewer(2);" class="flex-readjust" aria-pressed="false" aria-label="Show the wooden bench model" style="background-image:url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></button>
                 <div class="flex-readjust bottom-mvbtn" style="cursor: auto; background: transparent; border:0"></div>
             </div>
         </div>
@@ -267,7 +280,7 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                    <p class="footer__title">Joe Marks-Chadwick</p>
                     <span class="footer__subtitle">Game Designer</span>
                 </div>
 
@@ -286,16 +299,16 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                        <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/#contact" class="footer__social">
-                        <i class="uil uil-message"></i>
+                    <a href="/#contact" class="footer__social" aria-label="Contact me">
+                        <i class="uil uil-message" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/resume" class="footer__social" target="_blank">
-                        <i class="uil uil-file-alt"></i>
+                    <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                        <i class="uil uil-file-alt" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>

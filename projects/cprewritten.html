@@ -72,6 +72,7 @@
   </head>
 
   <body class="cpr-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header dark-theme" id="header">
       <nav class="nav container">
@@ -80,48 +81,48 @@
             <ul class="nav__list grid">
                 <li class="nav__item">
                     <a href="/#home" class="nav__link active-link">
-                        <i class="uil uil-estate nav__icon"></i> Home
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#about" class="nav__link">
-                        <i class="uil uil-user nav__icon"></i> About
+                        <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#services" class="nav__link">
-                        <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                        <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
                     </a>
                 </li>
                 <li class="nav__item">
                   <a href="/#portfolio" class="nav__link">
-                      <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                      <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
                   </a>
               </li>
               <li class="nav__item">
                   <a href="/#contact" class="nav__link">
-                      <i class="uil uil-estate nav__icon"></i> Contact Me
+                      <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
                   </a>
               </li>
               <li class="nav__item">
-                <a href="/resume" target="_blank" class="nav__link">
-                      <i class="uil uil-file-alt nav__icon"></i> CV
+                <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                      <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
                 </a>
             </li>
             </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+            <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
         </div>
         
           <div class="nav__btns">
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="uil uil-apps" aria-hidden="true"></i>
+            </button>
         </div>
       </nav>
     </header>
 
     <!--==================== MAIN ====================-->
-    <main>
+    <main id="main-content">
         <!--==================== HERO ====================-->
         <div id="hero">
             <div class="texture"></div>
@@ -173,14 +174,14 @@
 
             <div class="flex-parent-div">
                 <div class="flex-full tb-header" >
-                    <h1 class="game-title">Core Responsibilities</h1>
+                    <h2 class="game-title">Core Responsibilities</h2>
                 </div>
             </div>
 
             <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
                 
                 <div class="flex-half text-block tb-section-half-l">
-                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
+                    <ul class="text-block-ul">
                         <li>
                             Conducted research and information gathering to troubleshoot and improve content quality for over 10 million registered users.
                         </li>
@@ -191,7 +192,7 @@
                 </div>
 
                 <div class="flex-half text-block tb-section-half-r">
-                    <ul class="text-block-ul" style="list-style: disc; margin-left: 1rem;">
+                    <ul class="text-block-ul">
                         <li>
                             Balanced and adjusted gameplay experiences to increase critical and commercial success of product.
                         </li>
@@ -241,7 +242,7 @@
             <div class="flex-parent-div summary__description">
                 
                 <div class="article__section flex-third">
-                    <h1 class="game-title">ARTICLES</h1>
+                    <h2 class="game-title">ARTICLES</h2>
                     <ul style="padding-top: 15px;">
                         <li>
                             &#x2022; Oct 29, 2017 – 
@@ -280,7 +281,7 @@
 
             <!--==================== QUOTES ====================-->
                 <section class="flex-two-third" style="overflow: hidden;">
-                    <h1 class="game-title" style="text-align: center;">QUOTES</h1>
+                    <h2 class="game-title" style="text-align: center;">QUOTES</h2>
 
                     <div class="quotes_flickity portfolio__container swiper-container" style="padding-top: 15px;">
                         <div class="swiper-wrapper">
@@ -364,10 +365,10 @@
                         </div>
                         <!--============ Add Arrows =============-->
                         <div class="swiper-button-next">
-                            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                            <i class="uil uil-angle-right-b swiper-portfolio-icon" aria-hidden="true"></i>
                         </div>
                         <div class="swiper-button-prev">
-                            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                            <i class="uil uil-angle-left-b swiper-portfolio-icon" aria-hidden="true"></i>
                         </div>
 
                         <!--============ Add Pagination =============-->
@@ -381,7 +382,7 @@
         <div class="dynamic">
             <div class="flex-parent-div">
                 <div class="flex-full tb-header">
-                    <h1 class="game-title">The Community Made A Real Change!</h1>
+                    <h2 class="game-title">The Community Made A Real Change!</h2>
                     <h3 class="summary__description summary__title__h3">During my time on Rewritten, the community came together to make a positive impact in the world.</h3>
                 </div>
             </div>
@@ -420,7 +421,7 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                    <p class="footer__title">Joe Marks-Chadwick</p>
                     <span class="footer__subtitle">Game Designer</span>
                 </div>
 
@@ -439,16 +440,16 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                        <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/#contact" class="footer__social">
-                        <i class="uil uil-message"></i>
+                    <a href="/#contact" class="footer__social" aria-label="Contact me">
+                        <i class="uil uil-message" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/resume" class="footer__social" target="_blank">
-                        <i class="uil uil-file-alt"></i>
+                    <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                        <i class="uil uil-file-alt" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -457,8 +458,8 @@
         </div>
     </footer>
 
-    <div id="myModal4" class="modal-window">
-        <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
+    <div id="myModal4" class="modal-window" role="dialog" aria-modal="true" aria-label="Trailer video" aria-hidden="true">
+        <button type="button" onclick="closeVideoModal('player');" class="modalCloseBtn" aria-label="Close video">&times;</button>
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">

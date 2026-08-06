@@ -79,6 +79,7 @@
   </head>
 
   <body class="dark-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header dark-theme" id="header">
       <nav class="nav container">
@@ -87,48 +88,48 @@
             <ul class="nav__list grid">
                 <li class="nav__item">
                     <a href="/#home" class="nav__link active-link">
-                        <i class="uil uil-estate nav__icon"></i> Home
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#about" class="nav__link">
-                        <i class="uil uil-user nav__icon"></i> About
+                        <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#services" class="nav__link">
-                        <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                        <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
                     </a>
                 </li>
                 <li class="nav__item">
                   <a href="/#portfolio" class="nav__link">
-                      <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                      <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
                   </a>
               </li>
               <li class="nav__item">
                   <a href="/#contact" class="nav__link">
-                      <i class="uil uil-estate nav__icon"></i> Contact Me
+                      <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
                   </a>
               </li>
               <li class="nav__item">
-                <a href="/resume" target="_blank" class="nav__link">
-                      <i class="uil uil-file-alt nav__icon"></i> CV
+                <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                      <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
                 </a>
             </li>
             </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+            <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
         </div>
 
           <div class="nav__btns">
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="uil uil-apps" aria-hidden="true"></i>
+            </button>
         </div>
       </nav>
     </header>
 
     <!--==================== MAIN ====================-->
-    <main>
+    <main id="main-content">
 
         <div id="hero">
             <div class="texture"></div>
@@ -141,7 +142,7 @@
                 <img src="/assets/img/mario-rpg/smrpg-logo.webp" style="width: 70%; margin-top: -90px" alt="Super Mario RPG: Descent Into Darkness Logo">
                 <button  onclick="openModal('4');" id="trailer-button" class="button">
                     Watch Trailer
-                    <i class="uil uil-star"></i>
+                    <i class="uil uil-star" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -174,31 +175,52 @@
 
         <div class="gallery">
             <figure>
-                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/mario-rpg/screenshot_1.webp" alt="The player in the overworld.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
+                        aria-label="The player in the overworld — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_1.webp" alt="">
+                </button>
                 <figcaption>The player in the overworld.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/mario-rpg/screenshot_2.webp" alt="Encountering enemies in the caves.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
+                        aria-label="Encountering enemies in the caves — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_2.webp" alt="">
+                </button>
                 <figcaption>Encountering enemies in the caves.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/mario-rpg/screenshot_3.webp" alt="An example of the battle UI.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
+                        aria-label="An example of the battle UI — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_3.webp" alt="">
+                </button>
                 <figcaption>An example of the battle UI.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/mario-rpg/screenshot_4.webp" alt="Princess Peach's castle from a scrapped version of the early game.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
+                        aria-label="Princess Peach's castle from a scrapped version of the early game — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_4.webp" alt="">
+                </button>
                 <figcaption>Princess Peach's castle from a scrapped version of the early game.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
+                        aria-label="A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="">
+                </button>
                 <figcaption>A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(5); fsFlickity();" src="/assets/img/mario-rpg/screenshot_items.webp" alt="The item inventory system which can display consumable items, keys items and player gear.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(5); fsFlickity();"
+                        aria-label="The item inventory system which can display consumable items, keys items and player gear — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_items.webp" alt="">
+                </button>
                 <figcaption>The item inventory system which can display consumable items, keys items and player gear.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(6); fsFlickity();" src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="The badge system, inspired by the Paper Mario games.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(6); fsFlickity();"
+                        aria-label="The badge system, inspired by the Paper Mario games — view full screen">
+                    <img src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="">
+                </button>
                 <figcaption>The badge system, inspired by the Paper Mario games.</figcaption>
             </figure>
         </div>
@@ -228,7 +250,7 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                    <p class="footer__title">Joe Marks-Chadwick</p>
                     <span class="footer__subtitle">Game Designer</span>
                 </div>
 
@@ -247,16 +269,16 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                        <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/#contact" class="footer__social">
-                        <i class="uil uil-message"></i>
+                    <a href="/#contact" class="footer__social" aria-label="Contact me">
+                        <i class="uil uil-message" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/resume" class="footer__social" target="_blank">
-                        <i class="uil uil-file-alt"></i>
+                    <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                        <i class="uil uil-file-alt" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -264,8 +286,8 @@
         </div>
       </footer>
 
-      <div id="myModal4" class="modal-window">
-        <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
+      <div id="myModal4" class="modal-window" role="dialog" aria-modal="true" aria-label="Trailer video" aria-hidden="true">
+        <button type="button" onclick="closeVideoModal('player');" class="modalCloseBtn" aria-label="Close video">&times;</button>
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">

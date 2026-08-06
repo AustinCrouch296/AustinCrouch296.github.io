@@ -52,6 +52,7 @@
   </head>
 
   <body class="dark-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header dark-theme" id="header">
       <nav class="nav container">
@@ -60,48 +61,48 @@
             <ul class="nav__list grid">
                 <li class="nav__item">
                     <a href="/#home" class="nav__link active-link">
-                        <i class="uil uil-estate nav__icon"></i> Home
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#about" class="nav__link">
-                        <i class="uil uil-user nav__icon"></i> About
+                        <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#services" class="nav__link">
-                        <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                        <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
                     </a>
                 </li>
                 <li class="nav__item">
                   <a href="/#portfolio" class="nav__link">
-                      <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                      <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
                   </a>
               </li>
               <li class="nav__item">
                   <a href="/#contact" class="nav__link">
-                      <i class="uil uil-estate nav__icon"></i> Contact Me
+                      <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
                   </a>
               </li>
               <li class="nav__item">
-                <a href="/resume" target="_blank" class="nav__link">
-                      <i class="uil uil-file-alt nav__icon"></i> CV
+                <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                      <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
                 </a>
             </li>
             </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+            <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
         </div>
 
           <div class="nav__btns">
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="uil uil-apps" aria-hidden="true"></i>
+            </button>
         </div>
       </nav>
     </header>
 
     <!--==================== MAIN ====================-->
-    <main>
+    <main id="main-content">
 
         <div id="hero">
             <div class="texture"></div>
@@ -128,7 +129,7 @@
         <div class="dynamic">
             <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header" >
-                    <h1 id="main-summary-title" class="game-title">Umbra: Creating an immersive VR Horror and Puzzle game.</h1>
+                    <h2 id="main-summary-title" class="game-title">Umbra: Creating an immersive VR Horror and Puzzle game.</h2>
                 </div>
             </div>
 
@@ -153,8 +154,8 @@
                         All results and research for this project can be found below in the linked PDF.
                     </p>
                     <div style="text-align:center; padding-top: 0.25rem;">
-                        <a href="/dissertation" target="_blank" class="button button--flex">
-                            Open Dissertation PDF <i class="uil uil-file-alt" style="padding-left:5px;"></i>
+                        <a href="/dissertation" target="_blank" rel="noopener" class="button button--flex">
+                            Open Dissertation PDF <i class="uil uil-file-alt" style="padding-left:5px;" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -163,23 +164,38 @@
         
         <div class="gallery">
             <figure>
-                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/umbra/room_screenshot.webp" alt="The final look of the game including lighting, reflections, fog and post processing effects.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
+                        aria-label="The final look of the game including lighting, reflections, fog and post processing effects — view full screen">
+                    <img src="/assets/img/umbra/room_screenshot.webp" alt="">
+                </button>
                 <figcaption>The final look of the game including lighting, reflections, fog and post processing effects.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/umbra/fireplace_screenshot.webp" alt="An example of how the lighting varies between rooms to set an eerie atmosphere.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
+                        aria-label="An example of how the lighting varies between rooms to set an eerie atmosphere — view full screen">
+                    <img src="/assets/img/umbra/fireplace_screenshot.webp" alt="">
+                </button>
                 <figcaption>An example of how the lighting varies between rooms to set an eerie atmosphere.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/umbra/comparison_screenshot.webp" alt="A before-and-after shot showing the effects of the fog and post processing effects.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
+                        aria-label="A before-and-after shot showing the effects of the fog and post processing effects — view full screen">
+                    <img src="/assets/img/umbra/comparison_screenshot.webp" alt="">
+                </button>
                 <figcaption>A before-and-after shot showing the effects of the fog and post processing effects.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/umbra/hdrp_screenshot.webp" alt="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
+                        aria-label="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR — view full screen">
+                    <img src="/assets/img/umbra/hdrp_screenshot.webp" alt="">
+                </button>
                 <figcaption>An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/umbra/keys_screenshot.webp" alt="An assortment of keys, just one of the examples of in world interactions.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
+                        aria-label="An assortment of keys, just one of the examples of in world interactions — view full screen">
+                    <img src="/assets/img/umbra/keys_screenshot.webp" alt="">
+                </button>
                 <figcaption>An assortment of keys, just one of the examples of in world interactions.</figcaption>
             </figure>
         </div>
@@ -207,7 +223,7 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                    <p class="footer__title">Joe Marks-Chadwick</p>
                     <span class="footer__subtitle">Game Designer</span>
                 </div>
 
@@ -226,16 +242,16 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                        <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/#contact" class="footer__social">
-                        <i class="uil uil-message"></i>
+                    <a href="/#contact" class="footer__social" aria-label="Contact me">
+                        <i class="uil uil-message" aria-hidden="true"></i>
                     </a>
 
-                    <a href="/resume" class="footer__social" target="_blank">
-                        <i class="uil uil-file-alt"></i>
+                    <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                        <i class="uil uil-file-alt" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -244,8 +260,8 @@
         </div>
     </footer>
 
-    <div id="myModal4" class="modal-window">
-        <span onclick="closeVideoModal('player');" class="modalCloseBtn">&times;</span>
+    <div id="myModal4" class="modal-window" role="dialog" aria-modal="true" aria-label="Trailer video" aria-hidden="true">
+        <button type="button" onclick="closeVideoModal('player');" class="modalCloseBtn" aria-label="Close video">&times;</button>
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
             <div class="video-holder-div centered-div">

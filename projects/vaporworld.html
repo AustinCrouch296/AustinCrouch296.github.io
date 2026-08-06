@@ -126,6 +126,7 @@
   </head>
 
   <body class="dark-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -134,48 +135,48 @@
               <ul class="nav__list grid">
                   <li class="nav__item">
                       <a href="/#home" class="nav__link active-link">
-                          <i class="uil uil-estate nav__icon"></i> Home
+                          <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
                       </a>
                   </li>
                   <li class="nav__item">
                       <a href="/#about" class="nav__link">
-                          <i class="uil uil-user nav__icon"></i> About
+                          <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
                       </a>
                   </li>
                   <li class="nav__item">
                       <a href="/#services" class="nav__link">
-                          <i class="uil uil-briefcase-alt nav__icon"></i> Projects
+                          <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
                       </a>
                   </li>
                   <li class="nav__item">
                     <a href="/#portfolio" class="nav__link">
-                        <i class="uil uil-scenery nav__icon"></i> 3D Modeling
+                        <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
                     </a>
                 </li>
                 <li class="nav__item">
                     <a href="/#contact" class="nav__link">
-                        <i class="uil uil-estate nav__icon"></i> Contact Me
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
                     </a>
                 </li>
                 <li class="nav__item">
-                  <a href="/resume" target="_blank" class="nav__link">
-                        <i class="uil uil-file-alt nav__icon"></i> CV
+                  <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                        <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
                   </a>
               </li>
               </ul>
-              <i class="uil uil-times nav__close" id="nav-close"></i>
+              <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
           </div>
   
             <div class="nav__btns">
-              <div class="nav__toggle" id="nav-toggle">
-                  <i class="uil uil-apps"></i>
-              </div>
+              <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                  <i class="uil uil-apps" aria-hidden="true"></i>
+              </button>
           </div>
         </nav>
       </header>
 
     <!--==================== MAIN ====================-->
-    <main>
+    <main id="main-content">
         <div id="hero">
             <div class="texture"></div>
             <video loop muted autoplay preload="auto">
@@ -222,35 +223,59 @@
 
         <div class="gallery">
             <figure>
-                <img onclick="fsFlickitySetImg(0); fsFlickity();" src="/assets/img/vaporworld/screenshot_1.webp" alt="The title screen for VaporWorld.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
+                        aria-label="The title screen for VaporWorld — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_1.webp" alt="">
+                </button>
                 <figcaption>The title screen for VaporWorld.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(1); fsFlickity();" src="/assets/img/vaporworld/screenshot_2.webp" alt="The UI displayed each collectible type and the player's score, steps, health, and visited locations.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
+                        aria-label="The UI displayed each collectible type and the player's score, steps, health, and visited locations — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_2.webp" alt="">
+                </button>
                 <figcaption>The UI displayed each collectible type and the player's score, steps, health, and visited locations.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(2); fsFlickity();" src="/assets/img/vaporworld/screenshot_3.webp" alt="The Temple area contained the special power-up that allowed the player to choose to gamble for more score.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
+                        aria-label="The Temple area contained the special power-up that allowed the player to choose to gamble for more score — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_3.webp" alt="">
+                </button>
                 <figcaption>The Temple area contained the special power-up that allowed the player to choose to gamble for more score.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(3); fsFlickity();" src="/assets/img/vaporworld/screenshot_4.webp" alt="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
+                        aria-label="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_4.webp" alt="">
+                </button>
                 <figcaption>The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(4); fsFlickity();" src="/assets/img/vaporworld/screenshot_5.webp" alt="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
+                        aria-label="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_5.webp" alt="">
+                </button>
                 <figcaption>When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(5); fsFlickity();" src="/assets/img/vaporworld/screenshot_6.webp" alt="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(5); fsFlickity();"
+                        aria-label="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_6.webp" alt="">
+                </button>
                 <figcaption>The Suburbs used low-poly assets, bright colors, and had collectible casette tapes hidden along the streets and in alleys.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(6); fsFlickity();" src="/assets/img/vaporworld/screenshot_7.webp" alt="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(6); fsFlickity();"
+                        aria-label="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_7.webp" alt="">
+                </button>
                 <figcaption>The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles.</figcaption>
             </figure>
             <figure>
-                <img onclick="fsFlickitySetImg(7); fsFlickity();" src="/assets/img/vaporworld/screenshot_8.webp" alt="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s.">
+                <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(7); fsFlickity();"
+                        aria-label="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s — view full screen">
+                    <img src="/assets/img/vaporworld/screenshot_8.webp" alt="">
+                </button>
                 <figcaption>The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s.</figcaption>
             </figure>
         </div>
@@ -281,7 +306,7 @@
         <div class="dynamic">
             <div class="flex-parent-div" style="padding: 1rem 0 1rem 0;">
                 <div class="flex-full" style="padding: 0 15px; text-align:center;" >
-                    <h1 class="game-title summary__title">Play VaporWorld</h1>
+                    <h2 class="game-title summary__title">Play VaporWorld</h2>
                 </div>
             </div>
         </div>
@@ -314,7 +339,7 @@
     <div class="footer__bg">
         <div class="footer__container container grid">
             <div>
-                <h1 class="footer__title">Joe Marks-Chadwick</h1>
+                <p class="footer__title">Joe Marks-Chadwick</p>
                 <span class="footer__subtitle">Game Designer</span>
             </div>
 
@@ -333,16 +358,16 @@
             </ul>
 
             <div class="footer__socials">
-                <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" class="footer__social">
-                    <i class="uil uil-linkedin-alt"></i>
+                <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                    <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
                 </a>
 
-                <a href="/#contact" class="footer__social">
-                    <i class="uil uil-message"></i>
+                <a href="/#contact" class="footer__social" aria-label="Contact me">
+                    <i class="uil uil-message" aria-hidden="true"></i>
                 </a>
 
-                <a href="/resume" class="footer__social" target="_blank">
-                    <i class="uil uil-file-alt"></i>
+                <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                    <i class="uil uil-file-alt" aria-hidden="true"></i>
                 </a>
             </div>
         </div>

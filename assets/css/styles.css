@@ -1575,6 +1575,14 @@ img{
     font-weight: bold;
     transition: 0.3s;
     z-index: 1;
+
+    /* Was a <span>; now a real <button>, so strip the browser chrome. */
+    background: none;
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: inherit;
+    cursor: pointer;
 }
   
 .modalCloseBtn:hover {
@@ -2054,6 +2062,17 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     }
 }
 
+.text-block-ul {
+    list-style: disc;
+    margin-left: 1rem;
+}
+
+/* Reads as a heading, but sits under the "About Me" h2 - so it is an h3. */
+.about__greeting {
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
 .text-block-ul  li {
     margin-bottom: var(--mb-0-75); 
     padding-top: 0px;
@@ -2087,13 +2106,17 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 .flex-readjust {
     /*border: 2px solid white; */
     border-radius: 0;
-    flex: 0 0 150px; 
+    flex: 0 0 150px;
     height: 150px;
     background-color: #46396e;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+
+    /* The model selectors are <button> now; strip the browser chrome. */
+    border: 0;
+    padding: 0;
 }
 
 .flex-readjust:hover {
@@ -2207,4 +2230,85 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 
 .is-invisible {
     display: none;
+}
+
+/*==================== ACCESSIBILITY ====================*/
+
+/* Skip link: hidden until focused, then drops in over the sticky header.
+   First thing in the tab order on every page. */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1000;
+    padding: .75rem 1.5rem;
+    border-radius: 0 0 .5rem .5rem;
+    background-color: var(--first-color);
+    color: #FFF;
+    font-weight: var(--font-medium);
+    transform: translateX(-50%) translateY(-200%);
+    transition: transform .2s ease;
+}
+
+.skip-link:focus {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Visible keyboard focus. :focus-visible means mouse users never see the ring.
+   White outline plus a dark halo stays legible over both the dark page
+   background and the light game screenshots in the galleries. */
+:focus-visible {
+    outline: 3px solid #FFF;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, .55);
+}
+
+/* focus-visible polyfill (loaded on index + abandoned-mall) uses a class instead */
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Gallery thumbnails are <button> wrappers now. Mirror the sizing of the <img>
+   they contain so figure/grid layout is unchanged, and strip the button chrome. */
+.gallery__trigger {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    line-height: 0;
+    cursor: pointer;
+}
+
+/* The mobile nav open/close controls are <button> now. */
+.nav__toggle,
+.nav__close {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+/*==================== REDUCED MOTION ====================*/
+/* Covers the animated hero scroll arrow, the Angry Birds POP! logo wiggle,
+   the modal zoom-in, carousel transitions and smooth scrolling. The autoplaying
+   hero videos are paused separately in main.js - CSS cannot stop playback. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto !important;
+    }
 }
