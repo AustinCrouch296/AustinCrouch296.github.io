@@ -1370,9 +1370,15 @@ img{
 	pointer-events:none;
 }
 
+/* These three rules used to ask for 'Quicksand', which was never loaded, so the
+   tiles silently fell back to the browser's default sans-serif and were the only
+   text on the site not in Poppins. Quicksand was trialled 2026-08-06 and rejected
+   on looks; they now use the site font deliberately. Keep var(--body-font) rather
+   than naming Poppins directly, so a future change to the type scale reaches the
+   tiles too. See backlog item 52. */
 .work-item-title
 {
-	font-family: 'Quicksand', sans-serif;
+	font-family: var(--body-font);
 	color: white;
 	font-weight: 100;
 	font-size: 30px;
@@ -1389,7 +1395,7 @@ img{
 
 .work-item-desc
 {
-	font-family: 'Quicksand', sans-serif;
+	font-family: var(--body-font);
 	color: white;
 	font-weight: 100;
     margin-top: 5px;
@@ -1437,7 +1443,7 @@ img{
 	min-width: 30px;
     padding: 2px 7px;
 	color: white;
-	font-family: 'Quicksand', sans-serif;
+	font-family: var(--body-font);
 	font-weight: 100;
 	font-size: 14px;
 	float: left;
