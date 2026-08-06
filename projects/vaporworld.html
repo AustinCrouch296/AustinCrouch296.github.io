@@ -29,19 +29,12 @@
       <!--==================== Special Font ====================-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-      <!--==================== JQUERY ====================-->
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <!--==================== FITTEXT ====================-->
-      <script src="/assets/js/fittext.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=VT323&display=swap">
       <!--==================== FLICKITY CSS ====================-->
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
       <!--==================== VIDEO PLAYER ====================-->
       <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
-      <!--==================== UNITY WEBGL PLAYER ====================-->
-      <script src="TemplateData/UnityProgress.js"></script>
-      <script src="Build/UnityLoader.js"></script>
       <!--==================== CSS ====================-->
       <title>VaporWorld — Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
@@ -179,13 +172,13 @@
     <main id="main-content">
         <div id="hero">
             <div class="texture"></div>
-            <video loop muted autoplay preload="auto">
+            <video loop muted autoplay playsinline preload="auto">
                 <source src="/assets/img/vaporworld/vaporworld-hero-vid.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
-            <img id="hero-img" src="/assets/img/vaporworld/vaporworld-hero-img.webp" alt="Banner image of a VaporWave desert, with neon and wireframe trees, and floating pyramids.">
+            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/vaporworld/vaporworld-hero-img.webp" alt="Banner image of a VaporWave desert, with neon and wireframe trees, and floating pyramids.">
             <div class="video-caption" id="startchange">
-                <img id="vaporwave-logo" src="/assets/img/vaporworld/vaporworld-logo.webp" alt="VaporWorld Logo">
+                <img width="975" height="737" decoding="async" id="vaporwave-logo" src="/assets/img/vaporworld/vaporworld-logo.webp" alt="VaporWorld Logo">
                     <button onclick="location.href='#play_game';" id="vaporcity-trailer-button" class="button">
                         Play VaporWorld.exe?
                     </button>
@@ -225,56 +218,56 @@
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
                         aria-label="The title screen for VaporWorld — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_1.webp" alt="">
+                    <img width="1274" height="844" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_1.webp" alt="">
                 </button>
                 <figcaption>The title screen for VaporWorld.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
                         aria-label="The UI displayed each collectible type and the player's score, steps, health, and visited locations — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_2.webp" alt="">
+                    <img width="1272" height="846" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_2.webp" alt="">
                 </button>
                 <figcaption>The UI displayed each collectible type and the player's score, steps, health, and visited locations.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
                         aria-label="The Temple area contained the special power-up that allowed the player to choose to gamble for more score — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_3.webp" alt="">
+                    <img width="1265" height="848" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_3.webp" alt="">
                 </button>
                 <figcaption>The Temple area contained the special power-up that allowed the player to choose to gamble for more score.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
                         aria-label="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_4.webp" alt="">
+                    <img width="1264" height="843" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_4.webp" alt="">
                 </button>
                 <figcaption>The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
                         aria-label="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_5.webp" alt="">
+                    <img width="1269" height="844" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_5.webp" alt="">
                 </button>
                 <figcaption>When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(5); fsFlickity();"
                         aria-label="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_6.webp" alt="">
+                    <img width="1275" height="849" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_6.webp" alt="">
                 </button>
                 <figcaption>The Suburbs used low-poly assets, bright colors, and had collectible casette tapes hidden along the streets and in alleys.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(6); fsFlickity();"
                         aria-label="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_7.webp" alt="">
+                    <img width="1271" height="848" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_7.webp" alt="">
                 </button>
                 <figcaption>The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(7); fsFlickity();"
                         aria-label="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s — view full screen">
-                    <img src="/assets/img/vaporworld/screenshot_8.webp" alt="">
+                    <img width="1272" height="842" decoding="async" loading="lazy" src="/assets/img/vaporworld/screenshot_8.webp" alt="">
                 </button>
                 <figcaption>The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s.</figcaption>
             </figure>
@@ -283,14 +276,14 @@
       <div id="flickity-container">
         <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
         <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_1.webp" alt="The title screen for VaporWorld."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_2.webp" alt="The UI displayed each collectible type and the player's score, steps, health, and visited locations."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_3.webp" alt="The Temple area contained the special power-up that allowed the player to choose to gamble for more score."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_4.webp" alt="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_5.webp" alt="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_6.webp" alt="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_7.webp" alt="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles."></div>
-            <div class="carousel-cell"><img src="/assets/img/vaporworld/screenshot_8.webp" alt="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s."></div>
+            <div class="carousel-cell"><img width="1274" height="844" decoding="async" src="/assets/img/vaporworld/screenshot_1.webp" alt="The title screen for VaporWorld."></div>
+            <div class="carousel-cell"><img width="1272" height="846" decoding="async" src="/assets/img/vaporworld/screenshot_2.webp" alt="The UI displayed each collectible type and the player's score, steps, health, and visited locations."></div>
+            <div class="carousel-cell"><img width="1265" height="848" decoding="async" src="/assets/img/vaporworld/screenshot_3.webp" alt="The Temple area contained the special power-up that allowed the player to choose to gamble for more score."></div>
+            <div class="carousel-cell"><img width="1264" height="843" decoding="async" src="/assets/img/vaporworld/screenshot_4.webp" alt="The special power-up opened a menu, allowing the player to gamble, read its description, or drop the item."></div>
+            <div class="carousel-cell"><img width="1269" height="844" decoding="async" src="/assets/img/vaporworld/screenshot_5.webp" alt="When a player entered a different zone, text would appear telling them the area name, and the music would fade out and into that area's specific song."></div>
+            <div class="carousel-cell"><img width="1275" height="849" decoding="async" src="/assets/img/vaporworld/screenshot_6.webp" alt="The Suburbs used many low-poly models which when combined with the game's shaders made a colorful, blocky, and retro area with collectible casette tapes hidden between buildings and in alleys."></div>
+            <div class="carousel-cell"><img width="1271" height="848" decoding="async" src="/assets/img/vaporworld/screenshot_7.webp" alt="The City location contained many tall, and flat skyscrapers, with long streets to travel between collectibles."></div>
+            <div class="carousel-cell"><img width="1272" height="842" decoding="async" src="/assets/img/vaporworld/screenshot_8.webp" alt="The Oasis contained wireframe trees and pyramids, reminiscent of glitch art and early 3D-rendered objects that may have been seen on the internet of late 1990s."></div>
         </div>
         <div id="flickity-fullscreen-div" class="inactive">
             <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -376,6 +369,8 @@
     </div>
     </footer>
 
+    <!--==================== JQUERY ====================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--==================== MAIN JS ====================-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
@@ -388,6 +383,8 @@
         const player = new Plyr('#player');
     </script>
     <!--==================== DYNAMIC PAGE SIZING ====================-->
+    <!--==================== FITTEXT ====================-->
+        <script src="/assets/js/fittext.js"></script>
     <script>
         window.fitText( document.getElementById("main-summary-title"), 2.5 );
     </script>
@@ -398,6 +395,12 @@
     <script src="/assets/js/load-flickity.js"></script>
     <script src="/assets/js/flickity-carousel-captions.js"></script>
     <!--==================== GAME PLAYER ====================-->
+    <!-- UnityLoader.js is 157 KB and used to be render-blocking in the document
+         head, but nothing touches it until the visitor clicks "Load Game" -
+         runUnityLoader() is an onclick handler. Loading it here instead keeps
+         it off the critical path. -->
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
     <script>
         var gameInstance;
 

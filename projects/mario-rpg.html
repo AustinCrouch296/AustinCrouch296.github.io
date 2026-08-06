@@ -26,10 +26,6 @@
 
       <!--==================== UNICONS ====================-->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-      <!--==================== JQUERY ====================-->
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <!--==================== FITTEXT ====================-->
-      <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
@@ -38,6 +34,9 @@
       <!--==================== CSS ====================-->
       <title>SMRPG: Descent Into Darkness — Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
       <link rel="stylesheet" href="/assets/css/styles.css">
       <style>
         .carousel-cell, .flickity-page-dots, #main-carousel {
@@ -133,13 +132,13 @@
 
         <div id="hero">
             <div class="texture"></div>
-            <video loop muted autoplay preload="auto">
+            <video loop muted autoplay playsinline preload="auto">
                 <source src="/assets/img/mario-rpg/mario-rpg-hero-vid.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
-            <img id="hero-img" src="/assets/img/mario-rpg/screenshot_2.webp" alt="Banner image of Mario encountering enemies in the caves.">
+            <img width="1277" height="959" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/mario-rpg/screenshot_2.webp" alt="Banner image of Mario encountering enemies in the caves.">
             <div class="video-caption" id="startchange">
-                <img src="/assets/img/mario-rpg/smrpg-logo.webp" style="width: 70%; margin-top: -90px" alt="Super Mario RPG: Descent Into Darkness Logo">
+                <img width="1020" height="450" decoding="async" src="/assets/img/mario-rpg/smrpg-logo.webp" style="width: 70%; margin-top: -90px" alt="Super Mario RPG: Descent Into Darkness Logo">
                 <button  onclick="openModal('4');" id="trailer-button" class="button">
                     Watch Trailer
                     <i class="uil uil-star" aria-hidden="true"></i>
@@ -177,49 +176,49 @@
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
                         aria-label="The player in the overworld — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_1.webp" alt="">
+                    <img width="1275" height="959" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_1.webp" alt="">
                 </button>
                 <figcaption>The player in the overworld.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
                         aria-label="Encountering enemies in the caves — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_2.webp" alt="">
+                    <img width="1277" height="959" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_2.webp" alt="">
                 </button>
                 <figcaption>Encountering enemies in the caves.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
                         aria-label="An example of the battle UI — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_3.webp" alt="">
+                    <img width="1275" height="955" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_3.webp" alt="">
                 </button>
                 <figcaption>An example of the battle UI.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
                         aria-label="Princess Peach's castle from a scrapped version of the early game — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_4.webp" alt="">
+                    <img width="1275" height="956" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_4.webp" alt="">
                 </button>
                 <figcaption>Princess Peach's castle from a scrapped version of the early game.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
                         aria-label="A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="">
+                    <img width="1276" height="959" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="">
                 </button>
                 <figcaption>A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(5); fsFlickity();"
                         aria-label="The item inventory system which can display consumable items, keys items and player gear — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_items.webp" alt="">
+                    <img width="1277" height="955" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_items.webp" alt="">
                 </button>
                 <figcaption>The item inventory system which can display consumable items, keys items and player gear.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(6); fsFlickity();"
                         aria-label="The badge system, inspired by the Paper Mario games — view full screen">
-                    <img src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="">
+                    <img width="1278" height="956" decoding="async" loading="lazy" src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="">
                 </button>
                 <figcaption>The badge system, inspired by the Paper Mario games.</figcaption>
             </figure>
@@ -228,13 +227,13 @@
         <div id="flickity-container">
             <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
             <div class="main-carousel is-invisible" id="main-carousel" data-flickity>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_1.webp" alt="The player in the overworld."></div>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_2.webp" alt="Encountering enemies in the caves."></div>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_3.webp" alt="An example of the battle UI."></div>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_4.webp" alt="Princess Peach's castle from a scrapped version of the early game."></div>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story."></div>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_items.webp" alt="The item inventory system which can display consumable items, keys items and player gear."></div>
-                <div class="carousel-cell"><img src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="The badge system, inspired by the Paper Mario games."></div>
+                <div class="carousel-cell"><img width="1275" height="959" decoding="async" src="/assets/img/mario-rpg/screenshot_1.webp" alt="The player in the overworld."></div>
+                <div class="carousel-cell"><img width="1277" height="959" decoding="async" src="/assets/img/mario-rpg/screenshot_2.webp" alt="Encountering enemies in the caves."></div>
+                <div class="carousel-cell"><img width="1275" height="955" decoding="async" src="/assets/img/mario-rpg/screenshot_3.webp" alt="An example of the battle UI."></div>
+                <div class="carousel-cell"><img width="1275" height="956" decoding="async" src="/assets/img/mario-rpg/screenshot_4.webp" alt="Princess Peach's castle from a scrapped version of the early game."></div>
+                <div class="carousel-cell"><img width="1276" height="959" decoding="async" src="/assets/img/mario-rpg/screenshot_startmenu.webp" alt="A placeholder menu screen inspired by Mario & Luigi Bowser's Inside Story."></div>
+                <div class="carousel-cell"><img width="1277" height="955" decoding="async" src="/assets/img/mario-rpg/screenshot_items.webp" alt="The item inventory system which can display consumable items, keys items and player gear."></div>
+                <div class="carousel-cell"><img width="1278" height="956" decoding="async" src="/assets/img/mario-rpg/screenshot_keyitems.webp" alt="The badge system, inspired by the Paper Mario games."></div>
             </div>
             <div id="flickity-fullscreen-div" class="inactive">
                 <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -291,13 +290,15 @@
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">
-                    <video id="player" playsinline controls data-poster="/assets/img/mario-rpg/smrpg-vid-thumbnail.webp">
+                    <video id="player" playsinline controls preload="none" data-poster="/assets/img/mario-rpg/smrpg-vid-thumbnail.webp">
                         <source src="/assets/img/mario-rpg/smrpg-trailer.webm" type="video/webm">
                     </video>
                 </div>
         </div>
     </div>
 
+      <!--==================== JQUERY ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
       <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
@@ -309,6 +310,8 @@
           const player = new Plyr('#player');
       </script>
       <!--==================== DYNAMIC PAGE SIZING ====================-->
+      <!--==================== FITTEXT ====================-->
+        <script src="/assets/js/fittext.js"></script>
       <script>
         window.fitText( document.getElementById("main-summary-title"), 2.7 );
       </script>

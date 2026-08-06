@@ -29,14 +29,9 @@
       <!--Special Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-     <!--==================== JQUERY ====================-->
-     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=VT323&display=swap">
      <!--=============== MODEL VIEWER SCRIPT ===============-->
-     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script> 
      <link type="text/css" href="/assets/css/3dmodel-styles.css" rel="stylesheet">
-      <!--==================== FITTEXT ====================-->
-      <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
@@ -123,7 +118,7 @@
         <div id="hero">
             <div class="texture"></div>
             <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" href="#main-section" aria-label="Skip to the main content" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
-            <img id="hero-img" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Banner image of an early block layout of a restaurant in the map.">
+            <img width="1067" height="536" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Banner image of an early block layout of a restaurant in the map.">
             <div class="video-caption" id="startchange">
                 <h1>Abandoned Mall</h1>
                 <h2>A Work-In-Progress Map built in S&box.</h2>
@@ -162,28 +157,28 @@
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
                         aria-label="Lighting and texture test within the Source 2 engine — view full screen">
-                    <img src="/assets/img/abandoned-mall/screenshot_1.webp" alt="">
+                    <img width="1280" height="618" decoding="async" loading="lazy" src="/assets/img/abandoned-mall/screenshot_1.webp" alt="">
                 </button>
                 <figcaption>Lighting and texture test within the Source 2 engine.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
                         aria-label="Basic block layout of the level's design, created for a zombie survival gamemode — view full screen">
-                    <img src="/assets/img/abandoned-mall/screenshot_2.webp" alt="">
+                    <img width="815" height="530" decoding="async" loading="lazy" src="/assets/img/abandoned-mall/screenshot_2.webp" alt="">
                 </button>
                 <figcaption>Basic block layout of the level's design, created for a zombie survival gamemode.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
                         aria-label="Early lighting, texture and reflection testing (Not representative of final version) — view full screen">
-                    <img src="/assets/img/abandoned-mall/screenshot_3.webp" alt="">
+                    <img width="1280" height="682" decoding="async" loading="lazy" src="/assets/img/abandoned-mall/screenshot_3.webp" alt="">
                 </button>
                 <figcaption>Early lighting, texture and reflection testing (Not representative of final version).</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
                         aria-label="Early block layout of one of the restaurants — view full screen">
-                    <img src="/assets/img/abandoned-mall/screenshot_4.webp" alt="">
+                    <img width="1067" height="536" decoding="async" loading="lazy" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="">
                 </button>
                 <figcaption>Early block layout of one of the restaurants.</figcaption>
             </figure>
@@ -192,10 +187,10 @@
       <div id="flickity-container">
         <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
         <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
-            <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_1.webp" alt="Lighting and texture test within the Source 2 engine."></div>
-            <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_2.webp" alt="Basic block layout of the level's design, created for a zombie survival gamemode."></div>
-            <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_3.webp" alt="Early lighting, texture and reflection testing (Not representative of final version)."></div>
-            <div class="carousel-cell"><img src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Early block layout of one of the restaurants."></div>
+            <div class="carousel-cell"><img width="1280" height="618" decoding="async" src="/assets/img/abandoned-mall/screenshot_1.webp" alt="Lighting and texture test within the Source 2 engine."></div>
+            <div class="carousel-cell"><img width="815" height="530" decoding="async" src="/assets/img/abandoned-mall/screenshot_2.webp" alt="Basic block layout of the level's design, created for a zombie survival gamemode."></div>
+            <div class="carousel-cell"><img width="1280" height="682" decoding="async" src="/assets/img/abandoned-mall/screenshot_3.webp" alt="Early lighting, texture and reflection testing (Not representative of final version)."></div>
+            <div class="carousel-cell"><img width="1067" height="536" decoding="async" src="/assets/img/abandoned-mall/screenshot_4.webp" alt="Early block layout of one of the restaurants."></div>
         </div>
         <div id="flickity-fullscreen-div" class="inactive">
             <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -226,7 +221,7 @@
                     View in your space
                 </button>
                 <div class="ar-prompt">
-                    <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
+                    <img width="50" height="54" decoding="async" loading="lazy" src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                 </div>
                 <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/vending-machine/poster-vending-machine.webp')"></div>
                 <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
@@ -241,7 +236,7 @@
                     View in your space
                 </button>
                 <div class="ar-prompt">
-                    <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
+                    <img width="50" height="54" decoding="async" loading="lazy" src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                 </div>
                 <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></div>
                 <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
@@ -256,7 +251,7 @@
                     View in your space
                 </button>
                 <div class="ar-prompt">
-                    <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
+                    <img width="50" height="54" decoding="async" loading="lazy" src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                 </div>
                 <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.webp')"></div>
                 <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
@@ -317,6 +312,8 @@
         </div>
       </footer>
 
+    <!--==================== JQUERY ====================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--==================== MAIN JS ====================-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
@@ -336,6 +333,8 @@
         const player = new Plyr('#player');
     </script>
     <!--==================== DYNAMIC PAGE SIZING ====================-->
+    <!--==================== FITTEXT ====================-->
+        <script src="/assets/js/fittext.js"></script>
     <script>
     window.fitText( document.getElementById("main-summary-title"), 2.6 );
     </script>

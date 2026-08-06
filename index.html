@@ -26,14 +26,14 @@
 
         <!--===================== UNICONS =====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <!--==================== JQUERY ====================-->
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <!--=============== MODEL VIEWER SCRIPT ===============-->
-        <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script> 
         <link type="text/css" href="/assets/css/3dmodel-styles.css" rel="stylesheet">
         <!--======================= CSS =======================-->
         <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
         <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
         <link rel="stylesheet" href="/assets/css/styles.css">
 
         <style>
@@ -108,7 +108,7 @@
                         <div id="hero">
                             <div class="color-overlay"></div>
                             <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" href="#about" aria-label="Skip to the about section" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
-                            <img id="hero-img" src="/assets/img/main-hero.webp" alt="Banner image of a person programming on a laptop.">
+                            <img width="1920" height="1045" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/main-hero.webp" alt="Banner image of a person programming on a laptop.">
                             <div class="video-caption" id="startchange" style="display:block">
                                 <h1>JOSEPH MARKS-CHADWICK</h1>
                                 <h2>Game Design Portfolio</h2>
@@ -382,7 +382,7 @@
                                 View in your space
                             </button>
                             <div class="ar-prompt">
-                                <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
+                                <img width="50" height="54" decoding="async" loading="lazy" src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                             </div>
                             <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/vending-machine/poster-vending-machine.webp')"></div>
                             <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
@@ -397,7 +397,7 @@
                                 View in your space
                             </button>
                             <div class="ar-prompt">
-                                <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
+                                <img width="50" height="54" decoding="async" loading="lazy" src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                             </div>
                             <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/models/wooden-bench/poster-wooden-bench.webp')"></div>
                             <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
@@ -412,7 +412,7 @@
                                 View in your space
                             </button>
                             <div class="ar-prompt">
-                                <img src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
+                                <img width="50" height="54" decoding="async" loading="lazy" src="/assets/img/ar_hand_prompt.png" alt="Move your phone in a circle to find a surface for the 3D model.">
                             </div>
                             <div class="lazy-load-poster" slot="poster" style="background-image: url('/assets/img/testposter3.webp')"></div>
                             <button type="button" onclick="loadModel(this);" class="loadModelBtn" slot="poster">Load 3D Model</button>
@@ -547,6 +547,8 @@
         <!--=============== MODEL VIEWER SCRIPTS ===============-->
         <script src="/assets/js/3dmodel-script.js"></script> 
         <script type="module" src="/assets/js/model-viewer.min.js"></script>
+        <!--==================== JQUERY ====================-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <!--==================== MAIN JS ====================-->
         <script src="/assets/js/main.js"></script>
         <script src="/assets/js/modal.js"></script>

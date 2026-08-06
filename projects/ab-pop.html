@@ -27,12 +27,10 @@
 
       <!--==================== UNICONS ====================-->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-      <!--==================== JQUERY ====================-->
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
       <!--==================== FONT ====================-->
-      <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
-      <!--==================== FITTEXT ====================-->
-      <script src="/assets/js/fittext.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;500;600&display=swap">
       <!--==================== FLICKITY CSS ====================-->
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
@@ -143,13 +141,13 @@
         <!--==================== HERO / BANNER ====================-->
         <div id="hero">
             <div class="texture"></div>
-            <video loop muted autoplay preload="auto">
+            <video loop muted autoplay playsinline preload="auto">
                 <source src="/assets/img/ab-pop/abpop-hero-vid.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
-            <img id="hero-img" src="/assets/img/ab-pop/abpop-hero.webp" alt="Banner image of the Angry Birds POP! logo with Red and Stella.">
+            <img width="1640" height="856" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/ab-pop/abpop-hero.webp" alt="Banner image of the Angry Birds POP! logo with Red and Stella.">
             <div class="video-caption" id="startchange">
-                <img id="abpop-logo" src="/assets/img/ab-pop/abpop-logo.webp" alt="Angry Birds POP! Logo">
+                <img width="425" height="247" decoding="async" id="abpop-logo" src="/assets/img/ab-pop/abpop-logo.webp" alt="Angry Birds POP! Logo">
                     <button onclick="openModal('4');" id="abpop-trailer-btn" class="button" style="font-family: 'Bubblegum Sans';">
                         <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -219,31 +217,31 @@
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
                         aria-label="Gameplay in a jungle level: a pig trapped in a cluster of coloured bubbles above the slingshot, with Red waiting to fire — view full screen">
-                    <img src="/assets/img/ab-pop/screenshot_1.webp" alt="">
+                    <img width="810" height="1440" decoding="async" loading="lazy" src="/assets/img/ab-pop/screenshot_1.webp" alt="">
                 </button>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
                         aria-label="A collage of level layouts from across the game, promoting over 4,000 levels — view full screen">
-                    <img src="/assets/img/ab-pop/screenshot_2.webp" alt="">
+                    <img width="810" height="1440" decoding="async" loading="lazy" src="/assets/img/ab-pop/screenshot_2.webp" alt="">
                 </button>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
                         aria-label="A Save the Hatchlings level, with hatchlings held inside bubbles and a pig catching one in a net — view full screen">
-                    <img src="/assets/img/ab-pop/screenshot_3.webp" alt="">
+                    <img width="810" height="1440" decoding="async" loading="lazy" src="/assets/img/ab-pop/screenshot_3.webp" alt="">
                 </button>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
                         aria-label="A charged power-up shot loaded into the slingshot, with pigs sheltering behind wooden planks above — view full screen">
-                    <img src="/assets/img/ab-pop/screenshot_4.webp" alt="">
+                    <img width="810" height="1440" decoding="async" loading="lazy" src="/assets/img/ab-pop/screenshot_4.webp" alt="">
                 </button>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
                         aria-label="The Seasons menu, showing costumed bird skins across the My Birds and Season Pass tabs — view full screen">
-                    <img src="/assets/img/ab-pop/screenshot_5.webp" alt="">
+                    <img width="810" height="1440" decoding="async" loading="lazy" src="/assets/img/ab-pop/screenshot_5.webp" alt="">
                 </button>
             </figure>
         </div>
@@ -251,11 +249,11 @@
       <div id="flickity-container">
         <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
         <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_1.webp" alt="Gameplay in a jungle level: a pig trapped in a cluster of coloured bubbles above the slingshot, with Red waiting to fire."></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_2.webp" alt="A collage of level layouts from across the game, promoting over 4,000 levels."></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_3.webp" alt="A Save the Hatchlings level, with hatchlings held inside bubbles and a pig catching one in a net."></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_4.webp" alt="A charged power-up shot loaded into the slingshot, with pigs sheltering behind wooden planks above."></div>
-            <div class="carousel-cell"><img src="/assets/img/ab-pop/screenshot_5.webp" alt="The Seasons menu, showing costumed bird skins across the My Birds and Season Pass tabs."></div>
+            <div class="carousel-cell"><img width="810" height="1440" decoding="async" src="/assets/img/ab-pop/screenshot_1.webp" alt="Gameplay in a jungle level: a pig trapped in a cluster of coloured bubbles above the slingshot, with Red waiting to fire."></div>
+            <div class="carousel-cell"><img width="810" height="1440" decoding="async" src="/assets/img/ab-pop/screenshot_2.webp" alt="A collage of level layouts from across the game, promoting over 4,000 levels."></div>
+            <div class="carousel-cell"><img width="810" height="1440" decoding="async" src="/assets/img/ab-pop/screenshot_3.webp" alt="A Save the Hatchlings level, with hatchlings held inside bubbles and a pig catching one in a net."></div>
+            <div class="carousel-cell"><img width="810" height="1440" decoding="async" src="/assets/img/ab-pop/screenshot_4.webp" alt="A charged power-up shot loaded into the slingshot, with pigs sheltering behind wooden planks above."></div>
+            <div class="carousel-cell"><img width="810" height="1440" decoding="async" src="/assets/img/ab-pop/screenshot_5.webp" alt="The Seasons menu, showing costumed bird skins across the My Birds and Season Pass tabs."></div>
         </div>
         <div id="flickity-fullscreen-div" class="inactive">
             <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -314,13 +312,15 @@
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
                 <div class="video-holder-div centered-div">
-                    <video id="player" playsinline controls data-poster="/assets/img/ab-pop/abpop-vid-thumbnail.webp">
+                    <video id="player" playsinline controls preload="none" data-poster="/assets/img/ab-pop/abpop-vid-thumbnail.webp">
                         <source src="/assets/img/ab-pop/abpop-trailer.webm" type="video/webm">
                     </video>
                 </div>
         </div>
     </div>
 
+      <!--==================== JQUERY ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
       <script src="/assets/js/scroll-spy.js"></script>
@@ -333,6 +333,8 @@
           const player = new Plyr('#player');
       </script>
       <!--==================== DYNAMIC PAGE SIZING ====================-->
+      <!--==================== FITTEXT ====================-->
+        <script src="/assets/js/fittext.js"></script>
       <script>
         window.fitText( document.getElementById("main-summary-title"), 2.6 );
       </script>

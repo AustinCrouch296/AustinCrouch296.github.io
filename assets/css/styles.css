@@ -1,5 +1,6 @@
-/*==================== GOOGLE FONTS ====================*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* Google Fonts are loaded with a <link> in each page head, not @import -
+   an @import here is invisible to the preload scanner and costs an extra
+   serial round trip before any text renders. */
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -2261,12 +2262,6 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     outline: 3px solid #FFF;
     outline-offset: 2px;
     box-shadow: 0 0 0 6px rgba(0, 0, 0, .55);
-}
-
-/* focus-visible polyfill (loaded on index + abandoned-mall) uses a class instead */
-.js-focus-visible :focus:not(.focus-visible) {
-    outline: none;
-    box-shadow: none;
 }
 
 /* Gallery thumbnails are <button> wrappers now. Mirror the sizing of the <img>

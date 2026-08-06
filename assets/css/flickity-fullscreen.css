@@ -53,14 +53,43 @@
   width:100%;
 }
 
+/* Fullscreen is a lightbox, so the whole image has to be visible whatever its
+   shape. This used to be object-fit: cover with an auto width, which crops:
+   .carousel-cell is a flex container, so an auto-width flex item resolves to
+   the image's INTRINSIC width rather than to height x aspect-ratio. The box
+   therefore ended up intrinsic-width x 80%-of-viewport - unrelated to the
+   image's real proportions - and cover threw away the difference. Portrait
+   screenshots (ab-pop is 810x1440) lost roughly half their height.
+
+   Giving the box explicit dimensions and using contain lets the image letterbox
+   or pillarbox inside it instead. Never edit this back to cover; if you want to
+   change the size, change the box, not the fit. */
 .flickity-enabled.is-fullscreen .carousel-cell img {
+  width: 100%;
+  height: 100%;
   max-width: 100%;
-  max-height: 80%;
+  max-height: 100%;
   margin-left: 0px;
   margin-right: 0px;
-  height: 80%;
-  object-fit: cover;
+  object-fit: contain;
   padding: 1px;
+}
+
+/* The room for the caption and page dots is reserved on the CELL rather than by
+   shrinking the image to 80%, so the reserve is a fixed strip instead of a
+   proportion. On a short landscape phone a percentage took far more than the
+   furniture actually needs. */
+.flickity-enabled.is-fullscreen .carousel-cell {
+  padding: 12px 12px 84px;
+  box-sizing: border-box;
+}
+
+/* Portrait phones: the furniture is proportionally much larger, and the caption
+   wraps to more lines on a narrow screen. */
+@media screen and (max-width: 767px) {
+  .flickity-enabled.is-fullscreen .carousel-cell {
+    padding: 8px 8px 96px;
+  }
 }
 
 

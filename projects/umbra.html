@@ -26,10 +26,6 @@
 
       <!--==================== UNICONS ====================-->
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-      <!--==================== JQUERY ====================-->
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-      <!--==================== FITTEXT ====================-->
-      <script src="/assets/js/fittext.js"></script>
       <!--==================== FLICKITY CSS ====================-->
       <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
       <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
@@ -38,6 +34,9 @@
       <!--==================== CSS ====================-->
       <title>Umbra — Joe Marks-Chadwick - Game Designer Portfolio</title>
       <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
       <link rel="stylesheet" href="/assets/css/styles.css">
       <style>
         #trailer-button {
@@ -106,13 +105,13 @@
 
         <div id="hero">
             <div class="texture"></div>
-            <video loop muted autoplay preload="auto">
+            <video loop muted autoplay playsinline preload="auto">
                 <source src="/assets/img/umbra/umbra-hero-vid.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
-            <img id="hero-img" src="/assets/img/umbra/hero-img.webp" alt="Banner image of a dark, foggy bedroom render taken from ingame.">
+            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/umbra/hero-img.webp" alt="Banner image of a dark, foggy bedroom render taken from ingame.">
             <div class="video-caption" id="startchange">
-                <img src="/assets/img/umbra/umbra-logo.svg" style="min-width: 350px; max-width: 1000px;" alt="Umbra Logo">
+                <img decoding="async" src="/assets/img/umbra/umbra-logo.svg" style="min-width: 350px; max-width: 1000px;" alt="Umbra Logo">
                 <!--<h1 style="margin-bottom:.25em;">UMBRA</h1>-->
                     <button onclick="openModal('4');" id="trailer-button" class="button">
                         <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
@@ -166,35 +165,35 @@
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
                         aria-label="The final look of the game including lighting, reflections, fog and post processing effects — view full screen">
-                    <img src="/assets/img/umbra/room_screenshot.webp" alt="">
+                    <img width="1280" height="719" decoding="async" loading="lazy" src="/assets/img/umbra/room_screenshot.webp" alt="">
                 </button>
                 <figcaption>The final look of the game including lighting, reflections, fog and post processing effects.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
                         aria-label="An example of how the lighting varies between rooms to set an eerie atmosphere — view full screen">
-                    <img src="/assets/img/umbra/fireplace_screenshot.webp" alt="">
+                    <img width="1211" height="719" decoding="async" loading="lazy" src="/assets/img/umbra/fireplace_screenshot.webp" alt="">
                 </button>
                 <figcaption>An example of how the lighting varies between rooms to set an eerie atmosphere.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
                         aria-label="A before-and-after shot showing the effects of the fog and post processing effects — view full screen">
-                    <img src="/assets/img/umbra/comparison_screenshot.webp" alt="">
+                    <img width="1280" height="704" decoding="async" loading="lazy" src="/assets/img/umbra/comparison_screenshot.webp" alt="">
                 </button>
                 <figcaption>A before-and-after shot showing the effects of the fog and post processing effects.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
                         aria-label="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR — view full screen">
-                    <img src="/assets/img/umbra/hdrp_screenshot.webp" alt="">
+                    <img width="1280" height="719" decoding="async" loading="lazy" src="/assets/img/umbra/hdrp_screenshot.webp" alt="">
                 </button>
                 <figcaption>An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR.</figcaption>
             </figure>
             <figure>
                 <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
                         aria-label="An assortment of keys, just one of the examples of in world interactions — view full screen">
-                    <img src="/assets/img/umbra/keys_screenshot.webp" alt="">
+                    <img width="1280" height="719" decoding="async" loading="lazy" src="/assets/img/umbra/keys_screenshot.webp" alt="">
                 </button>
                 <figcaption>An assortment of keys, just one of the examples of in world interactions.</figcaption>
             </figure>
@@ -203,11 +202,11 @@
         <div id="flickity-container">
             <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
             <div class="main-carousel is-invisible" id="main-carousel" data-flickity>
-                <div class="carousel-cell"><img src="/assets/img/umbra/room_screenshot.webp" alt="The final look of the game including lighting, reflections, fog and post processing effects."></div>
-                <div class="carousel-cell"><img src="/assets/img/umbra/fireplace_screenshot.webp" alt="An example of how the lighting varies between rooms to set an eerie atmosphere."></div>
-                <div class="carousel-cell"><img src="/assets/img/umbra/comparison_screenshot.webp" alt="A before-and-after shot showing the effects of the fog and post processing effects."></div>
-                <div class="carousel-cell"><img src="/assets/img/umbra/hdrp_screenshot.webp" alt="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR."></div>
-                <div class="carousel-cell"><img src="/assets/img/umbra/keys_screenshot.webp" alt="An assortment of keys, just one of the examples of in world interactions."></div>
+                <div class="carousel-cell"><img width="1280" height="719" decoding="async" src="/assets/img/umbra/room_screenshot.webp" alt="The final look of the game including lighting, reflections, fog and post processing effects."></div>
+                <div class="carousel-cell"><img width="1211" height="719" decoding="async" src="/assets/img/umbra/fireplace_screenshot.webp" alt="An example of how the lighting varies between rooms to set an eerie atmosphere."></div>
+                <div class="carousel-cell"><img width="1280" height="704" decoding="async" src="/assets/img/umbra/comparison_screenshot.webp" alt="A before-and-after shot showing the effects of the fog and post processing effects."></div>
+                <div class="carousel-cell"><img width="1280" height="719" decoding="async" src="/assets/img/umbra/hdrp_screenshot.webp" alt="An early version of the game using the high definition render pipeline, however this had to be downgraded as it was causing performance issues in VR."></div>
+                <div class="carousel-cell"><img width="1280" height="719" decoding="async" src="/assets/img/umbra/keys_screenshot.webp" alt="An assortment of keys, just one of the examples of in world interactions."></div>
             </div>
             <div id="flickity-fullscreen-div" class="inactive">
                 <p id="flickity-fullscreen-caption">&nbsp;</p>
@@ -265,13 +264,15 @@
         <div class="modal-window-content" id="img01">
             <!-- <video> HTML element -->
             <div class="video-holder-div centered-div">
-                <video id="player" playsinline controls data-poster="/assets/img/umbra/umbra-vid-thumbnail.webp">
+                <video id="player" playsinline controls preload="none" data-poster="/assets/img/umbra/umbra-vid-thumbnail.webp">
                     <source src="/assets/img/umbra/umbra-trailer.webm" type="video/webm">
                 </video>
             </div>
         </div>
     </div>
 
+    <!--==================== JQUERY ====================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--==================== MAIN JS ====================-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
@@ -283,6 +284,8 @@
         const player = new Plyr('#player');
     </script>
     <!--==================== DYNAMIC PAGE SIZING ====================-->
+    <!--==================== FITTEXT ====================-->
+        <script src="/assets/js/fittext.js"></script>
     <script>
         window.fitText( document.getElementById("main-summary-title"), 3.0 );
     </script>
