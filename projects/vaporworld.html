@@ -121,10 +121,12 @@
   <body class="dark-theme">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
-            <div class="nav__menu" id="nav-menu">
+    <header class="header" id="header" data-include="/partials/header.html">
+      <!-- No-JS fallback. The live version is partials/header.html, swapped in by
+           include.js. Re-sync this copy with docs/tools/sync_partials.py -->
+      <nav class="nav container">
+          <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
+          <div class="nav__menu" id="nav-menu">
               <ul class="nav__list grid">
                   <li class="nav__item">
                       <a href="/#home" class="nav__link active-link">
@@ -159,14 +161,14 @@
               </ul>
               <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
           </div>
-  
-            <div class="nav__btns">
-              <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-                  <i class="uil uil-apps" aria-hidden="true"></i>
-              </button>
-          </div>
-        </nav>
-      </header>
+
+          <div class="nav__btns">
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="uil uil-apps" aria-hidden="true"></i>
+            </button>
+        </div>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main id="main-content">
@@ -328,47 +330,51 @@
     </section>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer">
-    <div class="footer__bg">
-        <div class="footer__container container grid">
-            <div>
-                <p class="footer__title">Joe Marks-Chadwick</p>
-                <span class="footer__subtitle">Game Designer</span>
-            </div>
+    <footer class="footer" data-include="/partials/footer.html">
+      <!-- No-JS fallback. The live version is partials/footer.html, swapped in by
+           include.js. Re-sync this copy with docs/tools/sync_partials.py -->
+      <div class="footer__bg">
+          <div class="footer__container container grid">
+              <div>
+                  <p class="footer__title">Joe Marks-Chadwick</p>
+                  <span class="footer__subtitle">Game Designer</span>
+              </div>
 
-            <ul class="footer__links">
-                <li>
-                    <a href="/#services" class="footer__link">Projects</a>
-                </li>
+              <ul class="footer__links">
+                  <li>
+                      <a href="/#services" class="footer__link">Projects</a>
+                  </li>
 
-                <li>
-                    <a href="/#portfolio" class="footer__link">3D Modeling</a>
-                </li>
+                  <li>
+                      <a href="/#portfolio" class="footer__link">3D Modeling</a>
+                  </li>
 
-                <li>
-                    <a href="/#contact" class="footer__link">Contact Me</a>
-                </li>
-            </ul>
+                  <li>
+                      <a href="/#contact" class="footer__link">Contact Me</a>
+                  </li>
+              </ul>
 
-            <div class="footer__socials">
-                <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
-                    <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
-                </a>
+              <div class="footer__socials">
+                  <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                      <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
+                  </a>
 
-                <a href="/#contact" class="footer__social" aria-label="Contact me">
-                    <i class="uil uil-message" aria-hidden="true"></i>
-                </a>
+                  <a href="/#contact" class="footer__social" aria-label="Contact me">
+                      <i class="uil uil-message" aria-hidden="true"></i>
+                  </a>
 
-                <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
-                    <i class="uil uil-file-alt" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
+                  <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                      <i class="uil uil-file-alt" aria-hidden="true"></i>
+                  </a>
+              </div>
+          </div>
 
         <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
-    </div>
+      </div>
     </footer>
 
+    <!--==================== SHARED PARTIALS ====================-->
+    <script src="/assets/js/include.js"></script>
     <!--==================== JQUERY ====================-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!--==================== MAIN JS ====================-->

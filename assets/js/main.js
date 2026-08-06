@@ -1,65 +1,76 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
-const  navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close');
+/* The nav lives in partials/header.html and is swapped in by include.js AFTER
+   this script runs, so nothing here may capture a nav element once and hold it -
+   the reference would point at a node that is no longer in the document, and the
+   mobile menu would silently stop responding. Everything below therefore either
+   looks the element up at the moment it is needed, or is delegated to document. */
+function navMenuEl()   { return document.getElementById('nav-menu'); }
+function navToggleEl() { return document.getElementById('nav-toggle'); }
+function navCloseEl()  { return document.getElementById('nav-close'); }
 
 /* Keep the toggle's aria-expanded in step with the menu, so screen reader users
    are told whether the menu is open. */
 function setMenuOpen(isOpen) {
+    const navMenu = navMenuEl();
     if (!navMenu) {
         return;
     }
 
     navMenu.classList.toggle('show-menu', isOpen);
 
+    const navToggle = navToggleEl();
     if (navToggle) {
         navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
 }
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', ()=>{
+/*===== MENU SHOW / HIDDEN / CLOSE-ON-LINK =====*/
+/* One delegated listener covers the toggle, the close button and every nav link,
+   and keeps working across an include.js swap. */
+document.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) {
+        return;
+    }
+
+    if (target.closest('#nav-toggle')) {
         setMenuOpen(true);
         // Move focus into the menu so keyboard users land where the menu opened
+        const navClose = navCloseEl();
         if (navClose) {
             navClose.focus();
         }
-    })
-}
+        return;
+    }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', ()=>{
+    if (target.closest('#nav-close')) {
         setMenuOpen(false);
+        const navToggle = navToggleEl();
         if (navToggle) {
             navToggle.focus();
         }
-    })
-}
+        return;
+    }
+
+    if (target.closest('.nav__link')) {
+        // Following a link should not leave the mobile menu open behind it
+        setMenuOpen(false);
+    }
+});
 
 /*===== CLOSE THE MENU WITH ESCAPE =====*/
 document.addEventListener('keydown', (event) => {
+    const navMenu = navMenuEl();
     if (event.key !== 'Escape' || !navMenu || !navMenu.classList.contains('show-menu')) {
         return;
     }
 
     setMenuOpen(false);
+    const navToggle = navToggleEl();
     if (navToggle) {
         navToggle.focus();
     }
 });
-
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link');
-
-function linkAction(){
-    // When we click on each nav__link, we remove the show-menu class
-    setMenuOpen(false);
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader(){

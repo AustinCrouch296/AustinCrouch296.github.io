@@ -21,7 +21,9 @@
   <body class="dark-theme">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header">
+    <header class="header" id="header" data-include="/partials/header.html">
+      <!-- No-JS fallback. The live version is partials/header.html, swapped in by
+           include.js. Re-sync this copy with docs/tools/sync_partials.py -->
       <nav class="nav container">
           <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
           <div class="nav__menu" id="nav-menu">
@@ -84,7 +86,9 @@
         </div>
         
       <!--==================== FOOTER ====================-->
-      <footer class="footer">
+      <footer class="footer" data-include="/partials/footer.html">
+        <!-- No-JS fallback. The live version is partials/footer.html, swapped in by
+             include.js. Re-sync this copy with docs/tools/sync_partials.py -->
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
@@ -126,6 +130,8 @@
       </footer>
 
 
+      <!--==================== SHARED PARTIALS ====================-->
+      <script src="/assets/js/include.js"></script>
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
     </main>

@@ -1,0 +1,53 @@
+<!-- Shared site nav. This is the single source of truth: assets/js/include.js
+     fetches it and replaces the inner HTML of <header id="header"> on every page.
+
+     Each page also carries a copy of this markup inline as a no-JS fallback. Those
+     copies are allowed to drift - they only render when JS is off or this fetch
+     fails. Re-sync them all with:  python ../docs/tools/sync_partials.py
+
+     Links are root-absolute (/#about, not #about) so one copy works from both the
+     site root and /projects/. Do not change them to bare fragments. -->
+<nav class="nav container">
+    <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list grid">
+            <li class="nav__item">
+                <a href="/#home" class="nav__link active-link">
+                    <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="/#about" class="nav__link">
+                    <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="/#services" class="nav__link">
+                    <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
+                </a>
+            </li>
+            <li class="nav__item">
+              <a href="/#portfolio" class="nav__link">
+                  <i class="uil uil-scenery nav__icon" aria-hidden="true"></i> 3D Modeling
+              </a>
+          </li>
+          <li class="nav__item">
+              <a href="/#contact" class="nav__link">
+                  <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
+              </a>
+          </li>
+          <li class="nav__item">
+            <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                  <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
+            </a>
+        </li>
+        </ul>
+        <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="nav__btns">
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <i class="uil uil-apps" aria-hidden="true"></i>
+      </button>
+  </div>
+</nav>
