@@ -3,19 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="That page could not be found.">
+    <meta name="description" content="A personal Garry's Mod addon bringing Team Fortress 2 warpaints into the sandbox.">
+
+    <!-- STAGED PAGE. Everything marked TODO below is placeholder copy, so this page
+         is noindex and deliberately absent from sitemap.xml.
+
+         To publish it:
+           1. replace every TODO block with real copy
+           2. drop real media into assets/img/gmod-warpaint/ and add the carousel
+           3. swap this robots meta for the canonical + Open Graph block that every
+              other project page carries (see docs/ARCHITECTURE.md, "Page metadata")
+           4. add https://joemarkschadwick.com/projects/gmod-warpaint to sitemap.xml
+         docs/tools/check_seo.py enforces 3 and 4 together, so it will tell you if
+         you do half the job. -->
     <meta name="robots" content="noindex, follow">
 
-    
-      <!--==================== UNICONS ====================-->
-      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-      <!--==================== CSS ====================-->
-      <title>Joe Marks-Chadwick - Game Designer Portfolio</title>
-      <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
-      <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--==================== CSS ====================-->
+    <title>Garry's Mod — TF2 Warpaint Addon — Joe Marks-Chadwick - Game Designer Portfolio</title>
+    <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
 
   <body class="dark-theme">
@@ -65,22 +76,48 @@
       </nav>
     </header>
 
-
-    <main class="site-content" id="main-content">
-
-        <div style="display: flex; align-items: center; justify-content: center; padding: 20vh 0px;">
-            <section style="padding: 20px 60px; background: #201d36; filter: drop-shadow(0px 0px 1px #49417a); border-radius: 15px;">
-                <h1 class="section__title">404 Page Not Found!</h1>
-
-                <p style="text-align:center;">
-                    <br>
-                    Sorry, the page you were looking for does not exist! <br>
-                    Click <a href="/" style="color: white;">here</a> to return to the Home Page. <br><br>
-                    If you got to this page by clicking a link, please notify me so I can fix this error. :)
-                </p>
-            </section>
+    <!--==================== MAIN ====================-->
+    <main id="main-content">
+        <!--==================== HERO / BANNER ====================-->
+        <div id="hero">
+            <div class="texture"></div>
+            <!-- TODO: replace with a real screenshot or key art. -->
+            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/gmod-warpaint/gmod-warpaint-hero.webp" alt="Placeholder banner for the Garry's Mod TF2 Warpaint addon.">
+            <div class="video-caption" id="startchange">
+                <h2>G-Mod TF2 Warpaint Addon</h2>
+            </div>
         </div>
-        
+        <hr id="hero-hr">
+
+        <!--==================== CONTENT ====================-->
+        <a class="anchor" id="main-section"></a>
+
+        <div class="dynamic">
+            <div class="flex-parent-div summary__title">
+                <div class="flex-full tb-header">
+                    <!-- TODO: one-line hook, in the style of the other project pages. -->
+                    <h1 id="main-summary-title" class="game-title">Garry's Mod — TF2 Warpaint Addon</h1>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <p>
+                        A personal Garry's Mod addon that brings Team Fortress 2 warpaints into the sandbox.
+                    </p>
+                    <p>
+                        <b>TODO:</b> describe what the addon does, how the warpaint materials are applied, and anything notable about the workflow.
+                    </p>
+                </div>
+            </div>
+
+            <!-- TODO: image carousel. Copy the block from projects/ab-pop.html once
+                 screenshots exist in assets/img/gmod-warpaint/, and re-add the Flickity
+                 scripts at the end of this file. Every carousel <img> needs real alt
+                 text - flickity-carousel-captions.js builds the fullscreen caption
+                 from it, so alt is user-visible copy here. -->
+        </div>
+
       <!--==================== FOOTER ====================-->
       <footer class="footer" data-include="/partials/footer.html">
         <!-- No-JS fallback. The live version is partials/footer.html, swapped in by
@@ -120,12 +157,20 @@
           <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
       </footer>
-
+    </main>
 
       <!--==================== SHARED PARTIALS ====================-->
       <script src="/assets/js/include.js"></script>
+      <!--==================== JQUERY ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <!--==================== MAIN JS ====================-->
       <script src="/assets/js/main.js"></script>
-    </main>
+      <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
+      <!--==================== FITTEXT ====================-->
+      <script src="/assets/js/fittext.js"></script>
+      <script>
+        window.fitText( document.getElementById("main-summary-title"), 2.6 );
+      </script>
+      <script src="/assets/js/dynamic-sizing.js"></script>
   </body>
 </html>

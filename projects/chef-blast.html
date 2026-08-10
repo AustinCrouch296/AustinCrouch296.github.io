@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gordon Ramsay's Chef Blast — Intermediate Designer at Outplay Entertainment.">
+
+    <!-- STAGED PAGE. Everything marked TODO below is placeholder copy, so this page
+         is noindex and deliberately absent from sitemap.xml, and its home-page tile
+         is commented out in index.html.
+
+         To publish it:
+           1. replace every TODO block with real copy
+           2. drop real media into assets/img/chef-blast/ and add the carousel
+           3. swap this robots meta for the canonical + Open Graph block that every
+              other project page carries (see docs/ARCHITECTURE.md, "Page metadata")
+           4. add https://joemarkschadwick.com/projects/chef-blast to sitemap.xml
+           5. uncomment the Chef Blast tile in index.html
+         docs/tools/check_seo.py enforces 3 and 4 together, so it will tell you if
+         you do half the job. -->
+    <meta name="robots" content="noindex, follow">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--==================== FLICKITY CSS ====================-->
+    <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
+    <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
+    <!--==================== CSS ====================-->
+    <title>Gordon Ramsay's Chef Blast — Joe Marks-Chadwick - Game Designer Portfolio</title>
+    <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        /* The shared rule is width:50% with min-width:350px. On this page the caption
+           box is the logo's own 584px, so 50% resolves to 292px and the min-width
+           floor pins it at 350px - i.e. 60% of the logo's native size. Set it
+           explicitly instead. 525px is still under native 584px, so it stays sharp;
+           going past 584 would start softening it. */
+        #hero .video-caption img {
+            width: 525px;
+            min-width: 0;
+            max-width: 85vw;
+        }
+    </style>
+  </head>
+
+  <body class="abpop-theme">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header" data-include="/partials/header.html">
+      <!-- No-JS fallback. The live version is partials/header.html, swapped in by
+           include.js. Re-sync this copy with docs/tools/sync_partials.py -->
+      <nav class="nav container">
+          <a href="/" class="nav__logo">Joe Marks-Chadwick</a>
+          <div class="nav__menu" id="nav-menu">
+              <ul class="nav__list grid">
+                  <li class="nav__item">
+                      <a href="/#home" class="nav__link active-link">
+                          <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Home
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="/#about" class="nav__link">
+                          <i class="uil uil-user nav__icon" aria-hidden="true"></i> About
+                      </a>
+                  </li>
+                  <li class="nav__item">
+                      <a href="/#services" class="nav__link">
+                          <i class="uil uil-briefcase-alt nav__icon" aria-hidden="true"></i> Projects
+                      </a>
+                  </li>
+                <li class="nav__item">
+                    <a href="/#contact" class="nav__link">
+                        <i class="uil uil-estate nav__icon" aria-hidden="true"></i> Contact Me
+                    </a>
+                </li>
+                <li class="nav__item">
+                  <a href="/resume" target="_blank" rel="noopener" class="nav__link">
+                        <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i> CV
+                  </a>
+              </li>
+              </ul>
+              <button type="button" class="nav__close" id="nav-close" aria-label="Close menu"><i class="uil uil-times" aria-hidden="true"></i></button>
+          </div>
+
+          <div class="nav__btns">
+            <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="uil uil-apps" aria-hidden="true"></i>
+            </button>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main id="main-content">
+        <!--==================== HERO / BANNER ====================-->
+        <div id="hero">
+            <div class="texture"></div>
+            <video loop muted autoplay playsinline preload="auto">
+                <source src="/assets/img/chef-blast/chef-blast-hero-vid.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <img width="1280" height="720" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/chef-blast/chef-blast-hero.webp" alt="Gameplay from Gordon Ramsay's Chef Blast, showing a match-3 board of coloured blocks mid-explosion in a kitchen.">
+            <div class="video-caption" id="startchange">
+                <img width="584" height="219" decoding="async" src="/assets/img/chef-blast/chef-blast-logo.webp" alt="Gordon Ramsay's Chef Blast logo">
+            </div>
+        </div>
+        <hr id="hero-hr">
+
+        <!--==================== CONTENT ====================-->
+        <a class="anchor" id="main-section"></a>
+
+        <div class="dynamic">
+            <div class="flex-parent-div summary__title">
+                <div class="flex-full tb-header">
+                    <h1 id="main-summary-title" class="game-title">Have a blast in the kitchen with Gordon Ramsay!</h1>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <p>
+                        Gordon Ramsay's Chef Blast is a cube-matching puzzle game where you tap groups of matching blocks to clear them and work through hundreds of cooking-themed levels, with new ones added every couple of weeks. Levels reward smart play — finding efficient solutions earns higher scores and three-star ratings — and completing them pays out in-game currency. That cash goes toward renovating a virtual kitchen, with over 200 upgrades spread across different themes that you can complete individually or mix together however you like. Boosters help you get through tougher stages, and the game works offline for play anywhere.
+                    </p>
+                    <p>
+                        Beyond the core levels, the game runs rotating weekly events. Baking Bingo has you baking cupcakes to match customer orders for prizes, Hot Stove League pits you against other players to clear levels in the fewest attempts for leaderboard placement, and Market Day involves collecting stickers from specially marked blocks to trade for rewards. There's also a collectible recipe book featuring Ramsay's personal favorites plus dishes exclusive to the game, including a holiday recipe. Social features let you join a team, exchange lives with friends and other players, and compete on individual and team leaderboards.
+                    </p>
+                    <p>
+                        Gordon Ramsay: Chef Blast is available for download on the 
+                        <a class="marketing-button" target="_blank" rel="noopener" href="https://apps.apple.com/us/app/gordon-ramsay-chef-blast/id1515755905"><i class="uil uil-apple" aria-hidden="true"></i> App Store</a>,
+                        <a class="marketing-button" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.outplayentertainment.chefblast"><i class="uil uil-google-play" aria-hidden="true"></i> Google Play Store</a>, and
+                        <a class="marketing-button" target="_blank" rel="noopener" href="https://www.amazon.com/dp/B09BDG8YQB"><i class="uil uil-amazon" aria-hidden="true"></i> Amazon.com</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header" >
+                    <h2 class="game-title">Responsibilities</h2>
+                </div>
+            </div>
+
+                <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
+                
+                <div class="flex-half text-block tb-section-half-l">
+                    <ul class="text-block-ul">
+                        <li>TO-DO</li>
+                        <li>TO-DO</li>
+                        <li>TO-DO</li>
+                    </ul>
+                </div>
+
+                <div class="flex-half text-block tb-section-half-r">
+                    <ul class="text-block-ul">
+                        <li>TO-DO</li>
+                        <li>TO-DO</li>
+                        <li>TO-DO</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+
+            <!--==================== IMAGE CAROUSEL ====================-->
+            <div class="gallery">
+                <figure>
+                    <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(0); fsFlickity();"
+                            aria-label="A level in progress, with a board of food cubes, Gordon Ramsay tracking goals of 16 vegetables and 50 crates, and 42 moves remaining — view full screen">
+                        <img width="1080" height="1920" decoding="async" loading="lazy" src="/assets/img/chef-blast/screenshot_1.webp" alt="">
+                    </button>
+                </figure>
+                <figure>
+                    <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(1); fsFlickity();"
+                            aria-label="The Choose Portrait screen, where players pick a chef avatar from a grid of unlockable portraits — view full screen">
+                        <img width="1080" height="1920" decoding="async" loading="lazy" src="/assets/img/chef-blast/screenshot_2.webp" alt="">
+                    </button>
+                </figure>
+                <figure>
+                    <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(2); fsFlickity();"
+                            aria-label="The kitchen renovation flow, showing a worn kitchen wiping across to a refurbished one as the player confirms an upgrade — view full screen">
+                        <img width="1080" height="1920" decoding="async" loading="lazy" src="/assets/img/chef-blast/screenshot_3.webp" alt="">
+                    </button>
+                </figure>
+                <figure>
+                    <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(3); fsFlickity();"
+                            aria-label="The Hot Stove League event, where players race to clear levels in as few attempts as possible to earn Boiling Point Medals and climb a leaderboard of rival chefs — view full screen">
+                        <img width="1080" height="1920" decoding="async" loading="lazy" src="/assets/img/chef-blast/screenshot_4.webp" alt="">
+                    </button>
+                </figure>
+                <figure>
+                    <button type="button" class="gallery__trigger" onclick="fsFlickitySetImg(4); fsFlickity();"
+                            aria-label="The My Recipes menu, listing unlockable dishes including Beef Wellington and an exclusive Buttermilk Chicken with Truffle Cheese Mash — view full screen">
+                        <img width="1080" height="1920" decoding="async" loading="lazy" src="/assets/img/chef-blast/screenshot_5.webp" alt="">
+                    </button>
+                </figure>
+            </div>
+
+            <div id="flickity-container">
+                <button onclick="fsFlickity();" class="flickity-button flickity-fullscreen-button flickity-fullscreen-button-view is-invisible" id="flickity-fullscreen-btn" type="button" aria-label="View full-screen" title="View full-screen"><svg class="flickity-button-icon" viewBox="0 0 32 32"><path d="M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z"></path></svg></button>
+                <div class="main-carousel carousel is-invisible" id="main-carousel" data-flickity>
+                    <div class="carousel-cell"><img width="1080" height="1920" decoding="async" src="/assets/img/chef-blast/screenshot_1.webp" alt="A level in progress, with a board of food cubes, Gordon Ramsay tracking goals of 16 vegetables and 50 crates, and 42 moves remaining."></div>
+                    <div class="carousel-cell"><img width="1080" height="1920" decoding="async" src="/assets/img/chef-blast/screenshot_2.webp" alt="The Choose Portrait screen, where players pick a chef avatar from a grid of unlockable portraits."></div>
+                    <div class="carousel-cell"><img width="1080" height="1920" decoding="async" src="/assets/img/chef-blast/screenshot_3.webp" alt="The kitchen renovation flow, showing a worn kitchen wiping across to a refurbished one as the player confirms an upgrade."></div>
+                    <div class="carousel-cell"><img width="1080" height="1920" decoding="async" src="/assets/img/chef-blast/screenshot_4.webp" alt="The Hot Stove League event, where players race to clear levels in as few attempts as possible to earn Boiling Point Medals and climb a leaderboard of rival chefs."></div>
+                    <div class="carousel-cell"><img width="1080" height="1920" decoding="async" src="/assets/img/chef-blast/screenshot_5.webp" alt="The My Recipes menu, listing unlockable dishes including Beef Wellington and an exclusive Buttermilk Chicken with Truffle Cheese Mash."></div>
+                </div>
+
+                <div id="flickity-fullscreen-div" class="inactive">
+                    <p id="flickity-fullscreen-caption">&nbsp;</p>
+                </div>
+                <p id="flickity-caption">
+                    &nbsp;
+                </p>
+            </div>
+
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer" data-include="/partials/footer.html">
+        <!-- No-JS fallback. The live version is partials/footer.html, swapped in by
+             include.js. Re-sync this copy with docs/tools/sync_partials.py -->
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <p class="footer__title">Joe Marks-Chadwick</p>
+                    <span class="footer__subtitle">Game Designer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="/#services" class="footer__link">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="/#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/joe-marks-chadwick/" target="_blank" rel="noopener" class="footer__social" aria-label="Joe Marks-Chadwick on LinkedIn (opens in a new tab)">
+                        <i class="uil uil-linkedin-alt" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="/#contact" class="footer__social" aria-label="Contact me">
+                        <i class="uil uil-message" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="/resume" class="footer__social" target="_blank" rel="noopener" aria-label="View my CV (opens in a new tab)">
+                        <i class="uil uil-file-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+          <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+
+      <!--==================== SHARED PARTIALS ====================-->
+      <script src="/assets/js/include.js"></script>
+      <!--==================== JQUERY ====================-->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <!--==================== MAIN JS ====================-->
+      <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
+      <!--==================== FITTEXT ====================-->
+      <script src="/assets/js/fittext.js"></script>
+      <script>
+        window.fitText( document.getElementById("main-summary-title"), 2.6 );
+      </script>
+      <script src="/assets/js/dynamic-sizing.js"></script>
+      <!--==================== FLICKITY ====================-->
+      <script src="/assets/js/flickity.pkgd.min.js"></script>
+      <script src="/assets/js/flickity-fullscreen.js"></script>
+      <script src="/assets/js/load-flickity.js"></script>
+      <script src="/assets/js/flickity-carousel-captions.js"></script>
+  </body>
+</html>

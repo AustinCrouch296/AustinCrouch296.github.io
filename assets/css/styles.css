@@ -1356,6 +1356,22 @@ img{
 	border-color: rgb(148, 193, 228);
 }
 
+/* Tile-only projects: no dedicated page to link to. The tile still needs to look
+   like part of the grid, but it must NOT advertise a click it cannot honour - the
+   old markup wrapped these in a bare <a> with no href, which kept the pointer
+   cursor and the hover zoom while being unfocusable and inert. Drop the <a> and
+   add this modifier instead. */
+.work-item--static:hover
+{
+	cursor: default;
+	border-color: rgb(84, 84, 84);
+}
+
+.work-item--static .work-item-bg:hover
+{
+	transform: none;
+}
+
 .work-item-title-container
 {
 	width: 100%;
@@ -1619,6 +1635,44 @@ img{
 .column-item {
     background-color: lightgreen;
     grid-column: span 2;
+}
+
+/* Store links in project prose. Lived only in ab-pop.html's page-local <style>
+   until 2026-08-09, so the second page to use the class inherited the browser
+   default (#0000EE) - navy on a dark background, effectively unreadable. */
+.marketing-button {
+    color: lightblue;
+    font-weight: bold;
+}
+
+.marketing-button:hover {
+    color: lightseagreen;
+}
+
+/* .dynamic wraps the body content of every project page. These rules lived in
+   flickity.css until 2026-08-09, which meant a page without a carousel never got
+   them and rendered edge-to-edge - and because fitText derives the title size from
+   the container width, its heading came out oversized too. Layout belongs here. */
+.dynamic {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding-top: 0px;
+}
+
+@media screen and (min-width: 1010px) {
+    .dynamic { max-width: 90%; }
+}
+
+@media screen and (min-width: 1145px) {
+    .dynamic { max-width: 80%; }
+}
+
+@media screen and (min-width: 1350px) {
+    .dynamic { max-width: 70%; }
+}
+
+@media screen and (min-width: 1635px) {
+    .dynamic { max-width: 60%; }
 }
 
 .flex-parent-div,

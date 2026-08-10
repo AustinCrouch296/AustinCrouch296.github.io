@@ -213,78 +213,29 @@ https://flickity.metafizzy.co
   display: none;
 }
 
-@media screen and (min-width: 0px) {
-  #flickity-container,
-  .dynamic {
-    max-width: 100%; 
-  }
-
-  #bio {
-    max-width: 80%;
-  }
-}
-
+/* .dynamic and #bio used to be sized here too. .dynamic is the wrapper around all
+   project-page content, so keeping its width ladder in the CAROUSEL stylesheet meant
+   any page without a carousel rendered full-bleed. Moved to styles.css. #bio was
+   dead - no page uses it. */
 @media screen and (min-width: 1010px) {
-  #flickity-container, 
-  #bio, 
-  .dynamic {
-    max-width: 90%; 
-  }
-
-  #bio {
-    max-width: 80%;
-  }
+  #flickity-container { max-width: 90%; }
 }
 
 @media screen and (min-width: 1145px) {
-  #flickity-container, 
-  .dynamic {
-    max-width: 80%; 
-  }
-
-  #bio {
-    max-width: 70%;
-  }
+  #flickity-container { max-width: 80%; }
 }
 
 @media screen and (min-width: 1350px) {
-  #flickity-container, 
-  .dynamic {
-    max-width: 70%; 
-  }
-
-  #bio {
-    max-width: 60%;
-  }
+  #flickity-container { max-width: 70%; }
 }
 
 @media screen and (min-width: 1635px) {
-  #flickity-container, 
-  .dynamic {
-    max-width: 60%; 
-  }
-
-  #bio {
-    max-width: 50%;
-  }
+  #flickity-container { max-width: 60%; }
 }
 
-#flickity-container, 
-.dynamic {
-  margin: auto; 
+#flickity-container {
+  margin: auto;
   padding-top: 0px;
-}
-
-#bio {
-  margin: auto; 
-  padding-top: 0px;
-}
-
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
 }
 
 #flickity-caption {
@@ -293,8 +244,11 @@ https://flickity.metafizzy.co
   padding-top: 0px;
 }
 
-.dynamic {
-  margin: 1rem auto;
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
 }
 
 .flickity-fullscreen-button {
