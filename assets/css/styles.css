@@ -2074,6 +2074,28 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     background: linear-gradient(0deg, rgba(196,101,0,1) 0%, rgba(196,101,0,1) 50%, rgba(214,151,4,1) 50%, rgba(214,151,4,1) 100%); 
 }
 
+#chef-blast-trailer-btn {
+    height: auto;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: 0px;
+    background: rgb(238,56,28);
+    background: linear-gradient(0deg, rgba(238,56,28,1) 0%, rgba(238,56,28,1) 50%, rgba(252,140,28,1) 50%, rgba(252,140,28,1) 100%);
+    box-shadow: 0px 0px 0px 3px #fff;
+    transition: background-color 0.5s;
+    border-radius: 2rem;
+    margin-top: 20px;
+}
+
+#chef-blast-trailer-btn:hover {
+    background: rgb(206,44,20);
+    background: linear-gradient(0deg, rgba(206,44,20,1) 0%, rgba(206,44,20,1) 50%, rgba(222,120,20,1) 50%, rgba(222,120,20,1) 100%);
+}
+
 .text-block p {
     margin-bottom: var(--mb-0-75);
     padding-top: 0px;
