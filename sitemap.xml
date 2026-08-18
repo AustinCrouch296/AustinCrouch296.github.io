@@ -11,7 +11,7 @@
   This file is load-bearing: header/nav is planned to move to client-side includes,
   which means crawlers will not reliably discover pages by following the nav. Add an
   entry whenever a page is added, and refresh lastmod when a page's content changes.
-  Do not list 404.html or success.html - both are marked noindex.
+  Do not list 404.html, or any page marked noindex.
 -->
 
 <url>
