@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personal project reimplementing The Simpsons: Tapped Out for PC on a Vulkan renderer.">
+    <meta name="description" content="OpenTSTO, an in-progress clean-room rebuild of The Simpsons: Tapped Out's game engine in C++20, preserving the game after its 2025 shutdown.">
 
     <!-- STAGED PAGE. Everything marked TODO below is placeholder copy, so this page
          is noindex and deliberately absent from sitemap.xml.
@@ -21,12 +21,47 @@
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--==================== CSS ====================-->
-    <title>The Simpsons: Tapped Out — Vulkan PC Engine Port — Joe Marks-Chadwick - Game Designer Portfolio</title>
+    <title>OpenTSTO — Joe Marks-Chadwick - Game Designer Portfolio</title>
     <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        /* Hero logo sizing. Same approach as ab-pop.html (caption box at half the
+           hero, logo filling it) but 20% larger: 733px instead of 611px. That is
+           a ~1.72x upscale of the 425px source, which this flat-colour
+           vector-style art takes cleanly. height:auto keeps the 425:247 aspect
+           ratio intact at every width; max-width:90vw stops it overflowing on
+           narrow screens, and the width:100% + max-width pair means it scales
+           down proportionally rather than cropping. */
+        .video-caption {
+            width: 60%;
+            min-width: 350px;
+        }
+
+        /* Hero -> banner gap 1.2rem, banner -> title gap 1rem, so the banner sits
+           closer to the heading it introduces than to the hero above it. The row
+           wrapper carries the top space; the banner's own margin-bottom carries
+           the bottom. */
+        .wip-banner-row {
+            padding-top: 1.2rem;
+        }
+
+        .wip-banner-row .wip-banner {
+            margin-bottom: 1rem;
+        }
+
+        #opentsto-logo {
+            width: 100%;
+            max-width: 733px;
+            min-width: 350px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
   </head>
 
   <body class="dark-theme">
@@ -82,10 +117,9 @@
         <div id="hero">
             <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" href="#main-section" aria-label="Skip to the main content" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
             <div class="texture"></div>
-            <!-- TODO: replace with a real screenshot or key art. -->
-            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/simpsons-tapped-out/simpsons-tapped-out-hero.webp" alt="Placeholder banner for the Simpsons Tapped Out Vulkan PC engine port.">
+            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/simpsons-tapped-out/simpsons-tapped-out-hero.webp" alt="Homer Simpson in front of Moe's Tavern and King Toot's Music Store, with the Springfield skyline and the nuclear power plant behind him.">
             <div class="video-caption" id="startchange">
-                <h2>Simpsons Tapped Out — Vulkan PC Engine Port</h2>
+                <img width="425" height="247" decoding="async" id="opentsto-logo" src="/assets/img/simpsons-tapped-out/OpenTSTO-logo.webp" alt="OpenTSTO logo">
             </div>
         </div>
         <hr id="hero-hr">
@@ -94,21 +128,62 @@
         <a class="anchor" id="main-section"></a>
 
         <div class="dynamic">
+            <div class="flex-parent-div wip-banner-row">
+                <div class="flex-full text-block tb-section">
+                    <div class="wip-banner">
+                        <i class="uil uil-constructor" aria-hidden="true"></i>
+                        <div>
+                            <strong>Work in progress</strong>
+                            OpenTSTO is an active, ongoing project rather than a finished piece of work. Systems are still being added and refined, and everything shown here is subject to change.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header">
-                    <!-- TODO: one-line hook, in the style of the other project pages. -->
-                    <h1 id="main-summary-title" class="game-title">The Simpsons: Tapped Out — Vulkan PC Engine Port</h1>
+                    <h1 id="main-summary-title" class="game-title">Preserving a beloved mobile game</h1>
                 </div>
             </div>
 
             <div class="flex-parent-div summary__description">
                 <div class="flex-full text-block tb-section">
                     <p>
-                        A personal reverse-engineering project: rebuilding the client for PC on top of a Vulkan renderer.
+                        <i>The Simpsons: Tapped Out</i> was a city-building mobile game that ran for over twelve years before its servers were shut down in January 2025. When a live game goes offline it stops being playable altogether &ndash; there is no offline mode to fall back on, and the client is useless without the service behind it.
                     </p>
                     <p>
-                        <b>TODO:</b> describe what was reimplemented, what the Vulkan renderer had to do differently, and what the hardest part was.
+                        <b>OpenTSTO</b> is a clean-room rebuild of that game's engine, written from scratch in C++20 so the game can be preserved and played again. It is built around exact preservation rather than reinvention: the rebuild runs on the original game's own scripts, assets and data files, and a change is only correct if it behaves the way the original did. The engine is cross-platform, running on Vulkan on PC and OpenGL ES on mobile.
                     </p>
+                    <p>
+                        The difficulty is that none of the original game's logic is documented. The compiled game carries no names or structure to work from, so every system — how quests unlock, how characters find their way around town, how a menu decides its layout — has to be recovered by studying the original, forming a theory about how it worked, and testing that theory against the real game before anything is built. Around 4,300 of the game's own data files have been mapped this way.
+                    </p>
+                    <p>
+                        OpenTSTO is a joint effort. I lead the project and its design direction, working alongside <b>BodNJenie</b>, whose work on the server and backend systems the rebuild depends on.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">My Role</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
+                <div class="flex-half text-block tb-section-half-l">
+                    <ul class="text-block-ul">
+                        <li>Project lead, setting the direction and priorities for a rebuild spanning roughly 200,000 lines of code.</li>
+                        <li>Specified how the quest and scripting systems needed to behave — objective tracking, unlock requirements, and the original's embedded scripting language — and verified each against the real game.</li>
+                        <li>Designed the behaviour of the character systems, covering jobs, navigation around town, unlocks and costumes.</li>
+                    </ul>
+                </div>
+
+                <div class="flex-half text-block tb-section-half-r">
+                    <ul class="text-block-ul">
+                        <li>Rebuilt the game's interface against its original menu layout format, matching the source material closely enough to sit side by side with it.</li>
+                        <li>Directed the reverse-engineering effort, validating findings against the running game rather than trusting assumptions — the difference between a system that looks right and one that behaves right.</li>
+                        <li>Ran structured review passes across the project, catching behavioural mismatches that only surface in edge cases and documenting them so they stay fixed.</li>
+                    </ul>
                 </div>
             </div>
 

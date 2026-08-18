@@ -2096,6 +2096,36 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     background: linear-gradient(0deg, rgba(206,44,20,1) 0%, rgba(206,44,20,1) 50%, rgba(222,120,20,1) 50%, rgba(222,120,20,1) 100%);
 }
 
+/* Work-in-progress notice for project pages that are still being built out.
+   Reusable - drop <div class="wip-banner"> at the top of the summary block. */
+.wip-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    max-width: 900px;
+    margin: 0 auto var(--mb-1-5);
+    padding: 1rem 1.25rem;
+    border-radius: .75rem;
+    border: 1px solid rgba(240, 169, 3, .45);
+    border-left: 4px solid rgb(240, 169, 3);
+    background: rgba(240, 169, 3, .10);
+    font-size: var(--small-font-size);
+    text-align: left;
+}
+
+.wip-banner i {
+    color: rgb(240, 169, 3);
+    font-size: 1.35rem;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.wip-banner strong {
+    display: block;
+    margin-bottom: .15rem;
+    color: rgb(240, 169, 3);
+}
+
 .text-block p {
     margin-bottom: var(--mb-0-75);
     padding-top: 0px;
