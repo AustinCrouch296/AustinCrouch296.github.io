@@ -2097,6 +2097,311 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     background: linear-gradient(0deg, rgba(206,44,20,1) 0%, rgba(206,44,20,1) 50%, rgba(222,120,20,1) 50%, rgba(222,120,20,1) 100%);
 }
 
+/*==================== BEFORE / AFTER IMAGE COMPARE GALLERY ====================*/
+/* Gallery of comparison slides. Divider position comes from --pos, set per-slide
+   by assets/js/image-compare.js; everything below is pure CSS off that value. */
+.compare-gallery {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.compare {
+    --pos: 50%;
+    position: relative;
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+    line-height: 0;
+    cursor: ew-resize;
+}
+
+/* No-JS fallback: every slide renders, stacked vertically. image-compare.js adds
+   .is-enhanced, which collapses the stack to one visible slide at a time. */
+.compare-gallery:not(.is-enhanced) .compare {
+    margin-bottom: 1rem;
+}
+
+.compare-gallery.is-enhanced .compare {
+    display: none;
+}
+
+.compare-gallery.is-enhanced .compare.is-active {
+    display: block;
+}
+
+.compare__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* The "after" image is clipped to --pos, never faded: both stay fully opaque so
+   differences read as real differences, not blend artefacts. */
+.compare__after {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    overflow: hidden;
+    clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+.compare__after .compare__img {
+    /* Pin to the container so the clip reveals the same pixels the before image
+       shows underneath, rather than a squashed copy. */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Visible divider + grip. aria-hidden in the markup: the range carries the
+   semantics, this is only chrome. */
+.compare__handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--pos);
+    width: 2px;
+    background: #fff;
+    transform: translateX(-1px);
+    pointer-events: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .45);
+}
+
+.compare__grip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .45), 0 2px 8px rgba(0, 0, 0, .35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-size: 1.1rem;
+}
+
+/* The real control: invisible, full-size, on top, so pointer and keyboard both
+   land on a native range input. */
+.compare__range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+/* Focus lands on the invisible range, so show the ring on the visible grip -
+   otherwise keyboard focus appears to vanish. */
+.compare__range:focus-visible ~ .compare__handle .compare__grip {
+    outline: 3px solid #FFF;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, .55);
+}
+
+.compare__labels {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: .5rem auto 0;
+    padding: 0 .25rem;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    line-height: normal;
+}
+
+/* ---- maximise / fullscreen ----
+   Deliberately a fixed overlay rather than the native Fullscreen API, to match
+   how the Flickity galleries elsewhere on the site do it (they toggle
+   .is-flickity-fullscreen on <html> and let CSS do the work). Same behaviour
+   everywhere, including iOS Safari, where the Fullscreen API does not apply to
+   arbitrary elements. */
+.compare-gallery__fs {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .55);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.compare-gallery__fs:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+/* Scroll lock while maximised, mirroring html.is-flickity-fullscreen. */
+html.is-compare-fullscreen {
+    overflow: hidden;
+}
+
+.compare-gallery.is-fullscreen {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    max-width: none;
+    margin: 0;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 3.5rem;
+}
+
+/* Fit the image to the viewport instead of the 900px column, so the capture
+   renders at or near its native resolution - the whole point of maximising. */
+.compare-gallery.is-fullscreen .compare.is-active {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 5rem);
+    display: flex;
+}
+
+.compare-gallery.is-fullscreen .compare__img {
+    max-height: calc(100vh - 5rem);
+    width: auto;
+    max-width: 100vw;
+    object-fit: contain;
+}
+
+/* The clipped overlay is absolutely positioned, so it needs the same box as the
+   base image or the two stop lining up once the image is no longer full-width. */
+.compare-gallery.is-fullscreen .compare__after .compare__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.compare-gallery.is-fullscreen .compare-gallery__dots {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 0;
+    right: 0;
+}
+
+/* Prev / next arrows, vertically centred over the image. */
+.compare-gallery__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .55);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.compare-gallery__nav:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+.compare-gallery__nav--prev {
+    left: .75rem;
+}
+
+.compare-gallery__nav--next {
+    right: .75rem;
+}
+
+.compare-gallery__dots {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: .75rem;
+}
+
+.compare-gallery__dot {
+    width: .7rem;
+    height: .7rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--text-color);
+    opacity: .35;
+    cursor: pointer;
+    transition: opacity .2s, transform .2s;
+}
+
+.compare-gallery__dot:hover {
+    opacity: .7;
+}
+
+.compare-gallery__dot.is-active {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+/* Sits under the gallery caption. Muted and italic so it reads as a note about
+   the work rather than as part of the comparison's own labelling. */
+.compare__disclaimer {
+    max-width: 900px;
+    margin: .35rem auto 0;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    opacity: .75;
+    font-style: italic;
+    line-height: normal;
+}
+
+.compare__caption {
+    max-width: 900px;
+    margin: .5rem auto 0;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    line-height: normal;
+}
+
+@media screen and (max-width: 767px) {
+    .compare-gallery__nav {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.2rem;
+    }
+
+    .compare-gallery__nav--prev {
+        left: .35rem;
+    }
+
+    .compare-gallery__nav--next {
+        right: .35rem;
+    }
+}
+
 /* Work-in-progress notice for project pages that are still being built out.
    Reusable - drop <div class="wip-banner"> at the top of the summary block. */
 .wip-banner {
