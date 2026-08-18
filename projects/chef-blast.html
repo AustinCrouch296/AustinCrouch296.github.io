@@ -3,28 +3,35 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gordon Ramsay's Chef Blast — Intermediate Designer at Outplay Entertainment.">
+    <meta name="description" content="Designing and balancing levels and supporting LiveOps events on Gordon Ramsay's Chef Blast, a live match-3 puzzle game, at Outplay Entertainment.">
 
-    <!-- STAGED PAGE. Everything marked TODO below is placeholder copy, so this page
-         is noindex and deliberately absent from sitemap.xml, and its home-page tile
-         is commented out in index.html.
+<link rel="canonical" href="https://joemarkschadwick.com/projects/chef-blast">
 
-         To publish it:
-           1. replace every TODO block with real copy
-           2. drop real media into assets/img/chef-blast/ and add the carousel
-           3. swap this robots meta for the canonical + Open Graph block that every
-              other project page carries (see docs/ARCHITECTURE.md, "Page metadata")
-           4. add https://joemarkschadwick.com/projects/chef-blast to sitemap.xml
-           5. uncomment the Chef Blast tile in index.html
-         docs/tools/check_seo.py enforces 3 and 4 together, so it will tell you if
-         you do half the job. -->
-    <meta name="robots" content="noindex, follow">
+    <!--=============== LINK PREVIEW / OPEN GRAPH ===============-->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Joe Marks-Chadwick">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="https://joemarkschadwick.com/projects/chef-blast">
+    <meta property="og:title" content="Gordon Ramsay's Chef Blast — Joe Marks-Chadwick">
+    <meta property="og:description" content="Designing and balancing levels and supporting LiveOps events on Gordon Ramsay's Chef Blast, a live match-3 puzzle game, at Outplay Entertainment.">
+    <meta property="og:image" content="https://joemarkschadwick.com/assets/img/og/og-chef-blast.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Screenshots from Gordon Ramsay's Chef Blast showing a puzzle level, a kitchen renovation, and the Hot Stove League event.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gordon Ramsay's Chef Blast — Joe Marks-Chadwick">
+    <meta name="twitter:description" content="Designing and balancing levels and supporting LiveOps events on Gordon Ramsay's Chef Blast, a live match-3 puzzle game, at Outplay Entertainment.">
+    <meta name="twitter:image" content="https://joemarkschadwick.com/assets/img/og/og-chef-blast.jpg">
+    <meta name="twitter:image:alt" content="Screenshots from Gordon Ramsay's Chef Blast showing a puzzle level, a kitchen renovation, and the Hot Stove League event.">
 
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--==================== FLICKITY CSS ====================-->
     <link rel="stylesheet" href="/assets/css/flickity-fullscreen.css">
     <link rel="stylesheet" href="/assets/css/flickity.css" media="screen">
+    <!--==================== VIDEO PLAYER ====================-->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
     <!--==================== CSS ====================-->
     <title>Gordon Ramsay's Chef Blast — Joe Marks-Chadwick - Game Designer Portfolio</title>
     <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
@@ -42,6 +49,9 @@
             width: 525px;
             min-width: 0;
             max-width: 85vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
   </head>
@@ -106,6 +116,12 @@
             <img width="1280" height="720" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/chef-blast/chef-blast-hero.webp" alt="Gameplay from Gordon Ramsay's Chef Blast, showing a match-3 board of coloured blocks mid-explosion in a kitchen.">
             <div class="video-caption" id="startchange">
                 <img width="584" height="219" decoding="async" src="/assets/img/chef-blast/chef-blast-logo.webp" alt="Gordon Ramsay's Chef Blast logo">
+                    <button onclick="openModal('4');" id="chef-blast-trailer-btn" class="button">
+                        <svg role="img" stroke="currentColor" stroke-width="2" aria-hidden="true" fill="none" width="24" height="24" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 5px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg> Watch the Trailer!
+                    </button>
             </div>
         </div>
         <hr id="hero-hr">
@@ -147,17 +163,17 @@
                 
                 <div class="flex-half text-block tb-section-half-l">
                     <ul class="text-block-ul">
-                        <li>TO-DO</li>
-                        <li>TO-DO</li>
-                        <li>TO-DO</li>
+                        <li>Designed and built levels for a live match-3 title, working within an established content pipeline.</li>
+                        <li>Balanced and tuned levels against live player data to maintain difficulty pacing and progression.</li>
+                        <li>Supported LiveOps on the game's rotating events programme.</li>
                     </ul>
                 </div>
 
                 <div class="flex-half text-block tb-section-half-r">
                     <ul class="text-block-ul">
-                        <li>TO-DO</li>
-                        <li>TO-DO</li>
-                        <li>TO-DO</li>
+                        <li>Ran experiments on live builds to test design changes and inform decisions.</li>
+                        <li>Organised and took part in playtest sessions, feeding findings back to the design team.</li>
+                        <li>Identified and improved existing team processes, streamlining how design work moved through the pipeline.</li>
                     </ul>
                 </div>
             </div>
@@ -256,6 +272,23 @@
           <p class="footer__copy">&#169; Joe Marks-Chadwick. All rights reserved.</p>
         </div>
       </footer>
+
+    <!--==================== MODAL / VIDEO POP-UP PLAYER ====================-->
+    <!-- The trailer file is not in the repo yet. Drop it in as
+         assets/img/chef-blast/chef-blast-trailer.webm and it plays with no further
+         changes. The poster falls back to the hero image until a dedicated
+         chef-blast-vid-thumbnail.webp exists (see ab-pop.html for the pattern). -->
+    <div id="myModal4" class="modal-window" role="dialog" aria-modal="true" aria-label="Trailer video" aria-hidden="true">
+        <button type="button" onclick="closeVideoModal('player');" class="modalCloseBtn" aria-label="Close video">&times;</button>
+        <div class="modal-window-content" id="img01">
+            <!-- <video> HTML element -->
+                <div class="video-holder-div centered-div">
+                    <video id="player" playsinline controls preload="none" data-poster="/assets/img/chef-blast/chef-blast-hero.webp">
+                        <source src="/assets/img/chef-blast/chef-blast-trailer.webm" type="video/webm">
+                    </video>
+                </div>
+        </div>
+    </div>
     </main>
 
       <!--==================== SHARED PARTIALS ====================-->
@@ -266,6 +299,13 @@
       <script src="/assets/js/main.js"></script>
       <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
       <script src="/assets/js/hero_arrow.js"></script>
+      <!--=============== MODALS ===============-->
+      <script src="/assets/js/modal.js"></script>
+      <!--==================== VIDEO PLAYER ====================-->
+      <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+      <script>
+          const player = new Plyr('#player');
+      </script>
       <!--==================== FITTEXT ====================-->
       <script src="/assets/js/fittext.js"></script>
       <script>
