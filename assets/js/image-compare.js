@@ -1,7 +1,12 @@
-/*==================== BEFORE / AFTER IMAGE COMPARE GALLERY ====================*/
-/* A gallery of drag-a-divider comparisons: each slide stacks an "original" and a
-   "rebuild" screenshot, and arrows / dots step between slides. Used on the
-   OpenTSTO page to put the original game side by side with the rebuild.
+/*==================== IMAGE COMPARE / SLIDE GALLERY ====================*/
+/* Two gallery flavours share this component, both driven by [data-compare-gallery]:
+
+     - COMPARE slides stack an "original" and a "rebuild" screenshot with a
+       draggable divider between them (OpenTSTO's Original vs Rebuild section).
+     - TIMELINE slides are a single image with a caption (OpenTSTO's development
+       timeline). They simply omit the range/handle markup.
+
+   Arrows, dots, captions and maximise work identically for both.
 
    Markup contract (see projects/simpsons-tapped-out.html):
 
@@ -16,8 +21,8 @@
        <button class="compare-gallery__nav" data-compare-prev>...</button>
        <button class="compare-gallery__nav" data-compare-next>...</button>
        <div class="compare-gallery__dots" data-compare-dots></div>
-       <p data-compare-caption></p>
      </div>
+     <p data-compare-caption></p>        <- sibling of the gallery, not a child
 
    Design notes, because several of these are load-bearing:
 
@@ -73,7 +78,9 @@
         var prevBtn = gallery.querySelector('[data-compare-prev]');
         var nextBtn = gallery.querySelector('[data-compare-next]');
         var dotsBox = gallery.querySelector('[data-compare-dots]');
-        var caption = gallery.querySelector('[data-compare-caption]');
+        var captionScope = gallery.closest('.text-block') || gallery.parentNode;
+        var caption = gallery.querySelector('[data-compare-caption]')
+            || (captionScope && captionScope.querySelector('[data-compare-caption]'));
         var current = 0;
         var dots = [];
         var DEFAULT_POS = 50;
@@ -84,6 +91,9 @@
         /* ---------- divider behaviour, per slide ---------- */
 
         function wireSlide(slide) {
+            /* Timeline slides have no divider - they are a single image, not a
+               pair - so there is nothing to wire. Slide switching, dots, arrows
+               and maximise all still apply. */
             var range = slide.querySelector('.compare__range');
             if (!range) {
                 return;

@@ -2223,6 +2223,49 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     line-height: normal;
 }
 
+/* ---- development-log slides ----
+   Single-image slides in the same gallery component: no divider, so no clipped
+   overlay and no range input. */
+.compare--timeline {
+    cursor: default;
+}
+
+.compare-gallery.is-fullscreen .compare--timeline.is-active {
+    cursor: default;
+}
+
+/* Development-log captures vary a lot in aspect ratio (roughly 1.1 to 2.3), so
+   pin a fixed viewport and letterbox each image inside it. Without this the
+   gallery changes height on every step and the page jumps under the reader. */
+.compare-gallery--timeline .compare--timeline {
+    height: 60vw;
+    max-height: 506px;
+    background: #000;
+}
+
+.compare-gallery--timeline .compare--timeline .compare__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.compare-gallery.is-fullscreen.compare-gallery--timeline .compare--timeline.is-active {
+    height: calc(100vh - 5rem);
+    max-height: none;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* object-fit centres the pixels within the box, but the box itself must be
+   centred too, or a portrait-ish capture sits hard against the left edge. */
+.compare-gallery.is-fullscreen.compare-gallery--timeline .compare--timeline.is-active .compare__img {
+    margin: 0 auto;
+    object-fit: contain;
+}
+
 /* ---- maximise / fullscreen ----
    Deliberately a fixed overlay rather than the native Fullscreen API, to match
    how the Flickity galleries elsewhere on the site do it (they toggle
