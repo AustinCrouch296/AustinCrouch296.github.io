@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OpenTSTO, an in-progress clean-room rebuild of The Simpsons: Tapped Out's game engine in C++20, preserving the game after its 2025 shutdown.">
 
-    <!-- STAGED PAGE. Everything marked TODO below is placeholder copy, so this page
-         is noindex and deliberately absent from sitemap.xml.
+    <!-- STAGED PAGE. The copy and media are done - real hero, logo, four
+         original-vs-rebuild comparisons and a fifteen-image development log.
+         What is left is the publish step, so this page is still noindex and
+         deliberately absent from sitemap.xml.
 
          To publish it:
-           1. replace every TODO block with real copy
-           2. drop real media into assets/img/simpsons-tapped-out/ and add the carousel
-           3. swap this robots meta for the canonical + Open Graph block that every
+           1. swap this robots meta for the canonical + Open Graph block that every
               other project page carries (see docs/ARCHITECTURE.md, "Page metadata")
-           4. add https://joemarkschadwick.com/projects/simpsons-tapped-out to sitemap.xml
-         docs/tools/check_seo.py enforces 3 and 4 together, so it will tell you if
+           2. add an og-simpsons-tapped-out.jpg link-preview card, built from a
+              screenshot of the rebuild running rather than the Simpsons key art
+              in the hero
+           3. add https://joemarkschadwick.com/projects/simpsons-tapped-out to sitemap.xml
+         docs/tools/check_seo.py enforces 1 and 3 together, so it will tell you if
          you do half the job. -->
     <meta name="robots" content="noindex, follow">
 
@@ -187,11 +190,240 @@
                 </div>
             </div>
 
-            <!-- TODO: image carousel. Copy the block from projects/ab-pop.html once
-                 screenshots exist in assets/img/simpsons-tapped-out/, and re-add the Flickity
-                 scripts at the end of this file. Every carousel <img> needs real alt
-                 text - flickity-carousel-captions.js builds the fullscreen caption
-                 from it, so alt is user-visible copy here. -->
+            <!--==================== ORIGINAL vs REBUILD ====================-->
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">Original vs Rebuild</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <p style="text-align: center;">
+                        Drag the divider to compare the original game with OpenTSTO, and use the arrows to step between screens.
+                    </p>
+
+                    <!-- Each pair MUST be identical dimensions and framed identically -
+                         same resolution, same scroll position, same items on screen. If
+                         the framing differs, the slider exaggerates differences that are
+                         only camera position, which undermines the comparison. Add or
+                         remove a .compare block to change the number of slides; the
+                         arrows and dots adjust themselves. -->
+                    <div class="compare-gallery" data-compare-gallery>
+                        <div class="compare is-active" data-compare-slide data-caption="The store&#39;s Characters category">
+                            <img class="compare__img compare__img--before" width="1280" height="720" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/compare-1-rebuild.webp"
+                                 alt="The store&#39;s Characters category, listing Lotto &#39;N&#39; Liquor, Apu&#39;s Apartment, the Blue-Haired Lawyer and the Cracker Factory with their donut prices, rebuilt in OpenTSTO.">
+                            <div class="compare__after">
+                                <img class="compare__img" width="1280" height="720" decoding="async" loading="lazy"
+                                     src="/assets/img/simpsons-tapped-out/compare-1-original.webp"
+                                     alt="The store&#39;s Characters category, listing Lotto &#39;N&#39; Liquor, Apu&#39;s Apartment, the Blue-Haired Lawyer and the Cracker Factory with their donut prices, in the original The Simpsons: Tapped Out client.">
+                            </div>
+                            <input type="range" class="compare__range" min="0" max="100" value="50" step="0.1"
+                                   aria-label="Compare the original with the OpenTSTO rebuild: The store&#39;s Characters category">
+                            <div class="compare__handle" aria-hidden="true">
+                                <div class="compare__grip"><i class="uil uil-arrows-h"></i></div>
+                            </div>
+                        </div>
+                        <div class="compare" data-compare-slide data-caption="An act-event prize track">
+                            <img class="compare__img compare__img--before" width="1280" height="720" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/compare-2-rebuild.webp"
+                                 alt="The Ho-ho-d&#39;oh Pt. 1 prize track, showing the Elf Moe reward, locked decoration tiers, and a Collect Ornaments objective at 120 of 150, rebuilt in OpenTSTO.">
+                            <div class="compare__after">
+                                <img class="compare__img" width="1280" height="720" decoding="async" loading="lazy"
+                                     src="/assets/img/simpsons-tapped-out/compare-2-original.webp"
+                                     alt="The Ho-ho-d&#39;oh Pt. 1 prize track, showing the Elf Moe reward, locked decoration tiers, and a Collect Ornaments objective at 120 of 150, in the original The Simpsons: Tapped Out client.">
+                            </div>
+                            <input type="range" class="compare__range" min="0" max="100" value="50" step="0.1"
+                                   aria-label="Compare the original with the OpenTSTO rebuild: An act-event prize track">
+                            <div class="compare__handle" aria-hidden="true">
+                                <div class="compare__grip"><i class="uil uil-arrows-h"></i></div>
+                            </div>
+                        </div>
+                        <div class="compare" data-compare-slide data-caption="The friend map">
+                            <img class="compare__img compare__img--before" width="1280" height="720" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/compare-3-rebuild.webp"
+                                 alt="The Other Springfield friend map, with friend towns over a continuous shoreline and the Friendship Level 6 progress bar, rebuilt in OpenTSTO.">
+                            <div class="compare__after">
+                                <img class="compare__img" width="1280" height="720" decoding="async" loading="lazy"
+                                     src="/assets/img/simpsons-tapped-out/compare-3-original.webp"
+                                     alt="The Other Springfield friend map, with friend towns over a continuous shoreline and the Friendship Level 6 progress bar, in the original The Simpsons: Tapped Out client.">
+                            </div>
+                            <input type="range" class="compare__range" min="0" max="100" value="50" step="0.1"
+                                   aria-label="Compare the original with the OpenTSTO rebuild: The friend map">
+                            <div class="compare__handle" aria-hidden="true">
+                                <div class="compare__grip"><i class="uil uil-arrows-h"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="compare" data-compare-slide data-caption="Friend Level Prizes">
+                            <img class="compare__img compare__img--before" width="1920" height="1080" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/compare-4-rebuild.webp"
+                                 alt="The Friend Level Prizes screen, showing Snowball II, Homer&#39;s Car and Stampy as unlockable prizes with E.A.R.L. up next, rebuilt in OpenTSTO.">
+                            <div class="compare__after">
+                                <img class="compare__img" width="1920" height="1080" decoding="async" loading="lazy"
+                                     src="/assets/img/simpsons-tapped-out/compare-4-original.webp"
+                                     alt="The Friend Level Prizes screen, showing Snowball II, Homer&#39;s Car and Stampy as unlockable prizes with E.A.R.L. up next, in the original The Simpsons: Tapped Out client.">
+                            </div>
+                            <input type="range" class="compare__range" min="0" max="100" value="50" step="0.1"
+                                   aria-label="Compare the original with the OpenTSTO rebuild: Friend Level Prizes">
+                            <div class="compare__handle" aria-hidden="true">
+                                <div class="compare__grip"><i class="uil uil-arrows-h"></i></div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="compare-gallery__fs" data-compare-fullscreen aria-label="Maximise the comparison">
+                            <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="compare-gallery__nav compare-gallery__nav--prev" data-compare-prev aria-label="Previous comparison">
+                            <i class="uil uil-angle-left-b" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="compare-gallery__nav compare-gallery__nav--next" data-compare-next aria-label="Next comparison">
+                            <i class="uil uil-angle-right-b" aria-hidden="true"></i>
+                        </button>
+                        <div class="compare-gallery__dots" data-compare-dots></div>
+                    </div>
+
+                    <div class="compare__labels" aria-hidden="true">
+                        <span>Original</span>
+                        <span>OpenTSTO</span>
+                    </div>
+                    <p class="compare__caption" data-compare-caption></p>
+                    <p class="compare__disclaimer">
+                        Work in progress — UI elements subject to be tweaked/changed, some features may appear incomplete or missing.
+                    </p>
+                </div>
+            </div>
+
+            <!--==================== DEVELOPMENT LOG ====================-->
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">Development Log</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <p style="text-align: center;">
+                        A collection of images from the development of the game, showing the good and the buggy.
+                    </p>
+
+                    <!-- Single-image slides, sharing the gallery component with the
+                         Original vs Rebuild section below (see assets/js/image-compare.js).
+                         Add or remove a .compare block to change the count; arrows and
+                         dots adjust themselves. data-caption is user-visible, and so is
+                         each image&#39;s alt text. Keep them in chronological order.
+
+                         These captures vary a lot in aspect ratio, so the gallery pins a
+                         fixed viewport height and letterboxes each shot inside it rather
+                         than resizing the page on every step. -->
+                    <div class="compare-gallery compare-gallery--timeline" data-compare-gallery>
+                        <div class="compare compare--timeline is-active" data-compare-slide data-caption="Early rendering tests for the custom renderer and .rgb files">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-1.webp"
+                                 alt="An early render test showing decoded .rgb image data in the custom renderer.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Reading town data from protobufs">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-2.webp"
+                                 alt="Town data decoded from the game&#39;s protobuf save format.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="First attempts at rendering the BSV3 graphics for each building in the save file">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-3.webp"
+                                 alt="A first attempt at drawing BSV3 building graphics, with visible errors.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="An improved attempt at rendering BSV3 building graphics">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-4.webp"
+                                 alt="A later BSV3 building render, noticeably closer to the original artwork.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Early depth sorting and positioning tests">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-5.webp"
+                                 alt="A depth sorting and positioning test, with buildings overlapping incorrectly.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Early terrain rendering tests">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-6.webp"
+                                 alt="An early terrain rendering test.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Early road rendering">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-7.webp"
+                                 alt="An early attempt at rendering roads across the town grid.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="The splash screen, running in Android Studio">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-8.webp"
+                                 alt="The game&#39;s splash screen running in Android Studio.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Boardwalk tile rendering and an early depth-sorting pass">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-9.webp"
+                                 alt="Boardwalk tiles rendering with an early depth-sorting pass applied.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="A very early attempt at rendering the friend screen">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-10.webp"
+                                 alt="A very early, incomplete render of the friend screen.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="A broken attempt at getting MNT rendering working for the account management screen">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-11.webp"
+                                 alt="A broken MNT layout render of the account management screen.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Registration implementation">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-12.webp"
+                                 alt="The account registration screen.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Early friend level prize implementation">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-13.webp"
+                                 alt="An early implementation of the friend level prize screen.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Early friendship level prize implementation">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-14.webp"
+                                 alt="An early implementation of the friendship level prize panel.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Early level-up screen implementation">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/simpsons-tapped-out/timeline-15.webp"
+                                 alt="An early implementation of the level-up screen.">
+                        </div>
+
+                        <button type="button" class="compare-gallery__fs" data-compare-fullscreen aria-label="Maximise the development log">
+                            <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="compare-gallery__nav compare-gallery__nav--prev" data-compare-prev aria-label="Previous image">
+                            <i class="uil uil-angle-left-b" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="compare-gallery__nav compare-gallery__nav--next" data-compare-next aria-label="Next image">
+                            <i class="uil uil-angle-right-b" aria-hidden="true"></i>
+                        </button>
+                        <div class="compare-gallery__dots" data-compare-dots></div>
+                    </div>
+
+                    <p class="compare__caption" data-compare-caption></p>
+                </div>
+            </div>
+
         </div>
 
       <!--==================== FOOTER ====================-->
@@ -243,6 +475,8 @@
       <script src="/assets/js/main.js"></script>
       <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
       <script src="/assets/js/hero_arrow.js"></script>
+      <!--==================== IMAGE COMPARE ====================-->
+      <script src="/assets/js/image-compare.js"></script>
       <!--==================== FITTEXT ====================-->
       <script src="/assets/js/fittext.js"></script>
       <script>
