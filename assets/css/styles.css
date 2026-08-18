@@ -717,12 +717,13 @@ img{
     border-radius: .2rem;
 }
 /*==================== SERVICES ====================*/
+.container.services__container,
 .services__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
-    max-width: 1200px;
+    max-width: 1504px;
 }
 
 .services__content{
