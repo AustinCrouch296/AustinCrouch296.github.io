@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personal modding project adding functional hotels to The Sims 3.">
+    <meta name="description" content="Hotels & Motels, an in-progress gameplay mod adding a designed hotel system to The Sims 3 - real rooms, desk check-in, staff shifts and furnishing-based pricing.">
 
-    <!-- STAGED PAGE. Everything marked TODO below is placeholder copy, so this page
-         is noindex and deliberately absent from sitemap.xml.
+    <!-- STAGED PAGE. The copy is written. What is left is real media - a hero
+         screenshot, the logo, and gallery captures - and then the publish step,
+         so this page is still noindex and deliberately absent from sitemap.xml.
 
          To publish it:
-           1. replace every TODO block with real copy
-           2. drop real media into assets/img/sims3-hotels/ and add the carousel
-           3. swap this robots meta for the canonical + Open Graph block that every
+           1. swap this robots meta for the canonical + Open Graph block that every
               other project page carries (see docs/ARCHITECTURE.md, "Page metadata")
-           4. add https://joemarkschadwick.com/projects/sims3-hotels to sitemap.xml
-         docs/tools/check_seo.py enforces 3 and 4 together, so it will tell you if
+           2. add an og-sims3-hotels.jpg link-preview card
+           3. add https://joemarkschadwick.com/projects/sims3-hotels to sitemap.xml
+         docs/tools/check_seo.py enforces 1 and 3 together, so it will tell you if
          you do half the job. -->
     <meta name="robots" content="noindex, follow">
 
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--==================== CSS ====================-->
-    <title>The Sims 3 — Hotels Mod — Joe Marks-Chadwick - Game Designer Portfolio</title>
+    <title>Hotels &amp; Motels — Joe Marks-Chadwick - Game Designer Portfolio</title>
     <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,10 +82,11 @@
         <div id="hero">
             <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" href="#main-section" aria-label="Skip to the main content" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
             <div class="texture"></div>
-            <!-- TODO: replace with a real screenshot or key art. -->
-            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/sims3-hotels/sims3-hotels-hero.webp" alt="Placeholder banner for The Sims 3 Hotels mod.">
+            <!-- TODO: swap for a screenshot of a finished hotel lot in game. -->
+            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/sims3-hotels/sims3-hotels-hero.webp" alt="Placeholder banner for the Hotels &amp; Motels mod for The Sims 3.">
             <div class="video-caption" id="startchange">
-                <h2>Sims 3 Modding — Hotels</h2>
+                <!-- TODO: swap for the logo once exported, matching the ab-pop pattern. -->
+                <h2>Hotels &amp; Motels</h2>
             </div>
         </div>
         <hr id="hero-hr">
@@ -94,21 +95,155 @@
         <a class="anchor" id="main-section"></a>
 
         <div class="dynamic">
+            <div class="flex-parent-div wip-banner-row">
+                <div class="flex-full text-block tb-section">
+                    <div class="wip-banner">
+                        <i class="uil uil-constructor" aria-hidden="true"></i>
+                        <div>
+                            <strong>Work in progress</strong>
+                            The core hotel systems are built and working in game, but this is an active project rather than a finished release. Later features are still being designed, and everything shown here is subject to change.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="flex-parent-div summary__title">
                 <div class="flex-full tb-header">
-                    <!-- TODO: one-line hook, in the style of the other project pages. -->
-                    <h1 id="main-summary-title" class="game-title">The Sims 3 — Hotels Mod</h1>
+                    <h1 id="main-summary-title" class="game-title">Bringing interactive hotels to The Sims 3 for the first time ever!</h1>
                 </div>
             </div>
 
             <div class="flex-parent-div summary__description">
                 <div class="flex-full text-block tb-section">
                     <p>
-                        A personal modding project adding functional hotels to The Sims 3.
+                        <i>The Sims 3</i> never got a proper hotel. The resorts added by <i>Island Paradise</i> treat rooms as props: a guest walks into a tower object and disappears, pricing is fixed by tier, and nothing you furnish makes any difference.
                     </p>
                     <p>
-                        <b>TODO:</b> describe what the mod adds, how it hooks into the base game, and any design problems worth calling out.
+                        <b>Hotels &amp; Motels</b> replaces that with the real thing. Rooms are recognised from the walls, doors and beds the player built. Guests book a specific room, are given the key to that door, and are checked in by a receptionist who has to be on duty. Rooms are priced on what is inside them, so decorating becomes a pricing decision. Every system was specified in a design document before it was built.
                     </p>
+                </div>
+            </div>
+
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">My Role</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
+                <div class="flex-half text-block tb-section-half-l">
+                    <ul class="text-block-ul">
+                        <li>Designed the hotel system end to end and wrote its design document.</li>
+                        <li>Designed the check-in and checkout flows around what the player sees and does.</li>
+                        <li>Designed the staff systems — shifts, housekeeping priorities, uniforms and staff-only areas.</li>
+                        <li>Set the economy rules, pricing rooms on their furnishings.</li>
+                    </ul>
+                </div>
+
+                <div class="flex-half text-block tb-section-half-r">
+                    <ul class="text-block-ul">
+                        <li>Designed the in-game interfaces, including the uniform picker and lot requirements panel.</li>
+                        <li>Built the mod&#39;s systems on reverse-engineered knowledge of the original game, verifying each mechanism against the decompiled 1.67 client.</li>
+                        <li>Tested each system in game and wrote up the results.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">Design Decisions</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <div class="decision-grid">
+                        <div class="decision">
+                            <span class="decision__num" aria-hidden="true">01</span>
+                            <span class="decision__title">You book at the desk, not in a menu</span>
+                            <p class="decision__body">The sim walks over, queues, and picks a room while being served, so availability is checked when they arrive rather than when you clicked.</p>
+                        </div>
+
+                        <div class="decision">
+                            <span class="decision__num" aria-hidden="true">02</span>
+                            <span class="decision__title">No receptionist, no check-in</span>
+                            <p class="decision__body">If nobody is on duty then nobody gets a room, the player included. Staffing becomes something to think about, not a detail the game quietly handles.</p>
+                        </div>
+
+                        <div class="decision">
+                            <span class="decision__num" aria-hidden="true">03</span>
+                            <span class="decision__title">Guests walk out before the room is released</span>
+                            <p class="decision__body">Teleporting them would have been simpler, but a guest vanishing at checkout reads as a bug even when it works perfectly.</p>
+                        </div>
+
+                        <div class="decision">
+                            <span class="decision__num" aria-hidden="true">04</span>
+                            <span class="decision__title">Housekeepers work slower than they need to</span>
+                            <p class="decision__body">Real cleaning is fast enough that one would service a whole hotel in an hour and idle all day, so they keep tidying. Visibly working beats merely efficient.</p>
+                        </div>
+
+                        <div class="decision">
+                            <span class="decision__num" aria-hidden="true">05</span>
+                            <span class="decision__title">Guests arrive as people, not room-fillers</span>
+                            <p class="decision__body">A booking might be a couple, a group of friends, a family, or a single parent with children &mdash; five group types, each sized to a room and given beds that match who they are. Built on top of EA&#39;s own tourist system so they behave like the game&#39;s own sims.</p>
+                        </div>
+
+                        <div class="decision">
+                            <span class="decision__num" aria-hidden="true">06</span>
+                            <span class="decision__title">Groundwork for running your own hotel</span>
+                            <p class="decision__body">Player-owned hotels are not implemented yet, but the systems underneath &mdash; per-room pricing, staff rotas, occupancy and takings &mdash; are being designed so that ownership can sit on top of them rather than be bolted on later.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">Hotels vs Island Paradise Resorts</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <div class="faceoff">
+                        <div class="faceoff__head" aria-hidden="true">
+                            <div>Aspect</div>
+                            <div>Island Paradise Resort</div>
+                            <div>Hotels &amp; Motels</div>
+                        </div>
+
+                        <div class="faceoff__row">
+                            <div class="faceoff__aspect">Rooms</div>
+                            <div class="faceoff__before"><span class="faceoff__mark" aria-hidden="true">&times;</span>Tower objects the guest vanishes into</div>
+                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>Real rooms, read from walls, doors and beds</div>
+                        </div>
+
+                        <div class="faceoff__row">
+                            <div class="faceoff__aspect">Pricing</div>
+                            <div class="faceoff__before"><span class="faceoff__mark" aria-hidden="true">&times;</span>Fixed per tower tier</div>
+                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>Per room, based on how it is furnished</div>
+                        </div>
+
+                        <div class="faceoff__row">
+                            <div class="faceoff__aspect">Guests</div>
+                            <div class="faceoff__before"><span class="faceoff__mark" aria-hidden="true">&times;</span>Shallow and largely cosmetic</div>
+                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>A full stay: arrive, check in, sleep, check out</div>
+                        </div>
+
+                        <div class="faceoff__row">
+                            <div class="faceoff__aspect">Staff</div>
+                            <div class="faceoff__before"><span class="faceoff__mark" aria-hidden="true">&times;</span>Limited, with poor behaviour</div>
+                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>Receptionists and housekeepers, with shifts and uniforms</div>
+                        </div>
+
+                        <div class="faceoff__row">
+                            <div class="faceoff__aspect">Booking</div>
+                            <div class="faceoff__before"><span class="faceoff__mark" aria-hidden="true">&times;</span>Turn up and get assigned</div>
+                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>Choose your room at the desk or by phone</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
