@@ -21,15 +21,38 @@
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!--==================== CSS ====================-->
-    <title>Hotels &amp; Motels — Joe Marks-Chadwick - Game Designer Portfolio</title>
+    <title>Hotels &amp; Motels - Joe Marks-Chadwick - Game Designer Portfolio</title>
     <link href="/assets/img/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        /* Hero logo sizing. The shared rule is width:50% with min-width:350px,
+           which under-sizes this logo against a full-viewport hero. 1240px is
+           still under the 1700px source, so it stays sharp; height:auto holds
+           the 1700:988 ratio at every width and the vw cap stops it
+           overflowing on a phone. */
+        .video-caption {
+            width: 85%;
+            min-width: 350px;
+        }
+
+        #sims3-hotels-logo {
+            width: 100%;
+            max-width: 1240px;
+            min-width: 300px;
+            max-height: 62vh;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
   </head>
 
-  <body class="dark-theme">
+  <body class="hotels-theme">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <!--==================== HEADER ====================-->
     <header class="header" id="header" data-include="/partials/header.html">
@@ -82,11 +105,9 @@
         <div id="hero">
             <a id="hero_arrow" class="ca3-scroll-down-link ca3-scroll-down-arrow" href="#main-section" aria-label="Skip to the main content" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
             <div class="texture"></div>
-            <!-- TODO: swap for a screenshot of a finished hotel lot in game. -->
-            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/sims3-hotels/sims3-hotels-hero.webp" alt="Placeholder banner for the Hotels &amp; Motels mod for The Sims 3.">
+            <img width="1920" height="1080" decoding="async" fetchpriority="high" id="hero-img" src="/assets/img/sims3-hotels/sims3-hotels-hero.webp" alt="A high-rise hotel lit up at dusk on a city block, with its lobby glowing at street level and a taxi pulling up at the crossroads.">
             <div class="video-caption" id="startchange">
-                <!-- TODO: swap for the logo once exported, matching the ab-pop pattern. -->
-                <h2>Hotels &amp; Motels</h2>
+                <img width="1700" height="988" decoding="async" id="sims3-hotels-logo" src="/assets/img/sims3-hotels/sims3-hotels-logo.webp" alt="The Sims 3 Hotels &amp; Motels logo">
             </div>
         </div>
         <hr id="hero-hr">
@@ -101,7 +122,7 @@
                         <i class="uil uil-constructor" aria-hidden="true"></i>
                         <div>
                             <strong>Work in progress</strong>
-                            The core hotel systems are built and working in game, but this is an active project rather than a finished release. Later features are still being designed, and everything shown here is subject to change.
+                            The core hotel systems are built and working in game, but this is still an active project rather than a finished release. Later features are being designed as I go, so anything here may change.
                         </div>
                     </div>
                 </div>
@@ -116,10 +137,13 @@
             <div class="flex-parent-div summary__description">
                 <div class="flex-full text-block tb-section">
                     <p>
-                        <i>The Sims 3</i> never got a proper hotel. The resorts added by <i>Island Paradise</i> treat rooms as props: a guest walks into a tower object and disappears, pricing is fixed by tier, and nothing you furnish makes any difference.
+                        The Sims 3 never got a proper hotel system. The resorts added by <i>Island Paradise</i> treat rooms as props: a guest walks into a tower object and disappears, pricing is fixed by tier, and nothing you furnish makes any difference. That didn't go down well with players, and ever since I've seen plenty of people asking for a real hotel system.
                     </p>
                     <p>
-                        <b>Hotels &amp; Motels</b> replaces that with the real thing. Rooms are recognised from the walls, doors and beds the player built. Guests book a specific room, are given the key to that door, and are checked in by a receptionist who has to be on duty. Rooms are priced on what is inside them, so decorating becomes a pricing decision. Every system was specified in a design document before it was built.
+                        <b>Hotels &amp; Motels</b> does just that. Rooms are recognised from the walls, doors and beds the player built. Guests book a specific room, are given the key to that door, and are checked in by a receptionist who has to be on duty. Rooms are priced on what is inside them, so decorating becomes a pricing decision.
+                    </p>
+                    <p>
+                        None of this would have been possible without MonoPatching the game. Full credit goes to <b>LazyDuchess</b> and <b>Shapes</b> for making that possible.
                     </p>
                 </div>
             </div>
@@ -133,9 +157,9 @@
             <div class="flex-parent-div summary__description" style="padding-bottom: .25rem;">
                 <div class="flex-half text-block tb-section-half-l">
                     <ul class="text-block-ul">
-                        <li>Designed the hotel system end to end and wrote its design document.</li>
+                        <li>Worked out how a hotel should behave in The Sims 3, then designed the systems to match.</li>
                         <li>Designed the check-in and checkout flows around what the player sees and does.</li>
-                        <li>Designed the staff systems — shifts, housekeeping priorities, uniforms and staff-only areas.</li>
+                        <li>Designed the staff systems: shifts, housekeeping priorities, uniforms and staff-only areas.</li>
                         <li>Set the economy rules, pricing rooms on their furnishings.</li>
                     </ul>
                 </div>
@@ -143,8 +167,8 @@
                 <div class="flex-half text-block tb-section-half-r">
                     <ul class="text-block-ul">
                         <li>Designed the in-game interfaces, including the uniform picker and lot requirements panel.</li>
-                        <li>Built the mod&#39;s systems on reverse-engineered knowledge of the original game, verifying each mechanism against the decompiled 1.67 client.</li>
-                        <li>Tested each system in game and wrote up the results.</li>
+                        <li>Built the mod on reverse-engineered knowledge of the original game, checking each mechanism against the decompiled 1.67 client.</li>
+                        <li>Played every system in game to see whether it held up, and kept notes on what broke and why.</li>
                     </ul>
                 </div>
             </div>
@@ -161,7 +185,7 @@
                         <div class="decision">
                             <span class="decision__num" aria-hidden="true">01</span>
                             <span class="decision__title">You book at the desk, not in a menu</span>
-                            <p class="decision__body">The sim walks over, queues, and picks a room while being served, so availability is checked when they arrive rather than when you clicked.</p>
+                            <p class="decision__body">The sim walks over, queues, and picks a room while being served. Availability gets checked when they actually arrive, not when you clicked. Back out and the visit just ends, with nothing booked and nothing charged.</p>
                         </div>
 
                         <div class="decision">
@@ -173,25 +197,25 @@
                         <div class="decision">
                             <span class="decision__num" aria-hidden="true">03</span>
                             <span class="decision__title">Guests walk out before the room is released</span>
-                            <p class="decision__body">Teleporting them would have been simpler, but a guest vanishing at checkout reads as a bug even when it works perfectly.</p>
+                            <p class="decision__body">Teleporting them would have been simpler, but a guest vanishing at checkout looks buggy and ruins the immersion.</p>
                         </div>
 
                         <div class="decision">
                             <span class="decision__num" aria-hidden="true">04</span>
                             <span class="decision__title">Housekeepers work slower than they need to</span>
-                            <p class="decision__body">Real cleaning is fast enough that one would service a whole hotel in an hour and idle all day, so they keep tidying. Visibly working beats merely efficient.</p>
+                            <p class="decision__body">Cleaning a room outright is quick, so one housekeeper could get through a whole hotel in an hour and then stand around all day. Instead they carry on tidying. Staff you can see working sell the place better than staff who are simply efficient.</p>
                         </div>
 
                         <div class="decision">
                             <span class="decision__num" aria-hidden="true">05</span>
                             <span class="decision__title">Guests arrive as people, not room-fillers</span>
-                            <p class="decision__body">A booking might be a couple, a group of friends, a family, or a single parent with children &mdash; five group types, each sized to a room and given beds that match who they are. Built on top of EA&#39;s own tourist system so they behave like the game&#39;s own sims.</p>
+                            <p class="decision__body">A booking might be a couple, a group of friends, a family, or a single parent with children. There are five group types, each sized to a room and given beds that suit who they are. They sit on top of EA&#39;s own tourist system, so they behave like any other sim in the game.</p>
                         </div>
 
                         <div class="decision">
                             <span class="decision__num" aria-hidden="true">06</span>
                             <span class="decision__title">Groundwork for running your own hotel</span>
-                            <p class="decision__body">Player-owned hotels are not implemented yet, but the systems underneath &mdash; per-room pricing, staff rotas, occupancy and takings &mdash; are being designed so that ownership can sit on top of them rather than be bolted on later.</p>
+                            <p class="decision__body">Player-owned hotels are not in yet, but the systems underneath it (per-room pricing, staff rotas, occupancy and takings) are being designed so ownership can sit on top of them rather than get bolted on later.</p>
                         </div>
 
                     </div>
@@ -240,18 +264,105 @@
                         <div class="faceoff__row">
                             <div class="faceoff__aspect">Booking</div>
                             <div class="faceoff__before"><span class="faceoff__mark" aria-hidden="true">&times;</span>Turn up and get assigned</div>
-                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>Choose your room at the desk or by phone</div>
+                            <div class="faceoff__after"><span class="faceoff__mark" aria-hidden="true">&check;</span>Choose your room at the desk</div>
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <!-- TODO: image carousel. Copy the block from projects/ab-pop.html once
-                 screenshots exist in assets/img/sims3-hotels/, and re-add the Flickity
-                 scripts at the end of this file. Every carousel <img> needs real alt
-                 text - flickity-carousel-captions.js builds the fullscreen caption
-                 from it, so alt is user-visible copy here. -->
+            <!--==================== GALLERY ====================-->
+            <div class="flex-parent-div">
+                <div class="flex-full tb-header">
+                    <h2 class="game-title">In-game Screenshots</h2>
+                </div>
+            </div>
+
+            <div class="flex-parent-div summary__description">
+                <div class="flex-full text-block tb-section">
+                    <!-- Single-image slides sharing the gallery component with the OpenTSTO
+                         page (see assets/js/image-compare.js). Add or remove a .compare block
+                         to change the count; arrows and dots adjust themselves. data-caption
+                         and each image's alt text are both user-visible. -->
+                    <div class="compare-gallery compare-gallery--timeline" data-compare-gallery>
+                        <div class="compare compare--timeline is-active" data-compare-slide data-caption="Hotel is a lot type of its own">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-1-lot-type.webp"
+                                 alt="The Change Lot Type dialog with Community selected and Hotel chosen from the venue dropdown.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Hotels appear on the town map">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-2-map.webp"
+                                 alt="The town map at night showing the Downtown Lights Luxury Hotel with its own map tag and a guest inside.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Rooms are priced on how they are furnished">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-3-room-picker.webp"
+                                 alt="The Select a Room dialog listing six rooms with per-night prices from 197 to 315 simoleons, how many each sleeps, connecting doors, and whether each is occupied or available.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="The booking happens at the counter">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-4-nights.webp"
+                                 alt="The Hotel Check-In dialog asking how many nights, with the guest stood at the front desk being served by the receptionist.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Everything is confirmed before a simoleon is charged">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-5-confirmation.webp"
+                                 alt="The check-in confirmation showing Room 106, three nights at 315 simoleons a night, a total of 945, and the household funds available.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Receptionists staff each designated desk">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-6-reception.webp"
+                                 alt="Two receptionists in matching uniforms stood behind their front desks, one labelled Bubba Wadsworth, Receptionist.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Guests are assigned a room, and a bed within it">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-7-guest-room.webp"
+                                 alt="A furnished guest room with a tooltip reading Room 105, left bed assigned to Cleopatra Ammar and the right bed unassigned.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Housekeepers service rooms as guests leave">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-8-housekeeper-bed.webp"
+                                 alt="A housekeeper labelled Reynaldo Doyle making a bed on the guest floor, with other rooms visible along the corridor.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="And keep tidying once the room is clean">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-9-housekeeper-clean.webp"
+                                 alt="A housekeeper labelled Torrey Dexter cleaning a sink in a guest ensuite.">
+                        </div>
+
+                        <div class="compare compare--timeline" data-compare-slide data-caption="Guests stay the night in their own beds">
+                            <img class="compare__img" decoding="async" loading="lazy"
+                                 src="/assets/img/sims3-hotels/hotel-10-guests-asleep.webp"
+                                 alt="Two hotel guests asleep in separate assigned beds at night, with the lobby and fountain visible beyond.">
+                        </div>
+
+                        <button type="button" class="compare-gallery__fs" data-compare-fullscreen aria-label="Maximise the gallery">
+                            <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="compare-gallery__nav compare-gallery__nav--prev" data-compare-prev aria-label="Previous image">
+                            <i class="uil uil-angle-left-b" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="compare-gallery__nav compare-gallery__nav--next" data-compare-next aria-label="Next image">
+                            <i class="uil uil-angle-right-b" aria-hidden="true"></i>
+                        </button>
+                        <div class="compare-gallery__dots" data-compare-dots></div>
+                    </div>
+
+                    <p class="compare__caption" data-compare-caption></p>
+                    <p class="compare__disclaimer">
+                        Work in progress. Some UI and art is still placeholder, and a few features are yet to be built.
+                    </p>
+                </div>
+            </div>
         </div>
 
       <!--==================== FOOTER ====================-->
@@ -303,6 +414,8 @@
       <script src="/assets/js/main.js"></script>
       <script src="/assets/js/navbar-change-color-on-scroll.js"></script>
       <script src="/assets/js/hero_arrow.js"></script>
+      <!--==================== IMAGE GALLERY ====================-->
+      <script src="/assets/js/image-compare.js"></script>
       <!--==================== FITTEXT ====================-->
       <script src="/assets/js/fittext.js"></script>
       <script>
