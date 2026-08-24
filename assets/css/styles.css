@@ -120,6 +120,29 @@ body.cpr-theme{
     width: 100%;
 }
 
+body.hotels-theme{
+    /* Dark slate blue, in the same family as the in-game Sims 3 UI panels, so
+       the page sits with the warm interior screenshots rather than fighting
+       them. Container and scrollbar colours are derived from it so panels do
+       not fall back to the default purple-grey. */
+    --hue-color: 217;
+
+    --first-color: #7fa9e4;
+    --first-color-lighter: #c2d7f2;
+    --first-color-alt: #5f8ac8;
+    --text-color-light: #8c9cb3;
+    --first-color-second: #0e141d;
+    --title-color: #fff;
+    --text-color: #c9d4e2;
+    --input-color: #1f2b3d;
+    --container-color: #1f2b3d;
+    --scroll-bar-color: #2c3d58;
+    --scroll-thumb-color: #3d5479;
+    --body-color: #161f2c;
+    background-color: #161f2c;
+    width: 100%;
+}
+
 body.abpop-theme{
     /* HSL color mode */
     --hue-color: 211;
